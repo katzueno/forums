@@ -82,7 +82,7 @@ if( !Page::getCurrentPage()->getCollectionAttributeValue('forum_category') && !P
 <?php
 elseif(Page::getCurrentPage()->isEditMode()):?>
     <div class="forumSearchDisabled" style="color:red; background-color:#ccc; text-align:center; padding: 10px; margin: 5px 0">
-        The Forum Search Block is disabled in Forum Dashboard Settings.
+        <?php echo t('The Forum Search Block is disabled in Forum Dashboard Settings.');?>
     </div>
 <?php
 endif; ?>    
