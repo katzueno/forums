@@ -167,7 +167,7 @@ class Controller extends Package
 		// Add forum moderator user group
 		$forumGroup = Group::getByName('Forum Moderators');
 		if (!is_object($authorGroup)){
-			Group::add('Forum Moderators', 'Forum Moderators, delete, edit, approve');
+			Group::add('Forum Moderators', t('Forum Moderators, delete, edit, approve'));
 		}
 		
 		// install blocks	
@@ -249,8 +249,8 @@ class Controller extends Package
 			$pageType = \PageType::getByHandle('right_sidebar');
 			$template = \PageTemplate::getByHandle('right_sidebar');
 			$forumsPage = $parentPage->add($pageType, array(
-				'cName' => 'Forums',
-				'cDescription' => 'Top Level Forums Page',
+				'cName' => t('Forums'),
+				'cDescription' => t('Top Level Forums Page'),
 				'cHandle ' => 'forums'
 			), $template);
 			
@@ -266,8 +266,8 @@ class Controller extends Package
 			$pageType = \PageType::getByHandle('right_sidebar');
 			$template = \PageTemplate::getByHandle('right_sidebar');
 			$forumSearchPage = $parentPage->add($pageType, array(
-				'cName' => 'Forum Search',
-				'cDescription' => 'Forum Search Page',
+				'cName' => t('Forum Search'),
+				'cDescription' => t('Forum Search Page'),
 				'cHandle ' => 'forum-search'
 			), $template);
 	
@@ -539,14 +539,14 @@ class Controller extends Package
 				'cHandle ' => 'first-forum-post'
 			), $template);
 	
-			$samplePost->setAttribute('forum_post', '
+			$samplePost->setAttribute('forum_post', t('
 				<p>Hey, Congratulations, you have installed Forums for Concrete5.  Forums will give visitors to your site frontend
 				editing capabilities to add Forum Messages and reply to existing messages.</p>
 				<p>Administrators have access to the Forums Dashboard Page to customize and manage your forums.</p>
-				<p>So get your forum started and if you have any comments or questions visit <a href="http://forums.webli.us" target="_blank">forums.webli.us</a></p>');
+				<p>So get your forum started and if you have any comments or questions visit <a href="http://forums.webli.us" target="_blank">forums.webli.us</a></p>'));
 		
 			$samplePost->setAttribute('forum_post_approved', 1);
-			$samplePost->setAttribute('tags', array('Forums', 'Frist Message'));	
+			$samplePost->setAttribute('tags', array('Forums', t('Frist Message')));	
 		}
 
 		
