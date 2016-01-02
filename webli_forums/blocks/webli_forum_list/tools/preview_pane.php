@@ -1,5 +1,6 @@
 <?php
-use Concrete\Package\WebliBlogsEvents\Block\WebliBlogList\Controller;
+use Concrete\Package\WebliForumList\Block\WebliForumList\Controller;
+
 $request = Request::getInstance();
 $request->setCurrentPage(Page::getByID($_REQUEST['current_page']));
 $previewMode = true;
