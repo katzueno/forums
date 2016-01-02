@@ -356,7 +356,7 @@ $form = Loader::helper('form/page_selector');
 					$atKeys = CollectionAttributeKey::getList();
 					foreach($atKeys as $ak) {
 						if($ak->getAttributeType()->atHandle == 'image_file') { ?>
-							<option value="<?php echo $ak->akID ?>" <?php if($image_attribute == $ak->akID) echo 'selected="selected"' ?>><?php echo $ak->akName ?></option>
+							<option value="<?php echo $ak->getAttributeKeyID(); ?>" <?php if($image_attribute == $ak->getAttributeKeyID()) echo 'selected="selected"' ?>><?php echo $ak->getAttributeKeyName() ?></option>
 						<?php
 						}
 					}
