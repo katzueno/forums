@@ -10,6 +10,10 @@ use Page;
 use SinglePage;
 use Group;
 use Core;
+use Events;
+use URL;
+use Permissions;
+use Application\Service\UserInterface\Menu;
 
 use \Concrete\Core\Page\Type\Type as CollectionType;
 
@@ -27,12 +31,13 @@ use Concrete\Core\Attribute\Key\CollectionKey as CollectionAttributeKey;
 use \Concrete\Core\Attribute\Type as AttributeType;
 use Concrete\Attribute\Select as SelectAttributeTypeOption;
 
+
 class Controller extends Package
 {
 
 	protected $pkgHandle = 'webli_forums';
 	protected $appVersionRequired = '5.7.4';
-    protected $pkgVersion = '0.4.2.3';
+    protected $pkgVersion = '0.5';
 
      public function getPackageDescription()
 	 {
@@ -44,6 +49,57 @@ class Controller extends Package
           return t("Forums");
      }
 
+	 
+	public function on_start()
+	{
+		
+		$ihm = Loader::helper('concrete/ui/menu');
+				
+		$p = new Permissions(Page::getByPath('/dashboard/forums/'));
+		if($p->canRead()) {
+			$ihm->addPageHeaderMenuItem('forums', 'webli_forums', array('icon' => '', 'label' => t('Forums'), 'position' => 'right', 'href' => URL::to('/dashboard/forums'), 'linkAttributes' => array('style' => 'padding:0 5px;width:auto;')));
+		}
+				
+		Events::addListener('on_page_add', function($e){
+			$page = $e->getPageObject();
+			
+			if($page->getCollectionTypeHandle() == 'forum_post') {
+				
+				$settings =	$this->get_saved_settings($page->getCollectionParentID());
+				
+				if($settings['notification']){
+					$mh = Core::make('helper/mail');
+					$mh->to($settings['email_addresses']);
+					$mh->from('donotreply@webli.us');
+					
+					$parentPage = Page::getByID($page->getCollectionParentID());
+									
+					$mh->addParameter('forumName', $parentPage->getCollectionName());
+					$mh->addParameter('forumPath', BASE_URL . DIR_REL . $parentPage->getCollectionPath());
+
+					$mh->load('forum_notification', 'webli_forums');
+					$mh->setSubject(t('New Forum Post to %s', $parentPage->getCollectionName()));
+					@$mh->sendMail();
+				}
+		
+			}	
+		});
+	}
+
+	
+	function get_saved_settings($cID)
+	{
+		// get array of values in db
+		$db = Loader::db();
+		
+		$res = $db->GetRow("select * from btWebliForums where cID = ?", $cID);
+		
+		if(!$res) $res = $db->GetRow("select * from btWebliForums where cID = ?", 0);
+		
+		return $res;
+	}	
+
+	
     public function upgrade()
 	{
         $pkg = $this;
@@ -92,7 +148,8 @@ class Controller extends Package
 			forum_tags_block = ?',
 			array(1,1,1));		
     }
-	
+				
+				
 	public function install()
 	{
          
@@ -464,8 +521,11 @@ class Controller extends Package
 				display_avatars,
 				forum_search_block,
 				forum_archive_block,
-				forum_tags_block) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
-				array(0,1,1,1,'l F j, Y g:ia',1,1,1,0,1,350,250,1,1,1,1));			
+				forum_tags_block,
+				page_template,
+				page_type
+				) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
+				array(0,1,1,1,'l F j, Y g:ia',1,1,1,0,1,350,250,1,1,1,1,$pageTemplate->getPageTemplateID(),$pageType->getPageTypeID()));			
 
 
 		// Add Sample Forum Post
@@ -480,7 +540,7 @@ class Controller extends Package
 			), $template);
 	
 			$samplePost->setAttribute('forum_post', '
-				<p>Hey, Congradulations, you have installed Forums for Concrete5.  Forums will give visitors to your site frontend
+				<p>Hey, Congratulations, you have installed Forums for Concrete5.  Forums will give visitors to your site frontend
 				editing capabilities to add Forum Messages and reply to existing messages.</p>
 				<p>Administrators have access to the Forums Dashboard Page to customize and manage your forums.</p>
 				<p>So get your forum started and if you have any comments or questions visit <a href="http://forums.webli.us" target="_blank">forums.webli.us</a></p>');

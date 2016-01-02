@@ -24,16 +24,9 @@ if (is_object($basePostPage) && $basePostPage->isError()) {
     <div class="ccm-error"><?php echo t('The search index does not appear to exist. This block will not function until the reindex job has been run at least once in the dashboard.')?></div>
 <?php } ?>
 
-<fieldset>	 
-    <div class='form-group'>
-        <label for='title'><?php echo t('Title')?>:</label>
-        <?php echo $form->text('title',$searchObj->title);?>
-    </div>
+<fieldset>
+	<legend><?php echo t('Settings') ?></legend>
 
-    <div class='form-group'>
-        <label for='buttonText'><?php echo t('Button Text')?>:</label>
-        <?php echo $form->text('buttonText',$searchObj->buttonText);?>
-    </div>
     <div class='form-group'>
         <label for='title' style="margin-bottom: 0px;"><?php echo t('Search for Pages')?>:</label>
         <div class="radio">
@@ -122,8 +115,32 @@ if (is_object($basePostPage) && $basePostPage->isError()) {
             }
             ?>
             <?php echo t('OR Path')?>:
-            <?php echo $form->text('resultsURL',$searchObj->resultsURL);?>
+            <?php echo $form->text('resultsURL',$searchObj->resultsURL, array('maxlength' => 255));?>
         </div>
     </div>
 
 </fieldset>
+
+<fieldset>
+	<div class='form-group'>
+        <label for='buttonText'><?php echo t('Button Text')?>:</label>
+        <?php echo $form->text('buttonText',$searchObj->buttonText, array('maxlength' => 128));?>
+    </div>
+
+	<div class="form-group">
+		<label class="control-label"><?php echo t('Block Class') ?></label>
+		<span class="help-block"><?php echo
+				t('(<strong>Note</strong>: Wraps the Blog List block in a div with this class name.)'); ?></span>
+		<input type="text" maxlength="255" class="form-control" name="class" value="<?php echo $class?>" />
+	</div>
+		
+    <div class='form-group'>
+        <label for='title'><?php echo t('Title')?>:</label>
+        <?php echo $form->text('title',$searchObj->title, array('maxlength' => 255));?>
+    </div>
+
+
+
+
+</fieldset>
+

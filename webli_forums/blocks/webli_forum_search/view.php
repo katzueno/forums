@@ -13,7 +13,7 @@ if( !Page::getCurrentPage()->getCollectionAttributeValue('forum_category') && !P
     || Page::getByID( Page::getCurrentPage()->getCollectionParentID() )->getCollectionAttributeValue('forum_category') && $display['forum_search_block'] ):
 ?>
 
-    <div class="forumSearch">
+    <div class="forumSearchWrapper <?php echo $class ?>">
         <form action="<?php echo $view->url($resultTargetURL)?>" method="get" class="forumSearchForm"><?php
             if (isset($title) && ($title !== '')) {
                 ?><h3><?php echo h($title)?></h3><?php

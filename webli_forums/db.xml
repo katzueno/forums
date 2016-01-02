@@ -111,6 +111,14 @@
 		<field name="forum_tags_block" type="I">
 			<unsigned />
 		</field>
+
+		<field name="notification" type="I">
+			<unsigned />
+		</field>
+
+		<field name="email_addresses" type="C" size="255">
+			<default value="" />
+		</field>		
 		
 		<field name="add_this_script" type="X2">
 			<default value="" />
@@ -165,6 +173,18 @@
 		
 		<field name="twitter_image" type="I">
 			<unsigned />
+		</field>
+
+		<field name="page_template" type="I">
+			<unsigned />
+		</field>
+
+		<field name="page_type" type="I">
+			<unsigned />
+		</field>
+		
+		<field name="optional_attributes" type="C" size="255">
+			<default value="" />
 		</field>
 	</table>
 </schema>

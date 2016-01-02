@@ -11,17 +11,35 @@ use PageList;
 use Permissions;
 use PageTemplate;
 use PageType;
+use Asset;
+use AssetList;
 use Concrete\Core\Conversation\Conversation;
 use Concrete\Core\Conversation\Message\MessageList;
 use \Concrete\Core\Conversation\Message\Message as ConversationMessage;
 use \Concrete\Core\Attribute\Key\CollectionKey as CollectionAttributeKey;
+use \Concrete\Core\Attribute\Set as AttributeSet;
+use \Concrete\Core\Page\Type\Composer\Control\Type\Type as ComposerControlType;
+use Concrete\Core\Page\Type\Composer\FormLayoutSet as FormLayoutSet;
 
 class Forums extends DashboardPageController {
+
+	public function on_start() 
+	{
+		$al = AssetList::getInstance();
 		
-	function view() {		
-		$this->requireAsset('redactor');
-		$this->requireAsset('core/lightbox');
+		$al->register('css', 'forumsDashboard', 'css/forumsDashboard.css', array(), 'webli_forums');
+		$al->register('javascript', 'forumsDashboard', 'js/forumsDashboard.js', array(), 'webli_forums');
+
+		$this->requireAsset('javascript', 'forumsDashboard');
+		$this->requireAsset('css', 'forumsDashboard');
 	
+		$this->requireAsset('redactor');
+		$this->requireAsset('core/lightbox');		
+	}
+
+	
+	function view()
+	{		
 		// Send some values to the view
 		
 		$active = $this->get_active();
@@ -51,8 +69,10 @@ class Forums extends DashboardPageController {
 		$this->set('pinnedPages', $this->get_pinned_pages());
 		$this->set('replies', $this->get_approved_conversations());
 		$this->set('unApprovedReplies', $this->get_unApproved_conversations());
+		$this->set('forumAttributes', $this->get_forum_attributes());
+		$this->set('pageTemplates', PageTemplate::getList());
+		$this->set('pageTypes', PageType::getList());
 	}
-
 
 
 	function get_saved_settings($cID)
@@ -67,6 +87,24 @@ class Forums extends DashboardPageController {
 		return $res;
 	}
 
+	
+	function get_forum_attributes()
+	{
+	
+		$atSet = AttributeSet::getByHandle('forums');
+		$atKeys = $atSet->getAttributeKeys();
+		
+		$banAtt = array('Forum Post', 'Forum Category', 'Pin Forum Post', 'Forum Image', 'Forum Email Address', 'Forum Name', 'Forum Post Approved'); 
+		
+		foreach($atKeys as $ak) {
+			if(!in_array($ak->akName, $banAtt)) {
+				$forumAttributes[$ak->getAttributeKeyID()] = $ak->akName;
+			}
+		}
+		
+		return $forumAttributes;
+	}
+	
 	
 	function get_forum_categories()
 	{
@@ -481,45 +519,71 @@ class Forums extends DashboardPageController {
 		$this->redirect($newPage->getCollectionPath());
 	}
 
-	function edit_post()
-	{
-		$vf = Loader::helper('validation/form');
-        $vf->setData($_POST['ccm_token']);
-        $vf->addRequiredToken('edit_post');
-        
-		if ($vf->test()) {
-			
-			// get page to be edited
-			$editPage = Page::getbyID($_POST['cID']);
-
-			// check if we need to move the page
-			if($_POST['forumSelect'] && $_POST['forumSelect'] != $editPage->getCollectionParentID()){	
-				$category = \Page::getByID($_POST['forumSelect']);
-				$editPage->move($category);
-			}
-			
-			// Save any changes
-			if($_POST['title']) $editPage->update(array('cName' => $_POST['title']));
-			if($_POST['forumPost']) $editPage->setAttribute('forum_post', $_POST['forumPost'] );
-			if($_POST['forumTags']) $editPage->setAttribute('forum_tags', $_POST['forumTags'] );
-
-			// save tags
-			$ak = CollectionAttributeKey::getByHandle('tags');
-			$ak->saveAttributeForm($editPage);
-			
-			$editPage->reindex();
-			
-		} else {
-			die("Access Denied.");
-		}
-		
-		$this->save_active_tab($_POST['activeTab']);
-		$this->redirect(Page::getCurrentPage()->getCollectionPath());
-	}
-	
+//	function edit_post()
+//	{
+//		$vf = Loader::helper('validation/form');
+//        $vf->setData($_POST['ccm_token']);
+//        $vf->addRequiredToken('edit_post');
+//        
+//		if ($vf->test()) {
+//			
+//			// get page to be edited
+//			$editPage = Page::getbyID($_POST['cID']);
+//
+//			// check if we need to move the page
+//			if($_POST['forumSelect'] && $_POST['forumSelect'] != $editPage->getCollectionParentID()){	
+//				$category = \Page::getByID($_POST['forumSelect']);
+//				$editPage->move($category);
+//			}
+//			
+//			// Save any changes
+//			if($_POST['title']) $editPage->update(array('cName' => $_POST['title']));
+//			if($_POST['forumPost']) $editPage->setAttribute('forum_post', $_POST['forumPost'] );
+//			if($_POST['forumTags']) $editPage->setAttribute('forum_tags', $_POST['forumTags'] );
+//
+//			// save tags
+//			$ak = CollectionAttributeKey::getByHandle('tags');
+//			$ak->saveAttributeForm($editPage);
+//			
+//			$editPage->reindex();
+//			
+//		} else {
+//			die("Access Denied.");
+//		}
+//		
+//		$this->save_active_tab($_POST['activeTab']);
+//		$this->redirect(Page::getCurrentPage()->getCollectionPath());
+//	}
+//	
 
 	function save_settings()
 	{
+		
+		if($_POST['optional_attributes']) {
+			$forumAttributes = serialize($_POST['optional_attributes']);
+			
+			/* Get blog_post page template */
+			$pageType = \PageType::getByID($_POST['page_type']);
+			$ctTemplate = $pageType->getPageTypeDefaultPageTemplateObject();
+			$blogPostTemplate = $pageType->getPageTypePageTemplateDefaultPageObject($ctTemplate);
+			
+			// Drop the Optional Attribute Composer Layout
+			$db = Loader::db();
+			$db->Execute('delete from PageTypeComposerFormLayoutSets where ptComposerFormLayoutSetName = ?', array('Optional Attributes'));
+			
+			/* Add Composer Layouts */
+			$post = $pageType->addPageTypeComposerFormLayoutSet('Optional Attributes', 'Optional Attributes');
+			
+			/* Add Optional Attributes */
+			$cct = ComposerControlType::getByHandle('collection_attribute');
+		
+			foreach($_POST['optional_attributes'] as $oa) {	
+				$control = $cct->getPageTypeComposerControlByIdentifier($oa);
+				$control->addToPageTypeComposerFormLayoutSet($post);
+			}
+			
+		}
+		
 		$db = Loader::db();
 		// Drop database row
 		$db->Execute('DELETE FROM btWebliForums WHERE cID= ?',$_POST['cID']);
@@ -558,7 +622,12 @@ class Forums extends DashboardPageController {
 			forum_search_block,
 			forum_archive_block,
 			forum_tags_block,
-			display_avatars) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
+			display_avatars,
+			notification,
+			email_addresses,
+			page_template,
+			page_type,
+			optional_attributes) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
 			array( $_POST['cID'],
 				$_POST['display_title'],
 				$_POST['display_date'],
@@ -592,15 +661,16 @@ class Forums extends DashboardPageController {
 				$_POST['forum_search_block'],
 				$_POST['forum_archive_block'],
 				$_POST['forum_tags_block'],
-				$_POST['display_avatars']));
+				$_POST['display_avatars'],
+				$_POST['notification'],
+				$_POST['email_addresses'],
+				$_POST['page_template'],
+				$_POST['page_type'],
+				$forumAttributes));
 				
 		$this->save_active_category($_POST['cID']);
 		$this->save_active_tab($_POST['activeTab']);
 		$this->redirect(Page::getCurrentPage()->getCollectionPath());
 	}	
-		
-		//$message .=  t("Toolbar Updated\n");	
-		//// Send Update messages
-		//$this->set('message', $message);
-	
+
 }

@@ -6,7 +6,7 @@ if( !Page::getCurrentPage()->getCollectionAttributeValue('forum_category') && !P
     || Page::getByID( Page::getCurrentPage()->getCollectionParentID() )->getCollectionAttributeValue('forum_category') && $display['forum_tags_block'] ):
 ?>
 	 
-	 <div class="forumTags <?php echo $blockClass?>">
+	 <div class="forumTagsWrapper <?php echo $class?>">
 		  <h3><?php echo $title ?></h3>
 		  <div class="forumTagsList">
 			<?php echo $tags; ?>

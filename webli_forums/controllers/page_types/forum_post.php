@@ -29,10 +29,10 @@ class forumPost extends PageTypeController
 		}
 	}
 
+	
     public function view()
     {
         $this->set('forumAdmin', $this->forumAdmin());
-		//$this->set('isApproved', Page::getCurrentPage()->getCollectionAttributeValue('forum_post_approved'));
     }
 
     

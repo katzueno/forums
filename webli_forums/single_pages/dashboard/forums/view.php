@@ -5,173 +5,6 @@ $fp = FilePermissions::getGlobal();
 $tp = new TaskPermission();
 $u = new User();
 ?>
-
-<style>	
-	.forumPostPreview{
-		padding:10px;
-		max-height:150px;
-		overflow:auto;
-	}
-
-	.forumPostEdit{
-		display:none;
-		padding:10px;
-	}
-	
-	textarea{
-		padding: 2px 5px;
-	}
-	
-	.redactor-editor{
-		background-color: #fff;
-		padding: 2px 5px;
-	 }
-
-	.forumPostEdit .well{
-		background-color: #fff;
-	 }
-	 
-	input.hasDatepicker {
-		width: 85px !important;
-	}
-
-	.ccm-ui .table tbody td:hover{
-		background-color: #F5F5F5 !important;
-	}
-
-	.form-inline {
-		width: 307px;
-	}
-
-	.ccm-ui .table tbody td:hover{
-		background-color: #F5F5F5 !important;
-	}
-
-	.forumPostEdit,
-	.newPost{
-		background-color: #F5F5F5;
-		padding: 20px;
-	}
-	
-	#twitterPostBox label{
-		width: 150px;
-		margin-bottom: 10px;
-	}
-	
-	#twitterPostBox select {
-		margin-left: 153px;
-	}
-	
-	textarea{
-		width: 100%;
-	}
-	
-	.open-popup-link {
-	  display: block;
-	  font-size: 24px;
-	  text-align: center;
-	}
-	
-	th{
-		cursor: default !important;
-	}
-
-	.ccm-pagination-wrapper {
-		display: table;
-		font-size: 9px;
-		margin: 0 auto;
-	}
-	  
-	.forumDashboardPost{
-		max-height:100px;
-		overflow: auto;
-	}
-
-	.existingAttrValue,
-	.newAttrValue{
-	   display: inline-block;
-	   margin-right: 5px;
-	 }
-
-	.ccm-input-date,
-	#public_date_h,
-	#public_date_m,
-	#public_date_a{
-	  font-size: 12px !important;
-	}
-</style>
-
-<script>
-	$(document).ready(function(){
-	
-		// Show/hide Add This Follow with checkbox click-->		
-		$("#add_this").click(function(){
-			if ($("#add_this").is(":checked")) {
-				$("#addThisBox").show();
-			} else {     
-				 $("#addThisBox").hide();
-			}
-		});
-	
-		if ($("#add_this").is(":checked")) {
-			$("#addThisBox").show();
-		} else {     
-			$("#addThisBox").hide();
-		}   
-	
-
-		// Show/hide Share This with checkbox click-->		
-		$("#share_this").click(function(){
-			if ($("#share_this").is(":checked")) {
-				$("#shareThisBox").show();
-			} else {     
-				 $("#shareThisBox").hide();
-			}
-		});
-	
-		
-		if ($("#share_this").is(":checked")) {
-			$("#shareThisBox").show();
-		} else {     
-			$("#shareThisBox").hide();
-		}
-	
-		// Show/hide Twitter Post with checkbox click-->		
-		$("#twitter_post").click(function(){
-			if ($("#twitter_post").is(":checked")) {
-				$("#twitterPostBox").show();
-			} else {     
-				 $("#twitterPostBox").hide();
-			}
-		});
-	
-		if ($("#twitter_post").is(":checked")) {
-			$("#twitterPostBox").show();
-		} else {     
-			$("#twitterPostBox").hide();
-		}
-	
-	
-		// Show/hide Facebook Post with checkbox click-->		
-		$("#facebook_post").click(function(){
-			if ($("#facebook_post").is(":checked")) {
-				$("#facebookPostBox").show();
-			} else {     
-				 $("#facebookPostBox").hide();
-			}
-		});
-	
-		if ($("#facebook_post").is(":checked")) {
-			$("#facebookPostBox").show();
-		} else {     
-			$("#facebookPostBox").hide();
-		}
-		
-	
-		$('[data-toggle="tooltip"]').tooltip();   
-		
-	});
-</script>
 		
 <script type="text/javascript">
 	$(document).ready(function() {
@@ -184,10 +17,9 @@ $u = new User();
 				lightbox: true
 			}
 		});
-});
-</script>
+			
+	});
 
-<script type="text/javascript">
 	function confirmDelete()
 	{
 		var agree=confirm("<?php echo t('Are you sure you want to DELETE THIS PAGE?  This will remove the page from the website. THIS ACTION CANNOT BE UNDONE.') ?>");
@@ -196,9 +28,7 @@ $u = new User();
 		else
 		return false ;
 	}
-</script>
 
-<script type="text/javascript">
 	function confirmReplyDelete()
 	{
 		var agree=confirm("<?php echo t('Are you sure you want to DELETE THIS REPLY? You can undelete replies in the Conversations Messages Dashboard Page') ?>");
@@ -206,8 +36,11 @@ $u = new User();
 		return true ;
 		else
 		return false ;
-	}
+	}	
+	
 </script>
+
+
 
 <p>
 	<?php
@@ -333,7 +166,71 @@ $u = new User();
 						</div>
 					</td>
 				</tr>
+
+				<tr>
+					<td colspan="1">
+						<label>Page Type</label>
+						<br/>
+						<select name="page_type">
+						<?php 
+						foreach($pageTypes as $ptype){ ?>
+							<option value="<?php echo $ptype->getPageTypeID() ?>" <?php if($settings['page_type'] == $ptype->getPageTypeID()) echo 'selected="selected"'?>><?php echo $ptype->getPageTypeDisplayName() ?></option>
+						<?php	
+						}
+						?>
+						</select>
+						<br/>
+						<label>Page Template</label>
+						<br/>
+						<select name="page_template">
+						<?php
+						foreach($pageTemplates as $pt){ ?>
+							<option value="<?php echo $pt->getPageTemplateID() ?>" <?php if($settings['page_template'] == $pt->getPageTemplateID()) echo 'selected="selected"'?>><?php echo $pt->getPageTemplateName() ?></option>
+						<?php	
+						}
+						?>
+						</select>
+					</td>
+	
+					<td colspan="3">
+						<label>Optional Attributes</label>
+						<br/>
+						<?php
+						if($forumAttributes) {
+							$optionalAttributes = unserialize($settings['optional_attributes']);
+							
+							foreach($forumAttributes as $key => $val){ ?>
+								<div style="width: 24%;display: inline-block;">
+								<input type="checkbox" name="optional_attributes[]" value="<?php echo $key ?>" <?php if($optionalAttributes && in_array($key, $optionalAttributes)) echo 'checked="checked"'?>> <?php echo $val ?>
+								</div>
+							<?php
+							}
+						}
+						?>
+					</td>
+				</tr>
+
+
+
+
 				
+				<tr>
+					<td colspan="4">
+						<input id="notification" type="checkbox" name="notification" value="1" <?php if($settings['notification']) echo 'checked="checked"'?>> <?php echo t('E-Mail Notification of New Forum Post') ?>
+						<div id="emailNotification" style="display: none">
+							<label><?php echo t('Enter recipient E-Mail Addresses seperated by commas') ?></label>
+							<br/>
+							<input type="text" maxlength="255" name="email_addresses" value="<?php echo $settings['email_addresses'] ?>" style="width: 100%"/>
+						</div>
+
+							
+							
+
+					</td>
+					
+
+				
+				</tr>
 				<tr>
 					<td colspan="2">
 						<div id="addThis"class="addThis">
@@ -463,6 +360,21 @@ $u = new User();
 					</div>
 				<?php
 				}
+		
+				if($optionalAttributes) {
+					foreach($optionalAttributes as $optAtt){
+						$ak = CollectionAttributeKey::getByID($optAtt);
+						if(is_object($ak)){
+							if($ak->atHandle != 'boolean') {
+								?>
+								<label><?php echo $ak->akName ?></label>
+							<?php
+							} 
+							echo $ak->render('form');
+							echo '<br/>';
+						}
+					}		
+				}
 				
 				if($newPostSettings['display_tags']) { ?>
 					<div class="form-group tags">
@@ -520,6 +432,7 @@ $u = new User();
 					<th></th>
 					<th></th>
 					<th></th>
+					<th></th>
 				</tr>
 			</thead>
 			
@@ -567,124 +480,37 @@ $u = new User();
 									<button type="submit" class="forumBanButton btn btn-default"><?php echo t('unApprove') ?></button>
 								</form>
 							</td>
-							
+					
+							<td width=75>
+								<?php
+								if($p->getCollectionAttributeValue('forum_pin')): ?>
+									<form method="POST" action="<?php echo $this->action('un_pin_page') ?>">
+										<input type="hidden" name="cID" value="<?php echo $p->getCollectionID() ?>"/>
+										<input type="hidden" name="activeTab" value="forumPosts">
+										<?php echo Loader::helper('validation/token')->output('un_pin_page') ?>
+										<button type="submit" class="btn btn-default"><?php echo t('UnPin') ?></button>
+									</form>
+								<?php
+								else: ?>
+									<form method="POST" action="<?php echo $this->action('pin_page') ?>">
+										<input type="hidden" name="cID" value="<?php echo $p->getCollectionID() ?>"/>
+										<input type="hidden" name="activeTab" value="forumPosts">
+										<?php echo Loader::helper('validation/token')->output('pin_page') ?>
+										<button type="submit" class="btn btn-default"><?php echo t('Pin') ?></button>
+									</form>
+								<?php
+								endif; ?>
+							</td>
+
 							<td style="padding: 14px 0 8px 0; width:32px;">
-								<a href="#" id="editPost<?php echo $p->getCollectionID()?>"><i class="fa fa-edit" style="font-size:25px;"></i></a>
-								<script>
-									$('#editPost<?php echo $p->getCollectionID()?>').click(function() {
-										$('.toggle<?php echo $p->getCollectionID()?>').toggle();
-										return false;
-									});
-								</script>								
+								<a href="/index.php?cID=<?php echo $p->getCollectionID()?>&ctask=check-out-first"><i class="fa fa-edit" style="font-size:25px;"></i></a>				
 							</td>
 						</tr>
 						
 						<tr>
-							<td colspan="7">
-								<div class="forumPostPreview toggle<?php echo $p->getCollectionID()?>"> 
+							<td colspan="8">
+								<div class="forumPostPreview"> 
 									<?php echo $p->getCollectionAttributeValue('forum_post')?>
-								</div>
-								
-							<div class="forumPostEdit toggle<?php echo $p->getCollectionID()?>"> 
-									<form method="POST" action="<?php echo $this->action('edit_post') ?>">
-										<?php Loader::helper('validation/token')->output('edit_post') ?>
-										<input type="hidden" name="cID" value="<?php echo $p->getCollectionID() ?>"/>
-										<input type="hidden" name="activeTab" value="forumPosts">
-										<?php
-										if(count($forumCategories) > 1) { ?>
-											<label for="forumSelect"><?php echo t('Forum') ?></label>
-											<br/>
-											<select style="font-size:14px;" name="forumSelect">
-											<?php 
-											foreach($forumCategories as $fp) { ?>	
-												<option value="<?php echo $fp->getCollectionID() ?>" <?php if($fp->getCollectionID() == Page::getByID($p->getCollectionParentID())->getCollectionID()) echo 'selected="selected"' ?>><?php echo $fp->getCollectionName() ?></option>
-											<?php
-											} ?>
-											</select>
-											<br/>
-											<br/>
-										<?php
-										} elseif(count($forumPages) == 1) { ?>
-										  <input type="hidden" name="forumSelect" value="<?php echo $forumPages[0]->getCollectionID() ?>"/>
-										<?php 
-										} ?>
-										
-										<div class="form-group title">
-											<label><?php echo t('Title') ?></label>
-											<br/>
-											<input  maxlength="255" style=width:99% !important" id="title" type="text" name="title" value="<?php echo $p->getCollectionName() ?>" required>
-										</div>
-										
-										<div class="form-group forumPost">
-											<label><?php echo t('Message') ?></label>
-											<textarea class="redactor-edit" name="forumPost" required>
-												<?php echo $p->getCollectionAttributeValue('forum_post')?>
-											</textarea>
-										</div>
-	
-										<?php
-										if($settings['display_image']) { ?>
-											<div class="form-group forumImage">
-												<label for="forumImage"><?php echo t('Forum Image') ?></label>
-												<?php
-												echo $al->file('forumImage', 'forumImage', t('Choose Image'));?>
-											</div>
-										<?php
-										} ?>
-										
-										<?php
-										if($settings['display_tags']) { ?>
-											<div class="form-group tags">
-											   <div class="tagInput">
-												  <label for="tags"><?php echo t('Tags') ?></label>
-												  <?php
-												  $ak = CollectionAttributeKey::getByHandle('tags');
-												  echo $ak->render('form', $p->getAttributeValueObject($ak), true);
-												  ?>
-											   </div>
-											</div>
-										<?php
-										} ?>
-
-										<button style="float: left" type="submit" <button class="btn btn-default"><?php echo t('Save') ?></button>
-									</form>
-										 
-									<button style="float: left; margin-left:5px;" onclick="$.magnificPopup.close();"class="btn btn-default"><?php echo t('Cancel') ?></button>
-										 
-									<form method="POST" action="<?php echo $this->action('delete_page') ?>">
-										<input type="hidden" name="cID" value="<?php echo $p->getCollectionID() ?>"/>
-										<input type="hidden" name="activeTab" value="forumPosts">
-										<?php echo Loader::helper('validation/token')->output('delete_page') ?>
-										<button style="float: right" onClick="return confirmDelete()" class="btn btn-default"><?php echo t('Delete') ?></button>
-									</form>
-									
-									<form method="POST" action="<?php echo $this->action('unapprove_page') ?>">
-										<input type="hidden" name="cID" value="<?php echo $p->getCollectionID() ?>"/>
-										<input type="hidden" name="activeTab" value="forumPosts">
-										<?php echo Loader::helper('validation/token')->output('unapprove_page') ?>
-										<button style="float: right; margin-right: 5px;" type="submit" class="btn btn-default"><?php echo t('unApprove') ?></button>
-									</form>
-									
-									<?php
-									if($p->getCollectionAttributeValue('forum_pin')): ?>
-										<form method="POST" action="<?php echo $this->action('un_pin_page') ?>">
-											<input type="hidden" name="cID" value="<?php echo $p->getCollectionID() ?>"/>
-											<input type="hidden" name="activeTab" value="forumPosts">
-											<?php echo Loader::helper('validation/token')->output('un_pin_page') ?>
-											<button style="float: right; margin-right: 5px;" type="submit" class="btn btn-default"><?php echo t('UnPin') ?></button>
-										</form>
-									<?php
-									else: ?>
-										<form method="POST" action="<?php echo $this->action('pin_page') ?>">
-											<input type="hidden" name="cID" value="<?php echo $p->getCollectionID() ?>"/>
-											<input type="hidden" name="activeTab" value="forumPosts">
-											<?php echo Loader::helper('validation/token')->output('pin_page') ?>
-											<button style="float: right; margin-right: 5px;" type="submit" class="btn btn-default"><?php echo t('Pin') ?></button>
-										</form>
-									<?php
-									endif; ?>
-									
-									<div style="clear:both"></div>
 								</div>
 							</td>
 						</tr>
@@ -746,157 +572,51 @@ $u = new User();
 					 } else { 
 						$author = UserInfo::getByID($up->getCollectionUserID())->getUserName();
 					 } ?>
-						<tr>
-							<td>
-								<?php echo $up->getCollectionDatePublic() ?>
-							</td>
-							
-							<td>
-								<a href="<?php echo $up->getCollectionPath() ?>"><?php echo $up->getCollectionName() ?></a>
-							</td>
-							
-							<td>
-								<a href="<?php echo Page::getByID($up->getCollectionParentID())->getCollectionPath() ?>"><?php echo Page::getByID($up->getCollectionParentID())->getCollectionName() ?>
-							</td>
-							
-							<td>
-								<?php echo $author;
-								if($up->getCollectionAttributeValue('forum_email') ) echo '<br/>' . $up->getCollectionAttributeValue("forum_email") ?>
-							</td>
-							
-							<td width=75>
-								<form method="POST" action="<?php echo $this->action('delete_page') ?>">
-									<input type="hidden" name="cID" value="<?php echo $up->getCollectionID() ?>"/>
-									<input type="hidden" name="activeTab" value="unapproved">
-									<?php echo Loader::helper('validation/token')->output('delete_page') ?>
-									<button onClick="return confirmDelete()" type="submit" class="forumDeleteButton btn btn-default"><?php echo t('Delete') ?></button>
-								</form>
-							</td>
-							
-							<td width=95>
-								<form method="POST" action="<?php echo $this->action('approve_page') ?>">
-									<input type="hidden" name="cID" value="<?php echo $up->getCollectionID() ?>"/>
-									<input type="hidden" name="activeTab" value="unapproved">
-									<?php echo Loader::helper('validation/token')->output('approve_page') ?>
-									<button type="submit" class="forumBanButton btn btn-default"><?php echo t('Approve') ?></button>
-								</form>
-							</td>
-							
-							<td style="padding: 14px 0 8px 0; width:32px;">
-								<a href="#" id="editUnapprovedPost<?php echo $up->getCollectionID()?>"><i class="fa fa-edit" style="font-size:25px;"></i></a>
-								<script>
-									$('#editUnapprovedPost<?php echo $up->getCollectionID()?>').click(function() {
-										$('.toggle<?php echo $up->getCollectionID()?>').toggle();
-										return false;
-									});
-								</script>								
-							</td>
-					</tr>
 					<tr>
-					<td colspan="7">
-						<div class="forumPostPreview toggle<?php echo $up->getCollectionID()?>" >
-							<?php echo $up->getCollectionAttributeValue('forum_post')?>
-						</div>
+						<td>
+							<?php echo $up->getCollectionDatePublic() ?>
+						</td>
 						
-						<div class="forumPostEdit toggle<?php echo $up->getCollectionID()?>">
-							<form method="POST" action="<?php echo $this->action('edit_post') ?>">
-								<?php Loader::helper('validation/token')->output('edit_post') ?>
-								<input type="hidden" name="cID" value="<?php echo $up->getCollectionID() ?>"/>
-								<input type="hidden" name="activeTab" value="unapproved">
-								<?php
-								if(count($forumCategories) > 1) { ?>
-									<label for="forumSelect"><?php echo t('Forum') ?></label>
-									<br/>
-									<select style="font-size:14px;" name="forumSelect">
-									<?php 
-									foreach($forumCategories as $fp) { ?>	
-										<option value="<?php echo $fp->getCollectionID() ?>" <?php if($fp->getCollectionID() == Page::getByID($up->getCollectionParentID())->getCollectionID()) echo 'selected="selected"' ?>><?php echo $fp->getCollectionName() ?></option>
-									<?php
-									} ?>
-									</select>
-									<br/>
-									<br/>
-								<?php
-								} elseif(count($forumPages) == 1) { ?>
-								  <input type="hidden" name="forumSelect" value="<?php echo $forumPages[0]->getCollectionID() ?>"/>
-								<?php 
-								} ?>
-								
-								<div class="form-group title">
-									<label><?php echo t('Title') ?></label>
-									<br/>
-									<input  maxlength="255" style=width:99% !important" id="title" type="text" name="title" value="<?php echo $up->getCollectionName() ?>" required>
-								</div>
-								
-								<div class="form-group forumPost">
-									<label><?php echo t('Message') ?></label>
-									<textarea class="redactor-edit" name="forumPost" required>
-									<?php echo $up->getCollectionAttributeValue('forum_post')?>
-									</textarea>
-								</div>
-								
-								<?php
-								if($settings['display_image']) { ?>
-									<div class="form-group forumImage">
-										<label for="forumImage"><?php echo t('Forum Image') ?></label>
-										<?php
-										echo $al->file('forumImage', 'forumImage', t('Choose Image'));?>
-									</div>
-								<?php
-								} ?>
-								
-								<?php
-								if($settings['display_tags']) { ?>
-									<div class="form-group tags">
-									   <div class="tagInput">
-										  <label for="tags"><?php echo t('Tags') ?></label>
-										  <?php
-										  $ak = CollectionAttributeKey::getByHandle('tags');
-										  echo $ak->render('form', $up->getAttributeValueObject($ak), true);
-										  ?>
-									   </div>
-									</div>
-								<?php
-								} ?>
-								
-								<button style="float: left" type="submit" <button class="btn btn-default"><?php echo t('Save') ?></button>
-							</form>
-								 
-							<button style="float: left; margin-left:5px;" onclick="$.magnificPopup.close();"class="btn btn-default">Cancel</button>
-								 
+						<td>
+							<a href="<?php echo $up->getCollectionPath() ?>"><?php echo $up->getCollectionName() ?></a>
+						</td>
+						
+						<td>
+							<a href="<?php echo Page::getByID($up->getCollectionParentID())->getCollectionPath() ?>"><?php echo Page::getByID($up->getCollectionParentID())->getCollectionName() ?>
+						</td>
+						
+						<td>
+							<?php echo $author;
+							if($up->getCollectionAttributeValue('forum_email') ) echo '<br/>' . $up->getCollectionAttributeValue("forum_email") ?>
+						</td>
+						
+						<td width=75>
 							<form method="POST" action="<?php echo $this->action('delete_page') ?>">
 								<input type="hidden" name="cID" value="<?php echo $up->getCollectionID() ?>"/>
 								<input type="hidden" name="activeTab" value="unapproved">
 								<?php echo Loader::helper('validation/token')->output('delete_page') ?>
-								<button style="float: right" onClick="return confirmDelete()" class="btn btn-default"><?php echo t('Delete') ?></button>
+								<button onClick="return confirmDelete()" type="submit" class="forumDeleteButton btn btn-default"><?php echo t('Delete') ?></button>
 							</form>
-							
+						</td>
+						
+						<td width=95>
 							<form method="POST" action="<?php echo $this->action('approve_page') ?>">
 								<input type="hidden" name="cID" value="<?php echo $up->getCollectionID() ?>"/>
 								<input type="hidden" name="activeTab" value="unapproved">
 								<?php echo Loader::helper('validation/token')->output('approve_page') ?>
-								<button style="float: right; margin-right: 5px;" type="submit" class="btn btn-default"><?php echo t('Approve') ?></button>
+								<button type="submit" class="forumBanButton btn btn-default"><?php echo t('Approve') ?></button>
 							</form>
-							
-							<?php
-							if($up->getCollectionAttributeValue('forum_pin')): ?>
-								<form method="POST" action="<?php echo $this->action('un_pin_page') ?>">
-									<input type="hidden" name="cID" value="<?php echo $up->getCollectionID() ?>"/>
-									<input type="hidden" name="activeTab" value="unnaproved">
-									<?php echo Loader::helper('validation/token')->output('un_pin_page') ?>
-									<button style="float: right; margin-right: 5px;" type="submit" class="btn btn-default"><?php echo t('UnPin') ?></button>
-								</form>
-							<?php
-							else: ?>
-								<form method="POST" action="<?php echo $this->action('pin_page') ?>">
-									<input type="hidden" name="cID" value="<?php echo $up->getCollectionID() ?>"/>
-									<input type="hidden" name="activeTab" value="unapproved">
-									<?php echo Loader::helper('validation/token')->output('pin_page') ?>
-									<button style="float: right; margin-right: 5px;" type="submit" class="btn btn-default"><?php echo t('Pin') ?></button>
-								</form>
-							<?php
-							endif; ?>
-							<div style="clear:both"></div>
+						</td>
+						
+						<td style="padding: 14px 0 8px 0; width:32px;">
+							<a href="/index.php?cID=<?php echo $up->getCollectionID()?>&ctask=check-out-first"><i class="fa fa-edit" style="font-size:25px;"></i></a>	
+						</td>
+					</tr>
+						
+					<tr>
+					<td colspan="7">
+						<div class="forumPostPreview" >
+							<?php echo $up->getCollectionAttributeValue('forum_post')?>
 						</div>
 					</td>
 				</tr>
@@ -993,119 +713,13 @@ $u = new User();
 							</td>
 							
 							<td style="padding: 14px 0 8px 0; width:32px;">
-								<a href="#" id="pinnedPost<?php echo $pin->getCollectionID()?>"><i class="fa fa-edit" style="font-size:25px;"></i></a>
-								<script>
-									$('#pinnedPost<?php echo $pin->getCollectionID()?>').click(function() {
-										$('.toggle<?php echo $pin->getCollectionID()?>').toggle();
-										return false;
-									});
-								</script>								
+								<a href="/index.php?cID=<?php echo $pin->getCollectionID()?>&ctask=check-out-first"><i class="fa fa-edit" style="font-size:25px;"></i></a>		
 							</td>
 						</tr>
 						<tr>
 							<td colspan="7">
-								<div class="forumPostPreview toggle<?php echo $pin->getCollectionID()?>" >
+								<div class="forumPostPreview" >
 									<?php echo $pin->getCollectionAttributeValue('forum_post')?>
-								</div>
-								
-								<div class="forumPostEdit toggle<?php echo $pin->getCollectionID()?>">
-									<form method="POST" action="<?php echo $this->action('edit_post') ?>">
-										<?php Loader::helper('validation/token')->output('edit_post') ?>
-										<input type="hidden" name="cID" value="<?php echo $pin->getCollectionID() ?>"/>
-										<input type="hidden" name="activeTab" value="pinned">
-										<?php
-										if(count($forumCategories) > 1) { ?>
-											<label for="forumSelect"><?php echo t('Forum') ?></label>
-											<br/>
-											<select style="font-size:14px;" name="forumSelect">
-											<?php 
-											foreach($forumCategories as $fp) { ?>	
-												<option value="<?php echo $fp->getCollectionID() ?>" <?php if($fp->getCollectionID() == Page::getByID($pin->getCollectionParentID())->getCollectionID()) echo 'selected="selected"' ?>><?php echo $fp->getCollectionName() ?></option>
-											<?php
-											} ?>
-											</select>
-											<br/>
-											<br/>
-										<?php
-										} elseif(count($forumPages) == 1) { ?>
-										  <input type="hidden" name="forumSelect" value="<?php echo $forumPages[0]->getCollectionID() ?>"/>
-										<?php 
-										} ?>
-										
-										<div class="form-group title">
-										<label><?php echo t('Title') ?></label>
-										<br/>
-										<input maxlength="255" style=width:99% !important" id="title" type="text" name="title" value="<?php echo $pin->getCollectionName() ?>" required>
-										</div>
-										
-										<div class="form-group forumPost">
-											<label><?php echo t('Message') ?></label>
-											<textarea class="redactor-edit" name="forumPost" required>
-											<?php echo $pin->getCollectionAttributeValue('forum_post')?>
-											</textarea>
-										</div>
-										
-										<?php
-										if($settings['display_image']) { ?>
-											<div class="form-group forumImage">
-												<label for="forumImage"><?php echo t('Forum Image') ?></label>
-												<?php
-												echo $al->file('forumImage', 'forumImage', t('Choose Image'));?>
-											</div>
-										<?php
-										} ?>
-										
-										<?php
-										if($settings['display_tags']) { ?>
-											<div class="form-group tags">
-											   <div class="tagInput">
-												  <label for="tags"><?php echo t('Tags') ?></label>
-												  <?php
-												  $ak = CollectionAttributeKey::getByHandle('tags');
-												  echo $ak->render('form', $pin->getAttributeValueObject($ak), true);
-												  ?>
-											   </div>
-											</div>
-										<?php
-										} ?>
-										
-										<button style="float: left" type="submit" <button class="btn btn-default"><?php echo t('Save') ?></button>
-									</form>
-										 
-									<button style="float: left; margin-left:5px;" onclick="$.magnificPopup.close();"class="btn btn-default">Cancel</button>
-										 
-									<form method="POST" action="<?php echo $this->action('delete_page') ?>">
-										<input type="hidden" name="cID" value="<?php echo $pin->getCollectionID() ?>"/>
-										<input type="hidden" name="activeTab" value="pinned">
-										<?php echo Loader::helper('validation/token')->output('delete_page') ?>
-										<button style="float: right" onClick="return confirmDelete()" class="btn btn-default"><?php echo t('Delete') ?></button>
-									</form>
-										
-									<?php
-									if($pin->getCollectionAttributeValue('forum_post_approved')): ?>
-										<form method="POST" action="<?php echo $this->action('unapprove_page') ?>">
-											<input type="hidden" name="cID" value="<?php echo $pin->getCollectionID() ?>"/>
-											<input type="hidden" name="activeTab" value="pinned">
-											<?php echo Loader::helper('validation/token')->output('unapprove_page') ?>
-											<button style="float: right; margin-right: 5px;" type="submit" class="btn btn-default"><?php echo t('unApprove') ?></button>
-										</form>
-									<?php
-									else: ?>
-										<form method="POST" action="<?php echo $this->action('approve_page') ?>">
-											<input type="hidden" name="cID" value="<?php echo $pin->getCollectionID() ?>"/>
-											<input type="hidden" name="activeTab" value="pinned">
-											<?php echo Loader::helper('validation/token')->output('approve_page') ?>
-											<button style="float: right; margin-right: 5px;" type="submit" class="btn btn-default"><?php echo t('Approve') ?></button>
-										</form>
-									<?php
-									endif; ?>		
-									<form method="POST" action="<?php echo $this->action('un_pin_page') ?>">
-										<input type="hidden" name="cID" value="<?php echo $pin->getCollectionID() ?>"/>
-										<input type="hidden" name="activeTab" value="pinned">
-										<?php echo Loader::helper('validation/token')->output('un_pin_page') ?>
-										<button style="float: right; margin-right: 5px;" type="submit" class="btn btn-default"><?php echo t('UnPin') ?></button>
-									</form>
-									<div style="clear:both"></div>
 								</div>
 							</td>
 						</tr>
@@ -1471,9 +1085,45 @@ $u = new User();
 		  </p>
 			
 		  <p>
+		  <br/>
+		  <h4>Settings</h4>
+		  On the Settings page you can select the defaults for each Forum Category.  The top row of checkboxes allows you to select the options you
+		  want displayed on your Forum pages.
+		  <br/>
+		  <br/>
+		  <label>Page Types / Page Template</label>
+		  <br/>
+		  For advanced users, you can select a different Page Type or Page Template than the default /"Forum Post/".
+		  </br/>
+		  To make a new Page Template copy packages/webli_forums/page_templates/forum_post.php to your theme or page_templates directory
+		  and make any changes you want to the file.
+		  <br/>
+		  <br/>
+		  To make a new Page Type, Create the page Type in your Concrete5 dashboard and make a new Page Type Controller by copying and renaming
+		  packages/webli_forums/controllers/page_types/forum_post.php and change the class at the beginning of the file.  The controller is necessary
+		  for the options in Forum Settings to work properly.
+		  <br/>
+		  <br/>
+		  <label>Optional Attributes</label>
+		  <br/>
+		  You can add additional attributes to the Forums Attribute Set in the Concrete5 dashboard and they will become available for your forum.  Check the checkbox
+		  for attributes you want to use for a forum Category.  Using Optional Attributes may require some styling or modifications to the forum page template.
+		  <br/>
+		  <br/>
+		  <label>Add This / Share This</label>
+		  Visit <a target="blank" href="http://www.addthis.com">www.addthis.com</a> for the code to enable social icons.
+		  <br/>
+		  <br/>
+		  <label>Pinned Posts</label>
+		  <br/>
+		  This function is not available yet. Coming soon.
+		  </p>
+		  
+		  <p>
 		  To be continued..
 		  </p>
 		   
 		   
 		'); ?>
 </div>
+

@@ -42,72 +42,46 @@ $form = Loader::helper('form/page_selector');
 		</fieldset>
 		
 		<fieldset>
-        <legend><?php echo t('Filtering') ?></legend>
-        <div class="checkbox">
-            <label>
-                <input <?php if (!is_object($featuredAttribute)) { ?> disabled <?php } ?> type="checkbox" name="displayFeaturedOnly"
-                                                                       value="1" <?php if ($displayFeaturedOnly == 1) { ?> checked <?php } ?>
-                                                                       style="vertical-align: middle"/>
-                <?php echo t('Featured pages only.') ?>
-            </label>
-            <?php if (!is_object($featuredAttribute)) { ?>
-                <span class="help-block"><?php echo
-                    t(
-                        '(<strong>Note</strong>: You must create the "is_featured" page attribute first.)'); ?></span>
-            <?php } ?>
-        </div>
-
-        <div class="checkbox">
-            <label>
-                <input type="checkbox" name="forum_pin"
-                       value="1" <?php if ($forum_pin == 1) { ?> checked <?php } ?> />
-                <?php echo t('Pin posts to top of list.') ?>
-				<span class="help-block"><?php echo
-                    t('(<strong>Note</strong>: Set the forum_pin page attribute on pages you want pinned at top.)'); ?></span>
-            </label>
-        </div>
-
-        <div class="checkbox">
-            <label>
-                <input type="checkbox" name="expiration_date"
-                       value="1" <?php if ($expiration_date == 1) { ?> checked <?php } ?> />
-                <?php echo t('Do not show Expired Posts.') ?>
-				<span class="help-block"><?php echo
-                    t('(<strong>Note</strong>: Set the expiration_date page attribute on pages you do not want displayed after a specific date.)'); ?></span>
-            </label>
-        </div>
-		
-        <div class="checkbox">
-            <label>
-                <input type="checkbox" name="displayAliases"
-                       value="1" <?php if ($displayAliases == 1) { ?> checked <?php } ?> />
-                <?php echo t('Display page aliases.') ?>
-            </label>
-        </div>
-
-        <div class="checkbox">
-            <label>
-                <input type="checkbox" name="enableExternalFiltering" value="1" <?php if ($enableExternalFiltering) { ?>checked<?php } ?> />
-                <?php echo t('Enable Other Blocks to Filter This Page List.') ?>
-            </label>
-            <span class="help-block"><?php echo t('Allows other blocks like the topic list block to pass search criteria to this page list block.')?></span>
-        </div>
-        <div class="checkbox">
-            <label>
-                <input type="checkbox" name="filterByRelated"
-                       value="1" <?php if ($filterByRelated == 1) { ?> checked <?php } ?> />
-                <?php echo t('Filter by Related Topic.') ?>
-            </label>
-        </div>
-
-        <div class="form-group" data-row="related-topic">
-            <select class="form-control" name="relatedTopicAttributeKeyHandle" id="relatedTopicAttributeKeyHandle">
-                    <option value=""><?php echo t('Choose topics attribute.')?></option>
-                <?php foreach($attributeKeys as $attributeKey) { ?>
-                    <option value="<?php echo $attributeKey->getAttributeKeyHandle()?>" <?php if ($attributeKey->getAttributeKeyHandle() == $relatedTopicAttributeKeyHandle) { ?>selected<?php } ?>><?php echo $attributeKey->getAttributeKeyDisplayName()?></option>
-                <?php } ?>
-            </select>
-        </div>
+			<legend><?php echo t('Filtering') ?></legend>
+			<div class="checkbox">
+				<label>
+					<input <?php if (!is_object($featuredAttribute)) { ?> disabled <?php } ?> type="checkbox" name="displayFeaturedOnly"
+																		   value="1" <?php if ($displayFeaturedOnly == 1) { ?> checked <?php } ?>
+																		   style="vertical-align: middle"/>
+					<?php echo t('Featured pages only.') ?>
+				</label>
+				<?php if (!is_object($featuredAttribute)) { ?>
+					<span class="help-block"><?php echo
+						t(
+							'(<strong>Note</strong>: You must create the "is_featured" page attribute first.)'); ?></span>
+				<?php } ?>
+			</div>
+	
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" name="forum_pin"
+						   value="1" <?php if ($forum_pin == 1) { ?> checked <?php } ?> />
+					<?php echo t('Pin posts to top of list.') ?>
+					<span class="help-block"><?php echo
+						t('(<strong>Note</strong>: Set the forum_pin page attribute on pages you want pinned at top.)'); ?></span>
+				</label>
+			</div>
+			
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" name="displayAliases"
+						   value="1" <?php if ($displayAliases == 1) { ?> checked <?php } ?> />
+					<?php echo t('Display page aliases.') ?>
+				</label>
+			</div>
+	
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" name="enableExternalFiltering" value="1" <?php if ($enableExternalFiltering) { ?>checked<?php } ?> />
+					<?php echo t('Enable Other Blocks to Filter This Page List.') ?>
+				</label>
+				<span class="help-block"><?php echo t('Allows other blocks like the topic list block to pass search criteria to this page list block.')?></span>
+			</div>
 		</fieldset>
 
 		</fieldset>
@@ -356,7 +330,7 @@ $form = Loader::helper('form/page_selector');
 					$atKeys = CollectionAttributeKey::getList();
 					foreach($atKeys as $ak) {
 						if($ak->getAttributeType()->atHandle == 'image_file') { ?>
-							<option value="<?php echo $ak->getAttributeKeyID(); ?>" <?php if($image_attribute == $ak->getAttributeKeyID()) echo 'selected="selected"' ?>><?php echo $ak->getAttributeKeyName() ?></option>
+							<option value="<?php echo $ak->getAttributeKeyID()  ?>" <?php if($image_attribute == $ak->getAttributeKeyID() ) echo 'selected="selected"' ?>><?php echo $ak->getAttributeKeyName() ?></option>
 						<?php
 						}
 					}
@@ -411,7 +385,7 @@ $form = Loader::helper('form/page_selector');
         </div>
 		
 		<div class="form-group">
-            <label class="control-label"><?php echo t('Title of Page List') ?></label>
+            <label class="control-label"><?php echo t('Title of Forum List') ?></label>
             <input type="text" maxwidth="255" class="form-control" name="pageListTitle" value="<?php echo $pageListTitle?>" />
         </div>
 

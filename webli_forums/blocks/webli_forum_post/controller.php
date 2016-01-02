@@ -10,6 +10,7 @@ use BlockType;
 use User;
 use Group;
 use \Concrete\Core\Attribute\Key\CollectionKey as CollectionAttributeKey;
+
 use \Concrete\Core\Attribute\Set as AttributeSet;
 use Permissions;
 
@@ -51,6 +52,7 @@ class Controller extends BlockController
 		$this->set('approved', Page::getCurrentPage()->getCollectionAttributeValue('forum_post_approved'));
 		$this->set('pinned', Page::getCurrentPage()->getCollectionAttributeValue('forum_pin'));
 		$this->set('publicForums', $this->get_public_forums());
+		$this->set('settings', $this->get_saved_settings());
 		
 		$cp = new Permissions(Page::getCurrentPage());
 		if($cp->canDeletePage()) $this->set('canDeletePage', true);
@@ -80,7 +82,37 @@ class Controller extends BlockController
 		
 		return $publicForums;
 	}
-	
+
+	//
+	//function get_forum_attributes()
+	//{
+	//
+	//	$atSet = AttributeSet::getByHandle('forums');
+	//	$atKeys = $atSet->getAttributeKeys();
+	//	
+	//	$banAtt = array('Forum Post', 'Forum Category', 'Pin Forum Post', 'Forum Image', 'Forum Email Address', 'Forum Name', 'Forum Post Approved'); 
+	//	
+	//	foreach($atKeys as $ak) {
+	//		if(!in_array($ak->akName, $banAtt)) {
+	//			$forumAttributes[$ak->getAttributeKeyID()] = $ak->akName;
+	//		}
+	//	}
+	//	
+	//	return $forumAttributes;
+	//}
+	//
+
+	function get_saved_settings()
+	{
+		// get array of values in db
+		$db = Loader::db();
+		
+		$res = $db->GetRow("select * from btWebliForums where cID = ?", Page::getCurrentPage()->getCollectionParentID());
+		
+		if(!$res) $res = $db->GetRow("select * from btWebliForums where cID = ?", 0);
+		
+		return $res;
+	}
 	
 	public function forumAdmin()
 	{
@@ -159,6 +191,18 @@ class Controller extends BlockController
 			// save tags
 			$ak = CollectionAttributeKey::getByHandle('tags');
 			$ak->saveAttributeForm($newPage);
+
+			// Save optional Attributes
+			$settings = $this->get_saved_settings();
+			
+			if($settings['optional_attributes']) {
+				$optAtts = unserialize($settings['optional_attributes']);
+				
+				foreach($optAtts as $ot){	
+					$ak = CollectionAttributeKey::getByID($ot);
+					$ak->saveAttributeForm($newPage);
+				}	
+			}
 			
 			$newPage->reindex();
 		
@@ -202,6 +246,18 @@ class Controller extends BlockController
 			// save tags
 			$ak = CollectionAttributeKey::getByHandle('tags');
 			$ak->saveAttributeForm($editPage);			
+
+			// Save optional Attributes
+			$settings = $this->get_saved_settings();
+			
+			if($settings['optional_attributes']) {
+				$optAtts = unserialize($settings['optional_attributes']);
+				
+				foreach($optAtts as $ot){	
+					$ak = CollectionAttributeKey::getByID($ot);
+					$ak->saveAttributeForm($editPage);
+				}	
+			}
 			
 			// check if we need to move the page
 			if($_POST['forumSelect'] && $_POST['forumSelect'] != $editPage->getCollectionParentID()){	

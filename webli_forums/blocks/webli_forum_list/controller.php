@@ -463,7 +463,6 @@ class Controller extends BlockController
         $args['crop'] = ($args['crop']) ? '1' : '0';
 		$args['displayAliases'] = ($args['displayAliases']) ? '1' : '0';
 		$args['forum_pin'] = ($args['forum_pin']) ? '1' : '0';
-		$args['expiration_date'] = ($args['expiration_date']) ? '1' : '0';
         $args['truncateChars'] = intval($args['truncateChars']);
         $args['paginate'] = intval($args['paginate']);
         $args['rss'] = intval($args['rss']);

@@ -2,10 +2,13 @@
 defined('C5_EXECUTE') or die("Access Denied.");
 //If you move file to theme directory uncomment
 // $this->inc('elements/header.php');
+
 $date = Core::make('helper/date');
 if($display['add_this'] && $display['add_this_script']) echo $display['add_this_script'];
 ?>
 
+<!-- If you move file to theme directory you can delete these
+	 styles and do all the styling in your CSS Files -->
 <style>
 	.forumUnApprovedPost{
 		text-align: center;
@@ -30,22 +33,24 @@ if($display['add_this'] && $display['add_this_script']) echo $display['add_this_
 		<div class="center container"> 
 			<div class="row"> 
 -->			
-				<div class="forumPost main col-sm-8"> <!--Begin Main Column-->
+				<div class="forumPost main col-sm-8"> <!-- Begin Main Column -->
 					
+					<!-- Move complete sections wrapped in if statements to
+						 rearrange the content of your forum post page -->
 					<?php if($display['enable_breadcrumb']): ?>
 						<div class="forumBreadcrumb">
 							<?php 	
 							$bt = BlockType::getByHandle('autonav');
-							$bt->controller->displayPages = 'top'; // 'top', 'above', 'below', 'second_level', 'third_level', 'custom', 'current'
-							$bt->controller->orderBy = 'display_asc';  // 'chrono_desc', 'chrono_asc', 'alpha_asc', 'alpha_desc', 'display_desc','display_asc'             
-							$bt->controller->displaySubPages = 'relevant_breadcrumb';  //none', 'all, 'relevant_breadcrumb', 'relevant'          
-							$bt->controller->displaySubPageLevels = 'enough'; // 'enough', 'enough_plus1', 'all', 'custom'
-							$bt->render('templates/forum_breadcrumb'); // for template 'templates/template_name';
+							$bt->controller->displayPages = 'top'; 
+							$bt->controller->orderBy = 'display_asc';     
+							$bt->controller->displaySubPages = 'relevant_breadcrumb';       
+							$bt->controller->displaySubPageLevels = 'enough';
+							$bt->render('templates/forum_breadcrumb'); 
 							?>
 						</div>
 					<?php endif; ?>
 
-
+					<!-- Area containing post block at top of pages -->
 					<div class="forumPostBlock">
 						<?php
 						$a = new Area('Forum Post');
@@ -58,12 +63,12 @@ if($display['add_this'] && $display['add_this_script']) echo $display['add_this_
 
 						<div class="forumPostTitle">
 							<?php if($display['display_title']): ?>
-								<h1><?php echo $c->getCollectionName(); ?></h1>
+								<h2><?php echo $c->getCollectionName(); ?></h2>
 							<?php endif; ?>
 							
 							<h5>
 							<?php if($display['display_date']):
-									echo $date->getSystemDateTime($c->getCollectionDatePublic(), $mask = $display['date_format']) ?> by <?php echo $author;
+									echo $date->getSystemDateTime($c->getCollectionDatePublic(), $mask = $display['date_format']);
 							endif;
 							
 							if($display['display_author']):
@@ -107,10 +112,29 @@ if($display['add_this'] && $display['add_this_script']) echo $display['add_this_
 								</div>
 							<?php
 							} ?>
-						<?php endif; ?>
+						<?php endif; 
+
+						if($display['optional_attributes']) { ?>
+							<?php
+							$optionalAttributes = unserialize($display['optional_attributes']);
+							
+							foreach($optionalAttributes as $optAtt){
+								$ak = CollectionAttributeKey::getByID($optAtt);
+								if($ak->atHandle != 'boolean' && $c->getCollectionAttributeValue($ak->akHandle)) {
+									?>
+									<br/>
+									<label><?php echo $ak->akName ?></label>
+									<br/>
+								<?php
+								
+								}
+								echo $c->getCollectionAttributeValue($ak->akHandle);
+								echo '<br/>';
+							}		
+						}
+					
 		
-		
-						<?php if($display['share_this']): ?>
+						if($display['share_this']): ?>
 							<div class="blogShareThis">
 								<?php echo $display['share_this_html'] ?>
 							</div>

@@ -192,7 +192,7 @@ document.onkeypress = stopRKey;
 			   margin-left: 4px;
 			 }
 			 .well{
-			   padding: 0 15px 15px
+			   padding: 0 15px 15px;
 			 }
 		 </style>
 		 <div class="tagInput">
@@ -203,7 +203,32 @@ document.onkeypress = stopRKey;
 			?>
 		 </div>
 	  </div>
-	 	 
+
+	 <?php
+	  if($settings['optional_attributes']) { ?>
+		 <div class="form-group attributes">
+			 <div class="attributeInput">
+			   <?php
+			   $optAtts = unserialize($settings['optional_attributes']);
+			   foreach($optAtts as $ot){
+				   $ak = CollectionAttributeKey::getByID($ot);
+				   if(is_object($ak)){
+					   if($ak->atHandle != 'boolean') {
+						   ?>
+						   <label><?php echo $ak->akName ?></label>
+					   <?php
+					   }
+					   echo $ak->render('form');
+					   echo '<br/>';
+				   }
+			   } ?>					
+			</div>
+		  </div>
+		 <?php
+		 } ?>
+	 
+
+	 
 	  <button style="float: left" type="submit" class="btn btn-default"><?php echo t('Submit') ?></button>
    </form>
    <button style="float: right" onclick="$.magnificPopup.close();"class="cancelButton btn btn-default">Cancel</button>
@@ -266,7 +291,30 @@ document.onkeypress = stopRKey;
 		 </div>
 	  </div>
 	 
-
+	 <?php
+	  if($settings['optional_attributes']) { ?>
+		 <div class="form-group attributes">
+			 <div class="attributeInput">
+			   <?php
+			   $page = Page::getCurrentPage();
+			   $optAtts = unserialize($settings['optional_attributes']);
+			   foreach($optAtts as $ot){
+				   $ak = CollectionAttributeKey::getByID($ot);
+				   if(is_object($ak)){
+					   if($ak->atHandle != 'boolean') {
+						   ?>
+						   <label><?php echo $ak->akName ?></label>
+					   <?php
+					   }
+					   $atValue = $page->getAttributeValueObject($ak);
+					   echo $ak->render('form', $atValue);
+					   echo '<br/>';
+				   }
+			   } ?>					
+			</div>
+		  </div>
+		 <?php
+		 } ?>
 	  
 	  <button style="float: left" type="submit" class="btn btn-default"><?php echo t('Submit') ?></button>
    </form>

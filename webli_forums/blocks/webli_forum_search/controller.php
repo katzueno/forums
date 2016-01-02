@@ -204,6 +204,8 @@ class Controller extends BlockController
 			$args['forum_categories'] = '';
 		}
 		
+		$args['class'] = $data['class'];
+		
 		parent::save($args);
     }
 

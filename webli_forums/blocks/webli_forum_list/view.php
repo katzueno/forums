@@ -18,11 +18,11 @@ $replies = $controller->getConversations() ?>
     <div class="ccm-edit-mode-disabled-item"><?php echo t('Empty Forum List Block.')?></div>
 <?php } else { ?>
 
-<div class="forumListWrapper">
+<div class="forumListWrapper <?php echo $class ?>">
 
    <?php if ($pageListTitle): ?>
 	   <div class="ForumListHeader">
-		   <h1><?php echo t($pageListTitle)?></h1>
+		   <h2><?php echo t($pageListTitle)?></h2>
 	   </div>
    <?php endif; ?>
 
