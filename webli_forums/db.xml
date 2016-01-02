@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<schema version="0.3">
+
+	<table name="btWebliForums">
+
+		<field name="cID" type="I">
+			<key />
+			<unsigned />
+		</field>
+
+		<field name="active_tab" type="C" size="255">
+			<default value="" />
+		</field>
+
+		<field name="active_category" type="I">
+			<unsigned />
+		</field>
+		
+		<field name="new_post_category" type="I">
+			<unsigned />
+		</field>
+		
+		<field name="sort_category" type="I">
+			<unsigned />
+		</field>
+						
+		<field name="user_edit" type="I1">
+			<unsigned />
+		</field>
+		
+		<field name="user_delete" type="I1">
+			<unsigned />
+		</field>
+				
+		<field name="anonymous_posts" type="I1">
+			<unsigned />
+		</field>
+		
+		<field name="moderate" type="I1">
+			<unsigned />
+		</field>
+
+		<field name="captcha" type="I1">
+			<unsigned />
+		</field>
+		
+		<field name="date_format" type="C" size="255">
+			<default value="" />
+		</field>
+
+		<field name="display_title" type="I">
+			<unsigned />
+		</field>
+		
+		<field name="display_date" type="I">
+			<unsigned />
+		</field>
+		
+		<field name="display_author" type="I">
+			<unsigned />
+		</field>
+		
+		<field name="display_tags" type="I">
+			<unsigned />
+		</field>
+		
+		<field name="enable_comments" type="I">
+			<unsigned />
+		</field>
+		
+		<field name="enable_breadcrumb" type="I">
+			<unsigned />
+		</field>
+
+		<field name="mod_approval" type="I">
+			<unsigned />
+		</field>
+		
+		<field name="display_image" type="I">
+			<unsigned />
+		</field>
+
+		<field name="crop_image" type="I">
+			<unsigned />
+		</field>
+		
+		<field name="image_width" type="I">
+			<unsigned />
+		</field>
+
+		<field name="image_height" type="I">
+			<unsigned />
+		</field>
+		
+		<field name="display_avatars" type="I">
+			<unsigned />
+		</field>
+
+		<field name="add_this" type="I">
+			<unsigned />
+		</field>
+		
+		<field name="forum_search_block" type="I">
+			<unsigned />
+		</field>
+		
+		<field name="forum_archive_block" type="I">
+			<unsigned />
+		</field>
+		
+		<field name="forum_tags_block" type="I">
+			<unsigned />
+		</field>
+		
+		<field name="add_this_script" type="X2">
+			<default value="" />
+		</field>
+	
+		<field name="add_this_follow_html" type="X2">
+			<default value="" />
+		</field>
+
+		<field name="add_this_share_html" type="X2">
+			<default value="" />
+		</field>		
+
+		<field name="add_this_recommend_html" type="X2">
+			<default value="" />
+		</field>
+	
+		<field name="share_this" type="I">
+			<unsigned />
+		</field>
+
+		<field name="share_this_html" type="X2">
+			<default value="" />
+		</field>
+
+		<field name="share_this_script" type="X2">
+			<default value="" />
+		</field>		
+		<field name="twitter_post" type="I">
+			<unsigned />
+		</field>		
+
+		<field name="twitter_api_key" type="C" size="255">
+			<default value="" />
+		</field>
+	
+		<field name="twitter_api_secret" type="C" size="255">
+			<default value="" />
+		</field>	
+
+		<field name="twitter_token" type="C" size="255">
+			<default value="" />
+		</field>
+	
+		<field name="twitter_token_secret" type="C" size="255">
+			<default value="" />
+		</field>
+		
+		<field name="twitter_select" type="C" size="255">
+			<default value="" />
+		</field>
+		
+		<field name="twitter_image" type="I">
+			<unsigned />
+		</field>
+	</table>
+</schema>
