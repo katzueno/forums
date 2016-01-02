@@ -98,7 +98,7 @@ $replies = $controller->getConversations() ?>
 						<h5>
 							<div class="forumListDateAuthor">
 							<?php if($includeDate) echo '<span class="forumListDate">' . $date . '</span>'; ?>
-							<?php if($display_author) echo ' by <span class="forumListAuthor">' . $author . '</span>'; ?>
+							<?php if($display_author) echo ' ' . t('by') . ' <span class="forumListAuthor">' . $author . '</span>'; ?>
 							<?php if($forumAdmin && $page->getCollectionAttributeValue('forum_email') ) echo ' <span class="forumListEmail"> (' . $page->getCollectionAttributeValue("forum_email") . ')</span>'; ?>
 						   </div>
 						</h5>
@@ -139,7 +139,7 @@ $replies = $controller->getConversations() ?>
 
 						if($replies && $display['enable_comments']):
 							echo '<div class="latestReplies">';
-							echo '<h5>Latest Replies</h5>';
+							echo '<h5>'. t('Latest Replies') . '</h5>';
 							$i = 1;
 							foreach($replies as $reply){	
 								$cnv = $reply->getConversationObject();
@@ -212,7 +212,7 @@ $replies = $controller->getConversations() ?>
 				<div class="forumListTotalDiscussions">	
 					<?php
 					$postList = $controller->getPostList($page->getCollectionID());
-					echo 'Total Discussions: <a href="' . $url . '" target="_self">' . count($postList) . '</a><br/>';
+					echo t('Total Discussions:') . ' <a href="' . $url . '" target="_self">' . count($postList) . '</a><br/>';
 					?>
 				</div>
 				
@@ -222,11 +222,11 @@ $replies = $controller->getConversations() ?>
 					if($p->getCollectionAttributeValue('forum_pin') ){
 						echo '<h5>';	
 					} else {
-						echo '<h5>Latest Discussion: ';
+						echo '<h5>' . t('Latest Discussion: ');
 					}
 					echo '<a href="' . $nh->getLinkToCollection($p) . '">' . $p->getCollectionName() . '</a></h5>';
-					echo 'by: ' . $page->getVersionObject()->getVersionAuthorUserName() . ' on ' . $date = $dh->getSystemDateTime($p->getCollectionDatePublic(), $mask = $date_format);
-					echo '<div class="latestDiscussion">' . $th->wordSafeShortText($p->getCollectionAttributeValue('forum_post'), 280) . '<a href="' . $nh->getLinkToCollection($p) . '" target="' . $target . '"> Read More</a></div>';				
+					echo t('by: ') . $page->getVersionObject()->getVersionAuthorUserName() . t(' on ') . $date = $dh->getSystemDateTime($p->getCollectionDatePublic(), $mask = $date_format);
+					echo '<div class="latestDiscussion">' . $th->wordSafeShortText($p->getCollectionAttributeValue('forum_post'), 280) . '<a href="' . $nh->getLinkToCollection($p) . '" target="' . $target . '"> '. t('Read More') . '</a></div>';				
 					
 					$hasReplies = false;
 					foreach($replies as $r){
@@ -240,14 +240,14 @@ $replies = $controller->getConversations() ?>
 
 					if($hasReplies && $display['enable_comments'] && $forumReplies > 0){
 						echo '<div class="latestReplies">';
-						echo '<h5>Latest Replies</h5>';
+						echo '<h5>' . t('Latest Discussion: ');
 						$i = 1;
 						foreach($replies as $reply){
 							$cnv = $reply->getConversationObject();
 							$replyPage = Page::getByID($cnv->cID);
 							$replyParent = $replyPage->getCollectionParentID();
 							if($page->getCollectionID() == Page::getByID($cnv->cID)->getCollectionParentID()){
-								echo $reply->cnvMessageAuthorName . ' replied to <a href="' . $nh->getLinkToCollection($replyPage) . '">' . $replyPage->getCollectionName() . ' </a> on ' . $dh->formatDateTime(strtotime($reply->getConversationMessageDateTime())) . '<br/>';
+								echo $reply->cnvMessageAuthorName . t(' replied to ') . '<a href="' . $nh->getLinkToCollection($replyPage) . '">' . $replyPage->getCollectionName() . ' </a> on ' . $dh->formatDateTime(strtotime($reply->getConversationMessageDateTime())) . '<br/>';
 								echo '<div class="latestReply">"' . $th->wordSafeShortText($reply->getConversationMessageBodyOutput(),150) . '"</div>';
 								$i++;
 								if($i > $forumReplies) break;
