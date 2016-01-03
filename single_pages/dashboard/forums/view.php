@@ -1077,7 +1077,7 @@ $u = new User();
 		    <br/>&nbsp;&nbsp;&nbsp;|- Forum Category Page (any page type with forum_category attribute checked and Forum List Block)
 			<br/>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- Forum Post One (child pages using the forum_post page type)
 			<br/>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- Forum Post Two
-			<br/>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- ect...
+			<br/>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- etc...
 			<br/>&nbsp;&nbsp;&nbsp;|- Second Forum Category Page (any page type with forum_category attribute checked and Forum List Block)
 			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- Forum Post One (child pages using the forum_post page type)
 			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- Forum Post Two
