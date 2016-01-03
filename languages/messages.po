@@ -1,0 +1,1094 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Webli Forms\n"
+"POT-Creation-Date: 2016-01-03 10:07+0900\n"
+"PO-Revision-Date: 2016-01-03 10:07+0900\n"
+"Last-Translator: Katz Ueno <katz@concrete5.co.jp>\n"
+"Language-Team: Webli Forms\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: t\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: blocks/autonav/templates/forum_breadcrumb.php:25
+msgid "Empty Auto-Nav Block."
+msgstr ""
+
+#: blocks/webli_forum_archive/controller.php:31
+msgid "Create Forum Archive."
+msgstr ""
+
+#: blocks/webli_forum_archive/controller.php:36
+msgid "Forum Archive"
+msgstr ""
+
+#: blocks/webli_forum_archive/controller.php:42
+#: blocks/webli_forum_list/controller.php:48
+#: blocks/webli_forum_tags/controller.php:42
+msgid "Please give your RSS Feed a name."
+msgstr ""
+
+#: blocks/webli_forum_archive/controller.php:304
+#: blocks/webli_forum_list/controller.php:314
+#: blocks/webli_forum_tags/controller.php:323
+msgid ""
+"Your RSS feed must have a valid URL, containing only letters, numbers or "
+"underscores"
+msgstr ""
+
+#: blocks/webli_forum_archive/controller.php:307
+#: blocks/webli_forum_list/controller.php:317
+#: blocks/webli_forum_tags/controller.php:326
+msgid "Your RSS feed must have a valid title."
+msgstr ""
+
+#: blocks/webli_forum_archive/controller.php:310
+#: blocks/webli_forum_list/controller.php:320
+#: blocks/webli_forum_tags/controller.php:329
+msgid "Your RSS feed must have a valid description."
+msgstr ""
+
+#: blocks/webli_forum_archive/forum_archive_form.php:12
+#: blocks/webli_forum_list/forum_list_form.php:11
+#: blocks/webli_forum_search/forum_search_form.php:28
+#: blocks/webli_forum_tags/forum_tags_form.php:12
+#: single_pages/dashboard/forums/view.php:76
+msgid "Settings"
+msgstr ""
+
+#: blocks/webli_forum_archive/forum_archive_form.php:15
+#: blocks/webli_forum_list/forum_list_form.php:19
+#: blocks/webli_forum_tags/forum_tags_form.php:15
+msgid "Page Type"
+msgstr ""
+
+#: blocks/webli_forum_archive/forum_archive_form.php:22
+#: blocks/webli_forum_list/forum_list_form.php:26
+#: blocks/webli_forum_tags/forum_tags_form.php:22
+msgid "All"
+msgstr ""
+
+#: blocks/webli_forum_archive/forum_archive_form.php:41
+#: blocks/webli_forum_list/forum_list_form.php:104
+#: blocks/webli_forum_tags/forum_tags_form.php:41
+msgid "Location"
+msgstr ""
+
+#: blocks/webli_forum_archive/forum_archive_form.php:46
+#: blocks/webli_forum_list/forum_list_form.php:109
+#: blocks/webli_forum_search/form_setup_html.php:78
+#: blocks/webli_forum_search/forum_search_form.php:35
+#: blocks/webli_forum_tags/forum_tags_form.php:46
+msgid "Everywhere"
+msgstr ""
+
+#: blocks/webli_forum_archive/forum_archive_form.php:53
+#: blocks/webli_forum_list/forum_list_form.php:116
+#: blocks/webli_forum_tags/forum_tags_form.php:54
+msgid "Beneath this page"
+msgstr ""
+
+#: blocks/webli_forum_archive/forum_archive_form.php:60
+#: blocks/webli_forum_list/forum_list_form.php:123
+#: blocks/webli_forum_tags/forum_tags_form.php:62
+msgid "Beneath another page"
+msgstr ""
+
+#: blocks/webli_forum_archive/forum_archive_form.php:68
+#: blocks/webli_forum_tags/forum_tags_form.php:70
+msgid "Beneath parent page"
+msgstr ""
+
+#: blocks/webli_forum_archive/forum_archive_form.php:83
+#: blocks/webli_forum_search/form_setup_html.php:56
+#: blocks/webli_forum_search/forum_search_form.php:74
+#: blocks/webli_forum_tags/forum_tags_form.php:84
+msgid "Forum Categories"
+msgstr ""
+
+#: blocks/webli_forum_archive/forum_archive_form.php:85
+#: blocks/webli_forum_search/forum_search_form.php:76
+#: blocks/webli_forum_tags/forum_tags_form.php:86
+msgid "optional - limit to selected categories"
+msgstr ""
+
+#: blocks/webli_forum_archive/forum_archive_form.php:112
+#: blocks/webli_forum_list/forum_list_form.php:381
+#: blocks/webli_forum_search/forum_search_form.php:131
+#: blocks/webli_forum_tags/forum_tags_form.php:138
+msgid "Block Class"
+msgstr ""
+
+#: blocks/webli_forum_archive/forum_archive_form.php:114
+#: blocks/webli_forum_list/forum_list_form.php:383
+#: blocks/webli_forum_tags/forum_tags_form.php:140
+msgid ""
+"(<strong>Note</strong>: Wraps the Forum List block in a div with this class "
+"name.)"
+msgstr ""
+
+#: blocks/webli_forum_archive/forum_archive_form.php:119
+#: blocks/webli_forum_tags/forum_tags_form.php:145
+msgid "Title of Archive"
+msgstr ""
+
+#: blocks/webli_forum_archive/view.php:89
+msgid "The Forum Archive Block is disabled in Forum Dashboard Settings."
+msgstr ""
+
+#: blocks/webli_forum_list/controller.php:37
+msgid "Create Forum Post Lists."
+msgstr ""
+
+#: blocks/webli_forum_list/controller.php:42
+msgid "Forum List"
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:14
+msgid "Number of Pages to Display"
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:45
+msgid "Filtering"
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:51
+msgid "Featured pages only."
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:56
+msgid ""
+"(<strong>Note</strong>: You must create the \"is_featured\" page attribute "
+"first.)"
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:64
+msgid "Pin posts to top of list."
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:66
+msgid ""
+"(<strong>Note</strong>: Set the forum_pin page attribute on pages you want "
+"pinned at top.)"
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:74
+msgid "Display page aliases."
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:81
+msgid "Enable Other Blocks to Filter This Page List."
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:83
+msgid ""
+"Allows other blocks like the topic list block to pass search criteria to "
+"this page list block."
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:94
+msgid "Pagination"
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:98
+msgid ""
+"Display pagination interface if more items are available than are displayed."
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:141
+msgid "Include all child pages"
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:149
+msgid "Sort"
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:153
+msgid "Sitemap order"
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:156
+msgid "Most recent first"
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:159
+msgid "Earliest first"
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:162
+msgid "Alphabetical order"
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:165
+msgid "Reverse alphabetical order"
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:168
+msgid "Random"
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:175
+msgid "Output"
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:177
+msgid "Provide RSS Feed"
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:181
+#: blocks/webli_forum_list/forum_list_form.php:219
+#: blocks/webli_forum_list/forum_list_form.php:235
+#: blocks/webli_forum_list/forum_list_form.php:273
+#: blocks/webli_forum_list/forum_list_form.php:296
+#: blocks/webli_forum_list/forum_list_form.php:314
+#: blocks/webli_forum_list/forum_list_form.php:363
+msgid "No"
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:187
+#: blocks/webli_forum_list/forum_list_form.php:225
+#: blocks/webli_forum_list/forum_list_form.php:241
+#: blocks/webli_forum_list/forum_list_form.php:279
+#: blocks/webli_forum_list/forum_list_form.php:302
+#: blocks/webli_forum_list/forum_list_form.php:320
+#: blocks/webli_forum_list/forum_list_form.php:369
+msgid "Yes"
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:192
+#, php-format
+msgid "RSS Feed can be found here: <a href=\"%s\" target=\"_blank\">%s</a>"
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:195
+msgid "RSS Feed Title"
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:200
+msgid "RSS Feed Description"
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:204
+msgid "RSS Feed Location"
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:215
+msgid "Include Page Name"
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:231
+msgid "Include Page Description"
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:249
+msgid "Use Page Content in place of Description."
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:253
+msgid "Display Truncated Description"
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:262
+msgid "characters"
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:269
+msgid "Include Public Page Date"
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:282
+msgid ""
+"This is usually the date the page is created. It can be changed from the "
+"page attributes panel."
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:285
+#: single_pages/dashboard/forums/view.php:143
+msgid "Date Format"
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:287
+msgid "(<strong>Note</strong>: Use PHP Date Formatting string.)"
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:292
+#: single_pages/dashboard/forums/view.php:137
+msgid "Display Author"
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:306
+msgid ""
+"(<strong>Note</strong>: This is the text set with the event_location page "
+"attribute.)"
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:310
+msgid "Display Thumbnail Image"
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:326
+msgid "Select an Image Attribute"
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:342
+msgid "Maximum Thumbnail Width (px)"
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:347
+msgid "Maximum Thumbnail Height (px)"
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:354
+msgid "Crop Thumbnail."
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:359
+msgid "Use Different Link than Page Name"
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:374
+msgid "Link Text"
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:388
+msgid "Title of Forum List"
+msgstr ""
+
+#: blocks/webli_forum_list/forum_list_form.php:393
+msgid "Message to Display When No Pages Listed."
+msgstr ""
+
+#: blocks/webli_forum_list/view.php:18
+msgid "Empty Forum List Block."
+msgstr ""
+
+#: blocks/webli_forum_list/view.php:101
+msgid "by"
+msgstr ""
+
+#: blocks/webli_forum_list/view.php:108 page_templates/forum_post.php:88
+msgid "UnApproved"
+msgstr ""
+
+#: blocks/webli_forum_list/view.php:109 page_templates/forum_post.php:89
+msgid "Pinned"
+msgstr ""
+
+#: blocks/webli_forum_list/view.php:126 blocks/webli_forum_list/view.php:229
+msgid "Read More"
+msgstr ""
+
+#: blocks/webli_forum_list/view.php:142
+msgid "Latest Replies"
+msgstr ""
+
+#: blocks/webli_forum_list/view.php:215
+msgid "Total Discussions:"
+msgstr ""
+
+#: blocks/webli_forum_list/view.php:225 blocks/webli_forum_list/view.php:243
+msgid "Latest Discussion: "
+msgstr ""
+
+#: blocks/webli_forum_list/view.php:228
+msgid "by: "
+msgstr ""
+
+#: blocks/webli_forum_list/view.php:228
+msgid " on "
+msgstr ""
+
+#: blocks/webli_forum_list/view.php:250
+msgid " replied to "
+msgstr ""
+
+#: blocks/webli_forum_post/controller.php:27
+msgid "Create forum posts"
+msgstr ""
+
+#: blocks/webli_forum_post/controller.php:32 controller.php:203
+#: single_pages/dashboard/forums/view.php:350
+msgid "Forum Post"
+msgstr ""
+
+#: blocks/webli_forum_post/forum_post_form.php:7
+msgid "Block Class (Optional)"
+msgstr ""
+
+#: blocks/webli_forum_post/view.php:34
+#: single_pages/dashboard/forums/view.php:471
+#: single_pages/dashboard/forums/view.php:598
+#: single_pages/dashboard/forums/view.php:702
+#: single_pages/dashboard/forums/view.php:813
+#: single_pages/dashboard/forums/view.php:862
+#: single_pages/dashboard/forums/view.php:962
+#: single_pages/dashboard/forums/view.php:1011
+msgid "Delete"
+msgstr ""
+
+#: blocks/webli_forum_post/view.php:41
+#: single_pages/dashboard/forums/view.php:491
+#: single_pages/dashboard/forums/view.php:711
+msgid "UnPin"
+msgstr ""
+
+#: blocks/webli_forum_post/view.php:47
+#: single_pages/dashboard/forums/view.php:391
+#: single_pages/dashboard/forums/view.php:499
+msgid "Pin"
+msgstr ""
+
+#: blocks/webli_forum_post/view.php:55
+msgid "UnApprove"
+msgstr ""
+
+#: blocks/webli_forum_post/view.php:61
+#: single_pages/dashboard/forums/view.php:607
+#: single_pages/dashboard/forums/view.php:971
+#: single_pages/dashboard/forums/view.php:1018
+msgid "Approve"
+msgstr ""
+
+#: blocks/webli_forum_post/view.php:68
+msgid "Add a Forum Post"
+msgstr ""
+
+#: blocks/webli_forum_post/view.php:71
+msgid "Login or Register to Add New Post"
+msgstr ""
+
+#: blocks/webli_forum_post/view.php:138 blocks/webli_forum_post/view.php:247
+#: new_post.php:10
+msgid "Select Forum"
+msgstr ""
+
+#: blocks/webli_forum_post/view.php:156 blocks/webli_forum_post/view.php:262
+#: blocks/webli_forum_search/form_setup_html.php:46
+#: blocks/webli_forum_search/forum_search_form.php:138 new_post.php:26
+#: single_pages/dashboard/forums/view.php:314
+#: single_pages/dashboard/forums/view.php:429
+#: single_pages/dashboard/forums/view.php:557
+#: single_pages/dashboard/forums/view.php:662
+msgid "Title"
+msgstr ""
+
+#: blocks/webli_forum_post/view.php:164 blocks/webli_forum_post/view.php:270
+#: new_post.php:34
+msgid "Name"
+msgstr ""
+
+#: blocks/webli_forum_post/view.php:169 new_post.php:39
+msgid "Email Address (not displayed)"
+msgstr ""
+
+#: blocks/webli_forum_post/view.php:176 blocks/webli_forum_post/view.php:279
+#: new_post.php:46
+msgid "Post"
+msgstr ""
+
+#: blocks/webli_forum_post/view.php:199 blocks/webli_forum_post/view.php:286
+#: controller.php:136 controller.php:245 new_post.php:51
+#: single_pages/dashboard/forums/view.php:382
+msgid "Tags"
+msgstr ""
+
+#: blocks/webli_forum_post/view.php:232 blocks/webli_forum_post/view.php:319
+#: new_post.php:55
+msgid "Submit"
+msgstr ""
+
+#: blocks/webli_forum_post/view.php:329
+#: single_pages/dashboard/forums/view.php:25
+msgid ""
+"Are you sure you want to DELETE THIS PAGE?  This will remove the page from "
+"the website. THIS ACTION CANNOT BE UNDONE."
+msgstr ""
+
+#: blocks/webli_forum_search/controller.php:89
+msgid "Add a forum search box."
+msgstr ""
+
+#: blocks/webli_forum_search/controller.php:94 controller.php:280
+msgid "Forum Search"
+msgstr ""
+
+#: blocks/webli_forum_search/form_setup_html.php:40
+#: blocks/webli_forum_search/forum_search_form.php:24
+msgid ""
+"The search index does not appear to exist. This block will not function "
+"until the reindex job has been run at least once in the dashboard."
+msgstr ""
+
+#: blocks/webli_forum_search/form_setup_html.php:51
+#: blocks/webli_forum_search/forum_search_form.php:126
+msgid "Button Text"
+msgstr ""
+
+#: blocks/webli_forum_search/form_setup_html.php:74
+#: blocks/webli_forum_search/forum_search_form.php:31
+msgid "Search for Pages"
+msgstr ""
+
+#: blocks/webli_forum_search/form_setup_html.php:84
+#: blocks/webli_forum_search/forum_search_form.php:47
+msgid "Beneath this Page"
+msgstr ""
+
+#: blocks/webli_forum_search/form_setup_html.php:90
+#: blocks/webli_forum_search/forum_search_form.php:53
+msgid "Beneath Another Page"
+msgstr ""
+
+#: blocks/webli_forum_search/form_setup_html.php:110
+#: blocks/webli_forum_search/forum_search_form.php:102
+#: blocks/webli_forum_tags/forum_tags_form.php:113
+msgid "Results Page"
+msgstr ""
+
+#: blocks/webli_forum_search/form_setup_html.php:114
+#: blocks/webli_forum_search/forum_search_form.php:106
+msgid "Post Results to a Different Page"
+msgstr ""
+
+#: blocks/webli_forum_search/form_setup_html.php:125
+#: blocks/webli_forum_search/forum_search_form.php:117
+msgid "OR Path"
+msgstr ""
+
+#: blocks/webli_forum_search/forum_search_form.php:41
+msgid "Beneath Parent"
+msgstr ""
+
+#: blocks/webli_forum_search/forum_search_form.php:133
+msgid ""
+"(<strong>Note</strong>: Wraps the Forum Search block in a div with this "
+"class name.)"
+msgstr ""
+
+#: blocks/webli_forum_search/view.php:50
+msgid "There were no results found. Please try another keyword or phrase."
+msgstr ""
+
+#: blocks/webli_forum_search/view.php:85
+msgid "The Forum Search Block is disabled in Forum Dashboard Settings."
+msgstr ""
+
+#: blocks/webli_forum_tags/controller.php:31
+msgid "Create Forum Tag List."
+msgstr ""
+
+#: blocks/webli_forum_tags/controller.php:36
+msgid "Forum Tags"
+msgstr ""
+
+#: blocks/webli_forum_tags/forum_tags_form.php:121
+msgid "Maximum Number of Tags"
+msgstr ""
+
+#: blocks/webli_forum_tags/forum_tags_form.php:126
+msgid "Minimum Height of Tags"
+msgstr ""
+
+#: blocks/webli_forum_tags/forum_tags_form.php:131
+msgid "Maximum Height of Tags"
+msgstr ""
+
+#: blocks/webli_forum_tags/view.php:18
+msgid "The Forum Tags Block is disabled in Forum Dashboard Settings."
+msgstr ""
+
+#: controller.php:45 controller.php:50 controller.php:61 controller.php:172
+#: controller.php:195 controller.php:263
+msgid "Forums"
+msgstr ""
+
+#: controller.php:92
+#, php-format
+msgid "New Forum Post to %s"
+msgstr ""
+
+#: controller.php:144 controller.php:252
+#: single_pages/dashboard/forums/view.php:357
+msgid "Forum Image"
+msgstr ""
+
+#: controller.php:172
+msgid "Forums Dashboard"
+msgstr ""
+
+#: controller.php:181
+msgid "Forum Moderators, delete, edit, approve"
+msgstr ""
+
+#: controller.php:210
+msgid "Forum Category"
+msgstr ""
+
+#: controller.php:217
+msgid "Forum Email Address"
+msgstr ""
+
+#: controller.php:224
+msgid "Forum Name"
+msgstr ""
+
+#: controller.php:231
+msgid "Pin Forum Post"
+msgstr ""
+
+#: controller.php:238
+msgid "Forum Post Approved"
+msgstr ""
+
+#: controller.php:264
+msgid "Top Level Forums Page"
+msgstr ""
+
+#: controller.php:281
+msgid "Forum Search Page"
+msgstr ""
+
+#: controller.php:505
+msgid "Add a Comment"
+msgstr ""
+
+#: controller.php:553
+msgid ""
+"\n"
+"\t\t\t\t<p>Hey, Congratulations, you have installed Forums for Concrete5.  "
+"Forums will give visitors to your site frontend\n"
+"\t\t\t\tediting capabilities to add Forum Messages and reply to existing "
+"messages.</p>\n"
+"\t\t\t\t<p>Administrators have access to the Forums Dashboard Page to "
+"customize and manage your forums.</p>\n"
+"\t\t\t\t<p>So get your forum started and if you have any comments or "
+"questions visit <a href=\"http://forums.webli.us\" target=\"_blank\">forums."
+"webli.us</a></p>"
+msgstr ""
+
+#: controller.php:560
+msgid "Frist Message"
+msgstr ""
+
+#: mail/forum_notification.php:4
+#, php-format
+msgid ""
+"\n"
+"\t\t  There has been a new forum post to %s, %s\n"
+"\t\t  "
+msgstr ""
+
+#: page_templates/forum_post.php:167
+msgid "Comments"
+msgstr ""
+
+#: page_templates/forum_post.php:177
+msgid "This Post is Waiting Approval"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:34
+msgid ""
+"Are you sure you want to DELETE THIS REPLY? You can undelete replies in the "
+"Conversations Messages Dashboard Page"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:77
+msgid "New Post"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:78
+msgid "Posts"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:79
+msgid "UnApproved Posts"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:80
+msgid "Pinned Posts"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:81
+msgid "Replies"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:82
+msgid "UnApproved Replies"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:83
+msgid "Help"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:94
+#: single_pages/dashboard/forums/view.php:290
+#: single_pages/dashboard/forums/view.php:430
+#: single_pages/dashboard/forums/view.php:558
+#: single_pages/dashboard/forums/view.php:663
+#: single_pages/dashboard/forums/view.php:771
+#: single_pages/dashboard/forums/view.php:920
+msgid "Category"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:116
+msgid "Enable Comments"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:118
+msgid "Enable Breadcrumb Menu"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:120
+msgid "Enable Anonymous Posts"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:122
+msgid "Moderator Approval Required"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:126
+msgid "Display Search Block"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:128
+msgid "Display Archive Block"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:130
+msgid "Display Tags Block"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:135
+msgid "Display Title"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:139
+msgid "Display Forum Tags"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:141
+msgid "Display Date"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:149
+msgid "Display Avatars"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:151
+msgid "Display Forum Image"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:153
+msgid "Crop Images"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:155
+msgid "Image Dimensions"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:158
+msgid "Width"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:163
+msgid "Height"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:219
+msgid "E-Mail Notification of New Forum Post"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:221
+msgid "Enter recipient E-Mail Addresses seperated by commas"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:237
+msgid "Add This"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:239
+msgid ""
+"Paste Add This Share Code Here: (<a href=\"http://www.addthis.com\" target="
+"\"_blank\">www.addthis.com</a>)"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:240
+#: single_pages/dashboard/forums/view.php:258
+msgid "Copy Javascript Script Tags Here"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:242
+msgid "Copy Share HTML Tags Here"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:244
+msgid "Copy Follow HTML Tags Here"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:246
+msgid "Copy Recommend HTML Tags Here"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:255
+msgid "Share This"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:257
+msgid ""
+"Paste Share This Code Here: (<a href=\"http://www.sharethis.com\" target="
+"\"_blank\">www.sharethis.com</a>)"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:260
+msgid "Copy HTML Tags Here"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:279
+msgid ""
+"Add a Forum Category page by setting a \"forum_category\" Page Attribute"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:292
+msgid "Select a Category"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:320
+msgid "Description"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:329
+msgid "User"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:338
+#: single_pages/dashboard/forums/view.php:428
+#: single_pages/dashboard/forums/view.php:556
+#: single_pages/dashboard/forums/view.php:661
+#: single_pages/dashboard/forums/view.php:769
+#: single_pages/dashboard/forums/view.php:918
+msgid "Date"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:359
+msgid "Choose Image"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:394
+#: single_pages/dashboard/forums/view.php:854
+#: single_pages/dashboard/forums/view.php:1003
+msgid "Save"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:408
+#: single_pages/dashboard/forums/view.php:535
+#: single_pages/dashboard/forums/view.php:641
+#: single_pages/dashboard/forums/view.php:748
+#: single_pages/dashboard/forums/view.php:897
+msgid "Filter by Category"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:410
+#: single_pages/dashboard/forums/view.php:537
+#: single_pages/dashboard/forums/view.php:643
+#: single_pages/dashboard/forums/view.php:750
+#: single_pages/dashboard/forums/view.php:899
+msgid "All Categories"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:431
+#: single_pages/dashboard/forums/view.php:559
+#: single_pages/dashboard/forums/view.php:664
+#: single_pages/dashboard/forums/view.php:772
+#: single_pages/dashboard/forums/view.php:921
+msgid "Author"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:480
+#: single_pages/dashboard/forums/view.php:822
+#: single_pages/dashboard/forums/view.php:869
+msgid "unApprove"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:524
+msgid "There are no Posts"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:630
+msgid "There are no unApproved Posts"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:737
+msgid "There are no Pinned Posts"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:770
+#: single_pages/dashboard/forums/view.php:919
+msgid "Reply To"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:844
+msgid "Reply To: "
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:884
+msgid "There are no Replies"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:1033
+msgid "There are no unApproved Replies"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:1043
+msgid ""
+"<h3 style=\"text-align:center;\">Forums Help</h3>\n"
+"\t\t   <h4>Single Category Forums</h4>\n"
+"\t\t   <p>\n"
+"\t\t   In a single forum you will have one page that is the Forum Category "
+"Page, it will have the \"forum_category\" Page Attribute checkbox set to "
+"true (checked), this will be the\n"
+"\t\t   Parent Page or Category Page for all your Forum Posts.  Forum posts "
+"beneath this page use the \"forum_post\" Page Type.\n"
+"\t\t   </p>"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:1050
+msgid ""
+"<p>\n"
+"\t\t   Forum Page (any page type with forum_category attribute checked and "
+"Forum List Block)\n"
+"\t\t\t <br/>&nbsp;&nbsp;&nbsp; |- Forum Post One (child pages using the "
+"forum_post page type)\n"
+"\t\t\t <br/>&nbsp;&nbsp;&nbsp; |- Forum Post Two\n"
+"\t\t\t <br/>&nbsp;&nbsp;&nbsp; |- etc...\n"
+"\t\t    </p>"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:1057
+msgid ""
+"<p>\n"
+"\t\t   Category Pages use a Forums List Block that will display a Page List "
+"of all the Forum Posts with links to each post.\n"
+"\t\t   </p>"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:1061
+msgid ""
+"<p>\n"
+"\t\t   All Forum Pages have a Forums Post Block, this block adds the \"Add a "
+"New Post\" button to the page that allows visitors to post from the front "
+"end of the website. On Forum Post Pages\n"
+"\t\t   the Forum Post Block adds buttons for Admins or Forum Moderators to "
+"Edit. Delete and UnApprove or Approve Pages. The Forums Post Block can be "
+"placed on any page on your website\n"
+"\t\t   where you want to give visitors a link to add forum posts.\n"
+"\t\t   </p>"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:1067
+msgid ""
+"<p>\n"
+"\t\t   All Forum Post Pages have an embeded Autonav block using the Forums "
+"Breadcrumb Template and a Forum Post block.  The rest of the data on the "
+"page is generated from Forum\n"
+"\t\t   Page Attributes on the forum_post.php Page Template.</p>"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:1071
+msgid ""
+"<h4>Multiple Category Forums</h4>\n"
+"\t\t   <p>\n"
+"\t\t   Multiple Category Forums are created with more than one page with the "
+"forums_category page attribute set.</p>"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:1075
+msgid ""
+"<p>\n"
+"\t\t   Top Level Forum Page (any page type with a Forum List Bock)\n"
+"\t\t    <br/>&nbsp;&nbsp;&nbsp;|- Forum Category Page (any page type with "
+"forum_category attribute checked and Forum List Block)\n"
+"\t\t\t<br/>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- Forum Post "
+"One (child pages using the forum_post page type)\n"
+"\t\t\t<br/>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- Forum Post "
+"Two\n"
+"\t\t\t<br/>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- etc...\n"
+"\t\t\t<br/>&nbsp;&nbsp;&nbsp;|- Second Forum Category Page (any page type "
+"with forum_category attribute checked and Forum List Block)\n"
+"\t\t\t<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- Forum Post One "
+"(child pages using the forum_post page type)\n"
+"\t\t\t<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- Forum Post "
+"Two\n"
+"\t\t\t<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- etc...\t\n"
+"\t\t  </p>"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:1087
+msgid ""
+"<h4>Settings</h4>\n"
+"\t\t  <p>On the Settings page you can select the defaults for each Forum "
+"Category.  The top row of checkboxes allows you to select the options you\n"
+"\t\t  want displayed on your Forum pages.</p>\n"
+"\t\t  <br/>\n"
+"\t\t  <br/>"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:1093
+msgid ""
+"<label>Page Types / Page Template</label>\n"
+"\t\t  <p>For advanced users, you can select a different Page Type or Page "
+"Template than the default /\"Forum Post/\".\n"
+"\t\t  </br/>\n"
+"\t\t  To make a new Page Template copy packages/webli_forums/page_templates/"
+"forum_post.php to your theme or page_templates directory\n"
+"\t\t  and make any changes you want to the file.\n"
+"\t\t  <br/>\n"
+"\t\t  <br/>\n"
+"\t\t  To make a new Page Type, Create the page Type in your Concrete5 "
+"dashboard and make a new Page Type Controller by copying and renaming\n"
+"\t\t  packages/webli_forums/controllers/page_types/forum_post.php and change "
+"the class at the beginning of the file.  The controller is necessary\n"
+"\t\t  for the options in Forum Settings to work properly.\n"
+"\t\t  <br/>\n"
+"\t\t  <br/></p>"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:1105
+msgid ""
+"<label>Optional Attributes</label>\n"
+"\t\t  <p>You can add additional attributes to the Forums Attribute Set in "
+"the Concrete5 dashboard and they will become available for your forum.  "
+"Check the checkbox\n"
+"\t\t  for attributes you want to use for a forum Category.  Using Optional "
+"Attributes may require some styling or modifications to the forum page "
+"template.</p>\n"
+"\t\t  <br/>\n"
+"\t\t  <br/>"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:1110
+msgid ""
+"<label>Add This / Share This</label>\n"
+"\t\t  <p>Visit <a target=\"blank\" href=\"http://www.addthis.com\">www."
+"addthis.com</a> for the code to enable social icons.</p>\n"
+"\t\t  <br/>\n"
+"\t\t  <br/>"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:1114
+msgid ""
+"<label>Pinned Posts</label>\n"
+"\t\t  <p>This function is not available yet. Coming soon.</p>"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:1117
+msgid ""
+"<p>\n"
+"\t\t  To be continued..\n"
+"\t\t  </p>"
+msgstr ""
