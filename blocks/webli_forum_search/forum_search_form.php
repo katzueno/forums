@@ -130,7 +130,7 @@ if (is_object($basePostPage) && $basePostPage->isError()) {
 	<div class="form-group">
 		<label class="control-label"><?php echo t('Block Class') ?></label>
 		<span class="help-block"><?php echo
-				t('(<strong>Note</strong>: Wraps the Blog List block in a div with this class name.)'); ?></span>
+				t('(<strong>Note</strong>: Wraps the Forum Search block in a div with this class name.)'); ?></span>
 		<input type="text" maxlength="255" class="form-control" name="class" value="<?php echo $class?>" />
 	</div>
 		

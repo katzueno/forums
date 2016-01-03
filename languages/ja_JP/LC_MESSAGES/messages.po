@@ -1,0 +1,1471 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Webli Forms\n"
+"POT-Creation-Date: 2016-01-03 09:59+0900\n"
+"PO-Revision-Date: 2016-01-03 10:33+0900\n"
+"Last-Translator: Katz Ueno <iam@katzueno.com>\n"
+"Language-Team: Webli Forums\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ../../..\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: t\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: blocks/autonav/templates/forum_breadcrumb.php:25
+msgid "Empty Auto-Nav Block."
+msgstr "空のオートナビブロックです。"
+
+#: blocks/webli_forum_archive/controller.php:31
+msgid "Create Forum Archive."
+msgstr "日付順に表示するフォーラムアーカイブを作る。"
+
+#: blocks/webli_forum_archive/controller.php:36
+msgid "Forum Archive"
+msgstr "フォーラムアーカイブ。"
+
+#: blocks/webli_forum_archive/controller.php:42
+#: blocks/webli_forum_list/controller.php:48
+#: blocks/webli_forum_tags/controller.php:42
+msgid "Please give your RSS Feed a name."
+msgstr "RSS Feed の名前をつけてください。"
+
+#: blocks/webli_forum_archive/controller.php:304
+#: blocks/webli_forum_list/controller.php:314
+#: blocks/webli_forum_tags/controller.php:323
+msgid ""
+"Your RSS feed must have a valid URL, containing only letters, numbers or "
+"underscores"
+msgstr ""
+"RSSフィードは有効なURLを設定してください。URLには半角英数字と下線のみ使用でき"
+"ます"
+
+#: blocks/webli_forum_archive/controller.php:307
+#: blocks/webli_forum_list/controller.php:317
+#: blocks/webli_forum_tags/controller.php:326
+msgid "Your RSS feed must have a valid title."
+msgstr "RSSフィードに有効なタイトルを設定してください。"
+
+#: blocks/webli_forum_archive/controller.php:310
+#: blocks/webli_forum_list/controller.php:320
+#: blocks/webli_forum_tags/controller.php:329
+msgid "Your RSS feed must have a valid description."
+msgstr "RSS フィードには有効な説明文を設定してください。"
+
+#: blocks/webli_forum_archive/forum_archive_form.php:12
+#: blocks/webli_forum_list/forum_list_form.php:11
+#: blocks/webli_forum_search/forum_search_form.php:28
+#: blocks/webli_forum_tags/forum_tags_form.php:12
+#: single_pages/dashboard/forums/view.php:76
+msgid "Settings"
+msgstr "設定"
+
+#: blocks/webli_forum_archive/forum_archive_form.php:15
+#: blocks/webli_forum_list/forum_list_form.php:19
+#: blocks/webli_forum_tags/forum_tags_form.php:15
+msgid "Page Type"
+msgstr "ページタイプ"
+
+#: blocks/webli_forum_archive/forum_archive_form.php:22
+#: blocks/webli_forum_list/forum_list_form.php:26
+#: blocks/webli_forum_tags/forum_tags_form.php:22
+msgid "All"
+msgstr "すべて"
+
+#: blocks/webli_forum_archive/forum_archive_form.php:41
+#: blocks/webli_forum_list/forum_list_form.php:104
+#: blocks/webli_forum_tags/forum_tags_form.php:41
+msgid "Location"
+msgstr "場所"
+
+#: blocks/webli_forum_archive/forum_archive_form.php:46
+#: blocks/webli_forum_list/forum_list_form.php:109
+#: blocks/webli_forum_search/form_setup_html.php:78
+#: blocks/webli_forum_search/forum_search_form.php:35
+#: blocks/webli_forum_tags/forum_tags_form.php:46
+msgid "Everywhere"
+msgstr "すべて"
+
+#: blocks/webli_forum_archive/forum_archive_form.php:53
+#: blocks/webli_forum_list/forum_list_form.php:116
+#: blocks/webli_forum_tags/forum_tags_form.php:54
+msgid "Beneath this page"
+msgstr "このページの下に公開"
+
+#: blocks/webli_forum_archive/forum_archive_form.php:60
+#: blocks/webli_forum_list/forum_list_form.php:123
+#: blocks/webli_forum_tags/forum_tags_form.php:62
+msgid "Beneath another page"
+msgstr "他のページ以下"
+
+#: blocks/webli_forum_archive/forum_archive_form.php:68
+#: blocks/webli_forum_tags/forum_tags_form.php:70
+msgid "Beneath parent page"
+msgstr "親ページの下"
+
+#: blocks/webli_forum_archive/forum_archive_form.php:83
+#: blocks/webli_forum_search/form_setup_html.php:56
+#: blocks/webli_forum_search/forum_search_form.php:74
+#: blocks/webli_forum_tags/forum_tags_form.php:84
+msgid "Forum Categories"
+msgstr "フォーラムカテゴリ"
+
+#: blocks/webli_forum_archive/forum_archive_form.php:85
+#: blocks/webli_forum_search/forum_search_form.php:76
+#: blocks/webli_forum_tags/forum_tags_form.php:86
+msgid "optional - limit to selected categories"
+msgstr "オプション - 選択したカテゴリのみに限定する"
+
+#: blocks/webli_forum_archive/forum_archive_form.php:112
+#: blocks/webli_forum_list/forum_list_form.php:381
+#: blocks/webli_forum_search/forum_search_form.php:131
+#: blocks/webli_forum_tags/forum_tags_form.php:138
+msgid "Block Class"
+msgstr "ブロック Class"
+
+#: blocks/webli_forum_archive/forum_archive_form.php:114
+#: blocks/webli_forum_list/forum_list_form.php:383
+#: blocks/webli_forum_tags/forum_tags_form.php:140
+msgid ""
+"(<strong>Note</strong>: Wraps the Forum List block in a div with this class "
+"name.)"
+msgstr ""
+"(<strong>メモ</strong>: フォーラムリストブロックをこの名前の class がついた "
+"div で囲みます。)"
+
+#: blocks/webli_forum_archive/forum_archive_form.php:119
+#: blocks/webli_forum_tags/forum_tags_form.php:145
+msgid "Title of Archive"
+msgstr "アーカイブタイトル"
+
+#: blocks/webli_forum_archive/view.php:89
+msgid "The Forum Archive Block is disabled in Forum Dashboard Settings."
+msgstr "フォーラムアーカイブブロックは、フォーラムの管理画面設定では無効です。"
+
+#: blocks/webli_forum_list/controller.php:37
+msgid "Create Forum Post Lists."
+msgstr "フォーラム投稿のリストを作成します。"
+
+#: blocks/webli_forum_list/controller.php:42
+msgid "Forum List"
+msgstr "フォーラムリスト"
+
+#: blocks/webli_forum_list/forum_list_form.php:14
+msgid "Number of Pages to Display"
+msgstr "表示件数"
+
+#: blocks/webli_forum_list/forum_list_form.php:45
+msgid "Filtering"
+msgstr "フィルタ"
+
+#: blocks/webli_forum_list/forum_list_form.php:51
+msgid "Featured pages only."
+msgstr "特集ページのみ。"
+
+#: blocks/webli_forum_list/forum_list_form.php:56
+msgid ""
+"(<strong>Note</strong>: You must create the \"is_featured\" page attribute "
+"first.)"
+msgstr ""
+"(<strong>注意</strong>: “is_featured”というページ属性を作成する必要がありま"
+"す。)"
+
+#: blocks/webli_forum_list/forum_list_form.php:64
+msgid "Pin posts to top of list."
+msgstr "「ピン」付き投稿はトップに表示"
+
+#: blocks/webli_forum_list/forum_list_form.php:66
+msgid ""
+"(<strong>Note</strong>: Set the forum_pin page attribute on pages you want "
+"pinned at top.)"
+msgstr ""
+"(<strong>メモ</strong>: 希望する投稿ページの属性 forum_pin にチェックを入れる"
+"と丈夫に表示されます。)"
+
+#: blocks/webli_forum_list/forum_list_form.php:74
+msgid "Display page aliases."
+msgstr "転載（エイリアス）ページを表示"
+
+#: blocks/webli_forum_list/forum_list_form.php:81
+msgid "Enable Other Blocks to Filter This Page List."
+msgstr "他のブロックからこのページリストの絞り込みを有効にする。"
+
+#: blocks/webli_forum_list/forum_list_form.php:83
+msgid ""
+"Allows other blocks like the topic list block to pass search criteria to "
+"this page list block."
+msgstr ""
+"トピックリストブロックなどの他のブロックにこのページリストブロックに検索条件"
+"を渡すことを許可する。"
+
+#: blocks/webli_forum_list/forum_list_form.php:94
+msgid "Pagination"
+msgstr "ページ付け"
+
+#: blocks/webli_forum_list/forum_list_form.php:98
+msgid ""
+"Display pagination interface if more items are available than are displayed."
+msgstr ""
+"表示数よりもアイテムが多い場合、ページ付けインターフェースを表示します。"
+
+#: blocks/webli_forum_list/forum_list_form.php:141
+msgid "Include all child pages"
+msgstr "すべての子ページを含む"
+
+#: blocks/webli_forum_list/forum_list_form.php:149
+msgid "Sort"
+msgstr "並び替え"
+
+#: blocks/webli_forum_list/forum_list_form.php:153
+msgid "Sitemap order"
+msgstr "サイトマップ順"
+
+#: blocks/webli_forum_list/forum_list_form.php:156
+msgid "Most recent first"
+msgstr "新規記事を最初に"
+
+#: blocks/webli_forum_list/forum_list_form.php:159
+msgid "Earliest first"
+msgstr "一番古いページを最初に"
+
+#: blocks/webli_forum_list/forum_list_form.php:162
+msgid "Alphabetical order"
+msgstr "アルファベット順"
+
+#: blocks/webli_forum_list/forum_list_form.php:165
+msgid "Reverse alphabetical order"
+msgstr "逆アルファベット順"
+
+#: blocks/webli_forum_list/forum_list_form.php:168
+msgid "Random"
+msgstr "ランダム"
+
+#: blocks/webli_forum_list/forum_list_form.php:175
+msgid "Output"
+msgstr "出力"
+
+#: blocks/webli_forum_list/forum_list_form.php:177
+msgid "Provide RSS Feed"
+msgstr "RSSフィードを出力"
+
+#: blocks/webli_forum_list/forum_list_form.php:181
+#: blocks/webli_forum_list/forum_list_form.php:219
+#: blocks/webli_forum_list/forum_list_form.php:235
+#: blocks/webli_forum_list/forum_list_form.php:273
+#: blocks/webli_forum_list/forum_list_form.php:296
+#: blocks/webli_forum_list/forum_list_form.php:314
+#: blocks/webli_forum_list/forum_list_form.php:363
+msgid "No"
+msgstr "いいえ"
+
+#: blocks/webli_forum_list/forum_list_form.php:187
+#: blocks/webli_forum_list/forum_list_form.php:225
+#: blocks/webli_forum_list/forum_list_form.php:241
+#: blocks/webli_forum_list/forum_list_form.php:279
+#: blocks/webli_forum_list/forum_list_form.php:302
+#: blocks/webli_forum_list/forum_list_form.php:320
+#: blocks/webli_forum_list/forum_list_form.php:369
+msgid "Yes"
+msgstr "はい"
+
+#: blocks/webli_forum_list/forum_list_form.php:192
+#, php-format
+msgid "RSS Feed can be found here: <a href=\"%s\" target=\"_blank\">%s</a>"
+msgstr "RSSフィードはこちら: <a href=“%s” target=“_blank”>%s</a>"
+
+#: blocks/webli_forum_list/forum_list_form.php:195
+msgid "RSS Feed Title"
+msgstr "RSSフィードタイトル"
+
+#: blocks/webli_forum_list/forum_list_form.php:200
+msgid "RSS Feed Description"
+msgstr "RSSフィード説明"
+
+#: blocks/webli_forum_list/forum_list_form.php:204
+msgid "RSS Feed Location"
+msgstr "RSS フィードの場所"
+
+#: blocks/webli_forum_list/forum_list_form.php:215
+msgid "Include Page Name"
+msgstr "ページ名を含める"
+
+#: blocks/webli_forum_list/forum_list_form.php:231
+msgid "Include Page Description"
+msgstr "ページの説明を含める"
+
+#: blocks/webli_forum_list/forum_list_form.php:249
+msgid "Use Page Content in place of Description."
+msgstr "投稿の内容を説明部分として使用する。"
+
+#: blocks/webli_forum_list/forum_list_form.php:253
+msgid "Display Truncated Description"
+msgstr "説明文を切り詰めて表示"
+
+#: blocks/webli_forum_list/forum_list_form.php:262
+msgid "characters"
+msgstr "文字"
+
+#: blocks/webli_forum_list/forum_list_form.php:269
+msgid "Include Public Page Date"
+msgstr "公開日を含める"
+
+#: blocks/webli_forum_list/forum_list_form.php:282
+msgid ""
+"This is usually the date the page is created. It can be changed from the "
+"page attributes panel."
+msgstr "これは通常ページが作成された日です。ページ属性パネルから変更できます。"
+
+#: blocks/webli_forum_list/forum_list_form.php:285
+#: single_pages/dashboard/forums/view.php:143
+msgid "Date Format"
+msgstr "日付書式"
+
+#: blocks/webli_forum_list/forum_list_form.php:287
+msgid "(<strong>Note</strong>: Use PHP Date Formatting string.)"
+msgstr "(<strong>メモ</strong>: PHP Date のフォーマット形式が使用できます。)"
+
+#: blocks/webli_forum_list/forum_list_form.php:292
+#: single_pages/dashboard/forums/view.php:137
+msgid "Display Author"
+msgstr "投稿者を表示"
+
+#: blocks/webli_forum_list/forum_list_form.php:306
+msgid ""
+"(<strong>Note</strong>: This is the text set with the event_location page "
+"attribute.)"
+msgstr ""
+"(<strong>メモ</strong>: これは投稿ページの属性 event_location で入力されたテ"
+"キストです。)"
+
+#: blocks/webli_forum_list/forum_list_form.php:310
+msgid "Display Thumbnail Image"
+msgstr "サムネイル画像を表示"
+
+#: blocks/webli_forum_list/forum_list_form.php:326
+msgid "Select an Image Attribute"
+msgstr "画像の属性を選択してください。"
+
+#: blocks/webli_forum_list/forum_list_form.php:342
+msgid "Maximum Thumbnail Width (px)"
+msgstr "最大サムネイル横幅 (px)"
+
+#: blocks/webli_forum_list/forum_list_form.php:347
+msgid "Maximum Thumbnail Height (px)"
+msgstr "最大サムネイル縦幅 (px)"
+
+#: blocks/webli_forum_list/forum_list_form.php:354
+msgid "Crop Thumbnail."
+msgstr "サムネイルを切り抜く。"
+
+#: blocks/webli_forum_list/forum_list_form.php:359
+msgid "Use Different Link than Page Name"
+msgstr "ページ名とは違うリンクを使用する"
+
+#: blocks/webli_forum_list/forum_list_form.php:374
+msgid "Link Text"
+msgstr "リンク文字"
+
+#: blocks/webli_forum_list/forum_list_form.php:388
+msgid "Title of Forum List"
+msgstr "フォーラムリストのタイトル"
+
+#: blocks/webli_forum_list/forum_list_form.php:393
+msgid "Message to Display When No Pages Listed."
+msgstr "表示するページがない場合のメッセージ"
+
+#: blocks/webli_forum_list/view.php:18
+msgid "Empty Forum List Block."
+msgstr "からのフォーラムリストブロックです。"
+
+#: blocks/webli_forum_list/view.php:101
+msgid "by"
+msgstr "投稿者"
+
+#: blocks/webli_forum_list/view.php:108 page_templates/forum_post.php:88
+msgid "UnApproved"
+msgstr "未承認"
+
+#: blocks/webli_forum_list/view.php:109 page_templates/forum_post.php:89
+msgid "Pinned"
+msgstr "ピン済み"
+
+#: blocks/webli_forum_list/view.php:126 blocks/webli_forum_list/view.php:229
+msgid "Read More"
+msgstr "もっと読む"
+
+#: blocks/webli_forum_list/view.php:142
+msgid "Latest Replies"
+msgstr "最新の返信"
+
+#: blocks/webli_forum_list/view.php:215
+msgid "Total Discussions:"
+msgstr "合計投稿数:"
+
+#: blocks/webli_forum_list/view.php:225 blocks/webli_forum_list/view.php:243
+msgid "Latest Discussion: "
+msgstr "最新の投稿:"
+
+#: blocks/webli_forum_list/view.php:228
+msgid "by: "
+msgstr "投稿者: "
+
+#: blocks/webli_forum_list/view.php:228
+msgid " on "
+msgstr "日付"
+
+#: blocks/webli_forum_list/view.php:250
+msgid " replied to "
+msgstr "返信先"
+
+#: blocks/webli_forum_post/controller.php:27
+msgid "Create forum posts"
+msgstr "投稿を作成"
+
+#: blocks/webli_forum_post/controller.php:32 controller.php:203
+#: single_pages/dashboard/forums/view.php:350
+msgid "Forum Post"
+msgstr "フォーラム投稿"
+
+#: blocks/webli_forum_post/forum_post_form.php:7
+msgid "Block Class (Optional)"
+msgstr "ブロック Class (オプション)"
+
+#: blocks/webli_forum_post/view.php:34
+#: single_pages/dashboard/forums/view.php:471
+#: single_pages/dashboard/forums/view.php:598
+#: single_pages/dashboard/forums/view.php:702
+#: single_pages/dashboard/forums/view.php:813
+#: single_pages/dashboard/forums/view.php:862
+#: single_pages/dashboard/forums/view.php:962
+#: single_pages/dashboard/forums/view.php:1011
+msgid "Delete"
+msgstr "削除"
+
+#: blocks/webli_forum_post/view.php:41
+#: single_pages/dashboard/forums/view.php:491
+#: single_pages/dashboard/forums/view.php:711
+msgid "UnPin"
+msgstr "ピンを外す"
+
+#: blocks/webli_forum_post/view.php:47
+#: single_pages/dashboard/forums/view.php:391
+#: single_pages/dashboard/forums/view.php:499
+msgid "Pin"
+msgstr "ピンする"
+
+#: blocks/webli_forum_post/view.php:55
+msgid "UnApprove"
+msgstr "未承認にする"
+
+#: blocks/webli_forum_post/view.php:61
+#: single_pages/dashboard/forums/view.php:607
+#: single_pages/dashboard/forums/view.php:971
+#: single_pages/dashboard/forums/view.php:1018
+msgid "Approve"
+msgstr "承認する"
+
+#: blocks/webli_forum_post/view.php:68
+msgid "Add a Forum Post"
+msgstr "投稿を追加"
+
+#: blocks/webli_forum_post/view.php:71
+msgid "Login or Register to Add New Post"
+msgstr "ログイン・新規登録が必要です"
+
+#: blocks/webli_forum_post/view.php:138 blocks/webli_forum_post/view.php:247
+#: new_post.php:10
+msgid "Select Forum"
+msgstr "フォーラムを選択"
+
+#: blocks/webli_forum_post/view.php:156 blocks/webli_forum_post/view.php:262
+#: blocks/webli_forum_search/form_setup_html.php:46
+#: blocks/webli_forum_search/forum_search_form.php:138 new_post.php:26
+#: single_pages/dashboard/forums/view.php:314
+#: single_pages/dashboard/forums/view.php:429
+#: single_pages/dashboard/forums/view.php:557
+#: single_pages/dashboard/forums/view.php:662
+msgid "Title"
+msgstr "タイトル"
+
+#: blocks/webli_forum_post/view.php:164 blocks/webli_forum_post/view.php:270
+#: new_post.php:34
+msgid "Name"
+msgstr "名前"
+
+#: blocks/webli_forum_post/view.php:169 new_post.php:39
+msgid "Email Address (not displayed)"
+msgstr "メールアドレス (非表示)"
+
+#: blocks/webli_forum_post/view.php:176 blocks/webli_forum_post/view.php:279
+#: new_post.php:46
+msgid "Post"
+msgstr "投稿"
+
+#: blocks/webli_forum_post/view.php:199 blocks/webli_forum_post/view.php:286
+#: controller.php:136 controller.php:245 new_post.php:51
+#: single_pages/dashboard/forums/view.php:382
+msgid "Tags"
+msgstr "タグ"
+
+#: blocks/webli_forum_post/view.php:232 blocks/webli_forum_post/view.php:319
+#: new_post.php:55
+msgid "Submit"
+msgstr "送信"
+
+#: blocks/webli_forum_post/view.php:329
+#: single_pages/dashboard/forums/view.php:25
+msgid ""
+"Are you sure you want to DELETE THIS PAGE?  This will remove the page from "
+"the website. THIS ACTION CANNOT BE UNDONE."
+msgstr ""
+"このページを削除してよろしいですか？このページがサイトから削除されます。この"
+"アクションはやり直しできません。"
+
+#: blocks/webli_forum_search/controller.php:89
+msgid "Add a forum search box."
+msgstr "フォーラム検索ボックスを追加。"
+
+#: blocks/webli_forum_search/controller.php:94 controller.php:280
+msgid "Forum Search"
+msgstr "フォーラム検索"
+
+#: blocks/webli_forum_search/form_setup_html.php:40
+#: blocks/webli_forum_search/forum_search_form.php:24
+msgid ""
+"The search index does not appear to exist. This block will not function "
+"until the reindex job has been run at least once in the dashboard."
+msgstr ""
+"検索インデックスが見つかりません。このブロックは少なくとも1回は管理画面から検"
+"索インデックス生成ジョブを実行しないと使えません。"
+
+#: blocks/webli_forum_search/form_setup_html.php:51
+#: blocks/webli_forum_search/forum_search_form.php:126
+msgid "Button Text"
+msgstr "ボタンテキスト"
+
+#: blocks/webli_forum_search/form_setup_html.php:74
+#: blocks/webli_forum_search/forum_search_form.php:31
+msgid "Search for Pages"
+msgstr "ページを検索"
+
+#: blocks/webli_forum_search/form_setup_html.php:84
+#: blocks/webli_forum_search/forum_search_form.php:47
+msgid "Beneath this Page"
+msgstr "ページの下に公開"
+
+#: blocks/webli_forum_search/form_setup_html.php:90
+#: blocks/webli_forum_search/forum_search_form.php:53
+msgid "Beneath Another Page"
+msgstr "他のページ以下"
+
+#: blocks/webli_forum_search/form_setup_html.php:110
+#: blocks/webli_forum_search/forum_search_form.php:102
+#: blocks/webli_forum_tags/forum_tags_form.php:113
+msgid "Results Page"
+msgstr "結果ページ"
+
+#: blocks/webli_forum_search/form_setup_html.php:114
+#: blocks/webli_forum_search/forum_search_form.php:106
+msgid "Post Results to a Different Page"
+msgstr "別ページに結果を表示"
+
+#: blocks/webli_forum_search/form_setup_html.php:125
+#: blocks/webli_forum_search/forum_search_form.php:117
+msgid "OR Path"
+msgstr "またはパス"
+
+#: blocks/webli_forum_search/forum_search_form.php:41
+msgid "Beneath Parent"
+msgstr "親ページの下"
+
+#: blocks/webli_forum_search/forum_search_form.php:133
+msgid ""
+"(<strong>Note</strong>: Wraps the Forum Search block in a div with this "
+"class name.)"
+msgstr ""
+"(<strong>メモ</strong>: フォーラムリストブロックをこの名前の class がついた "
+"div で囲みます。)"
+
+#: blocks/webli_forum_search/view.php:50
+msgid "There were no results found. Please try another keyword or phrase."
+msgstr ""
+"検索語句に一致するページは見つかりませんでした。他のキーワードを入力してみて"
+"ください。"
+
+#: blocks/webli_forum_search/view.php:85
+msgid "The Forum Search Block is disabled in Forum Dashboard Settings."
+msgstr "フォーラム検索ブロックはフォーラムの管理画面設定画面では無効です。"
+
+#: blocks/webli_forum_tags/controller.php:31
+msgid "Create Forum Tag List."
+msgstr "フォーラムタグリストを作成する。"
+
+#: blocks/webli_forum_tags/controller.php:36
+msgid "Forum Tags"
+msgstr "フォーラムタグ"
+
+#: blocks/webli_forum_tags/forum_tags_form.php:121
+msgid "Maximum Number of Tags"
+msgstr "タグの最大件数"
+
+#: blocks/webli_forum_tags/forum_tags_form.php:126
+msgid "Minimum Height of Tags"
+msgstr "タグの最小縦幅"
+
+#: blocks/webli_forum_tags/forum_tags_form.php:131
+msgid "Maximum Height of Tags"
+msgstr "タグの最大縦幅"
+
+#: blocks/webli_forum_tags/view.php:18
+msgid "The Forum Tags Block is disabled in Forum Dashboard Settings."
+msgstr "フォーラムタグブロックはフォーラム管理画面では無効です。"
+
+#: controller.php:45 controller.php:50 controller.php:61 controller.php:172
+#: controller.php:195 controller.php:263
+msgid "Forums"
+msgstr "フォーラム"
+
+#: controller.php:92
+#, php-format
+msgid "New Forum Post to %s"
+msgstr "新しい投稿先： %s"
+
+#: controller.php:144 controller.php:252
+#: single_pages/dashboard/forums/view.php:357
+msgid "Forum Image"
+msgstr "フォーラム画像"
+
+#: controller.php:172
+msgid "Forums Dashboard"
+msgstr "フォーラム管理画面"
+
+#: controller.php:181
+msgid "Forum Moderators, delete, edit, approve"
+msgstr "フォーラム管理者, 削除, 編集, 承認"
+
+#: controller.php:210
+msgid "Forum Category"
+msgstr "フォーラムカテゴリ"
+
+#: controller.php:217
+msgid "Forum Email Address"
+msgstr "フォーラムメールアドレス"
+
+#: controller.php:224
+msgid "Forum Name"
+msgstr "フォーラム名"
+
+#: controller.php:231
+msgid "Pin Forum Post"
+msgstr "投稿をピン付する"
+
+#: controller.php:238
+msgid "Forum Post Approved"
+msgstr "投稿を承認しました。"
+
+#: controller.php:264
+msgid "Top Level Forums Page"
+msgstr "フォーラムのトップレベルページ"
+
+#: controller.php:281
+msgid "Forum Search Page"
+msgstr "フォーラム検索ページ"
+
+#: controller.php:505
+msgid "Add a Comment"
+msgstr "返信を追加"
+
+#: controller.php:553
+msgid ""
+"\n"
+"\t\t\t\t<p>Hey, Congratulations, you have installed Forums for Concrete5.  "
+"Forums will give visitors to your site frontend\n"
+"\t\t\t\tediting capabilities to add Forum Messages and reply to existing "
+"messages.</p>\n"
+"\t\t\t\t<p>Administrators have access to the Forums Dashboard Page to "
+"customize and manage your forums.</p>\n"
+"\t\t\t\t<p>So get your forum started and if you have any comments or "
+"questions visit <a href=\"http://forums.webli.us\" target=\"_blank\">forums."
+"webli.us</a></p>"
+msgstr ""
+"\n"
+"\t\t\t\t<p>おめでとうどざいます。concrete5 のフォーラムブロックをインストール"
+"できました。フォーラムブロックは\n"
+"\t\t\t\tフロントエンドでメッセージを投稿したり、既存のメッセージに返信したり"
+"することができます。</p>\n"
+"\t\t\t\t<p>管理者は、管理画面のページでフォーラムの管理を行うことができます。"
+"</p>\n"
+"\t\t\t\t<p>自分だけのフォーラムを始めてみてください。何か質問がある場合は <a "
+"href=\"http://forums.webli.us\" target=\"_blank\">forums.webli.us</a>までお越"
+"し下さい。</p>"
+
+#: controller.php:560
+msgid "Frist Message"
+msgstr "最初のメッセージ"
+
+#: mail/forum_notification.php:4
+#, php-format
+msgid ""
+"\n"
+"\t\t  There has been a new forum post to %s, %s\n"
+"\t\t  "
+msgstr ""
+"\n"
+"\t\t  新しいフォーラムの投稿がありました\n"
+"\t\t  %s, \n"
+"\t\t  %s\n"
+"\t\t  "
+
+#: page_templates/forum_post.php:167
+msgid "Comments"
+msgstr "コメント"
+
+#: page_templates/forum_post.php:177
+msgid "This Post is Waiting Approval"
+msgstr "この投稿は承認待ちです。"
+
+#: single_pages/dashboard/forums/view.php:34
+msgid ""
+"Are you sure you want to DELETE THIS REPLY? You can undelete replies in the "
+"Conversations Messages Dashboard Page"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:77
+msgid "New Post"
+msgstr "新しい投稿"
+
+#: single_pages/dashboard/forums/view.php:78
+msgid "Posts"
+msgstr "投稿"
+
+#: single_pages/dashboard/forums/view.php:79
+msgid "UnApproved Posts"
+msgstr "未承認の投稿"
+
+#: single_pages/dashboard/forums/view.php:80
+msgid "Pinned Posts"
+msgstr "ピン付投稿"
+
+#: single_pages/dashboard/forums/view.php:81
+msgid "Replies"
+msgstr "返信"
+
+#: single_pages/dashboard/forums/view.php:82
+msgid "UnApproved Replies"
+msgstr "未承認の返信"
+
+#: single_pages/dashboard/forums/view.php:83
+msgid "Help"
+msgstr "ヘルプ"
+
+#: single_pages/dashboard/forums/view.php:94
+#: single_pages/dashboard/forums/view.php:290
+#: single_pages/dashboard/forums/view.php:430
+#: single_pages/dashboard/forums/view.php:558
+#: single_pages/dashboard/forums/view.php:663
+#: single_pages/dashboard/forums/view.php:771
+#: single_pages/dashboard/forums/view.php:920
+msgid "Category"
+msgstr "カテゴリを追加"
+
+#: single_pages/dashboard/forums/view.php:116
+msgid "Enable Comments"
+msgstr "コメントを有効化"
+
+#: single_pages/dashboard/forums/view.php:118
+msgid "Enable Breadcrumb Menu"
+msgstr "フォーラムパンくずを有効化"
+
+#: single_pages/dashboard/forums/view.php:120
+msgid "Enable Anonymous Posts"
+msgstr "非ログイン投稿を許可"
+
+#: single_pages/dashboard/forums/view.php:122
+msgid "Moderator Approval Required"
+msgstr "モデレータの承認が必要"
+
+#: single_pages/dashboard/forums/view.php:126
+msgid "Display Search Block"
+msgstr "検索ブロックを表示"
+
+#: single_pages/dashboard/forums/view.php:128
+msgid "Display Archive Block"
+msgstr "アーカイブブロックを表示する"
+
+#: single_pages/dashboard/forums/view.php:130
+msgid "Display Tags Block"
+msgstr "タグブロックを表示する"
+
+#: single_pages/dashboard/forums/view.php:135
+msgid "Display Title"
+msgstr "タイトルを表示する"
+
+#: single_pages/dashboard/forums/view.php:139
+msgid "Display Forum Tags"
+msgstr "フォーラムのタグを表示する"
+
+#: single_pages/dashboard/forums/view.php:141
+msgid "Display Date"
+msgstr "日付を表示する"
+
+#: single_pages/dashboard/forums/view.php:149
+msgid "Display Avatars"
+msgstr "プロフィール画像を表示する"
+
+#: single_pages/dashboard/forums/view.php:151
+msgid "Display Forum Image"
+msgstr "フォーラム画像を表示する"
+
+#: single_pages/dashboard/forums/view.php:153
+msgid "Crop Images"
+msgstr "画像を切り抜く"
+
+#: single_pages/dashboard/forums/view.php:155
+msgid "Image Dimensions"
+msgstr "画像サイズ"
+
+#: single_pages/dashboard/forums/view.php:158
+msgid "Width"
+msgstr "幅"
+
+#: single_pages/dashboard/forums/view.php:163
+msgid "Height"
+msgstr "高さ"
+
+#: single_pages/dashboard/forums/view.php:219
+msgid "E-Mail Notification of New Forum Post"
+msgstr "新しい投稿はメール通知をする"
+
+#: single_pages/dashboard/forums/view.php:221
+msgid "Enter recipient E-Mail Addresses seperated by commas"
+msgstr ""
+"送信先のメールアドレスを入力してください。複数の場合はカンマ(,) で区切ってく"
+"ださい。"
+
+#: single_pages/dashboard/forums/view.php:237
+msgid "Add This"
+msgstr "Add This"
+
+#: single_pages/dashboard/forums/view.php:239
+msgid ""
+"Paste Add This Share Code Here: (<a href=\"http://www.addthis.com\" target="
+"\"_blank\">www.addthis.com</a>)"
+msgstr ""
+"Add This のシェア用コードをこちらに貼付けてください (<a href=\"http://www."
+"addthis.com\" target=\"_blank\">www.addthis.com</a>)"
+
+#: single_pages/dashboard/forums/view.php:240
+#: single_pages/dashboard/forums/view.php:258
+msgid "Copy Javascript Script Tags Here"
+msgstr "Javascript タグをコピーしてください"
+
+#: single_pages/dashboard/forums/view.php:242
+msgid "Copy Share HTML Tags Here"
+msgstr "HTML タグをこちらに貼付けてください"
+
+#: single_pages/dashboard/forums/view.php:244
+msgid "Copy Follow HTML Tags Here"
+msgstr "フォロー HTML タグをこちらに貼付けてください"
+
+#: single_pages/dashboard/forums/view.php:246
+msgid "Copy Recommend HTML Tags Here"
+msgstr "レコメンデーション HTML タグをこちらに貼付けてください"
+
+#: single_pages/dashboard/forums/view.php:255
+msgid "Share This"
+msgstr "Share This"
+
+#: single_pages/dashboard/forums/view.php:257
+msgid ""
+"Paste Share This Code Here: (<a href=\"http://www.sharethis.com\" target="
+"\"_blank\">www.sharethis.com</a>)"
+msgstr ""
+"Share This のシェア用コードをこちらに貼付けてください (<a href=\"http://www."
+"sharethis.com\" target=\"_blank\">www.sharethis.com</a>)"
+
+#: single_pages/dashboard/forums/view.php:260
+msgid "Copy HTML Tags Here"
+msgstr "HTMLタグをこちらに貼付けてください"
+
+#: single_pages/dashboard/forums/view.php:279
+msgid ""
+"Add a Forum Category page by setting a \"forum_category\" Page Attribute"
+msgstr ""
+"フォーラムカテゴリページは、希望する属性に「forum_category」属性をオンにする"
+"と作成できます。"
+
+#: single_pages/dashboard/forums/view.php:292
+msgid "Select a Category"
+msgstr "カテゴリを選択"
+
+#: single_pages/dashboard/forums/view.php:320
+msgid "Description"
+msgstr "説明"
+
+#: single_pages/dashboard/forums/view.php:329
+msgid "User"
+msgstr "ユーザー"
+
+#: single_pages/dashboard/forums/view.php:338
+#: single_pages/dashboard/forums/view.php:428
+#: single_pages/dashboard/forums/view.php:556
+#: single_pages/dashboard/forums/view.php:661
+#: single_pages/dashboard/forums/view.php:769
+#: single_pages/dashboard/forums/view.php:918
+msgid "Date"
+msgstr "日付"
+
+#: single_pages/dashboard/forums/view.php:359
+msgid "Choose Image"
+msgstr "画像を選択"
+
+#: single_pages/dashboard/forums/view.php:394
+#: single_pages/dashboard/forums/view.php:854
+#: single_pages/dashboard/forums/view.php:1003
+msgid "Save"
+msgstr "保存"
+
+#: single_pages/dashboard/forums/view.php:408
+#: single_pages/dashboard/forums/view.php:535
+#: single_pages/dashboard/forums/view.php:641
+#: single_pages/dashboard/forums/view.php:748
+#: single_pages/dashboard/forums/view.php:897
+msgid "Filter by Category"
+msgstr "カテゴリで絞込む"
+
+#: single_pages/dashboard/forums/view.php:410
+#: single_pages/dashboard/forums/view.php:537
+#: single_pages/dashboard/forums/view.php:643
+#: single_pages/dashboard/forums/view.php:750
+#: single_pages/dashboard/forums/view.php:899
+msgid "All Categories"
+msgstr "全てのカテゴリ"
+
+#: single_pages/dashboard/forums/view.php:431
+#: single_pages/dashboard/forums/view.php:559
+#: single_pages/dashboard/forums/view.php:664
+#: single_pages/dashboard/forums/view.php:772
+#: single_pages/dashboard/forums/view.php:921
+msgid "Author"
+msgstr "投稿者"
+
+#: single_pages/dashboard/forums/view.php:480
+#: single_pages/dashboard/forums/view.php:822
+#: single_pages/dashboard/forums/view.php:869
+msgid "unApprove"
+msgstr "未承認"
+
+#: single_pages/dashboard/forums/view.php:524
+msgid "There are no Posts"
+msgstr "投稿がありません。"
+
+#: single_pages/dashboard/forums/view.php:630
+msgid "There are no unApproved Posts"
+msgstr "未承認の投稿がありません。"
+
+#: single_pages/dashboard/forums/view.php:737
+msgid "There are no Pinned Posts"
+msgstr "ピン付きの投稿はありません。"
+
+#: single_pages/dashboard/forums/view.php:770
+#: single_pages/dashboard/forums/view.php:919
+msgid "Reply To"
+msgstr "返信先"
+
+#: single_pages/dashboard/forums/view.php:844
+msgid "Reply To: "
+msgstr "返信先"
+
+#: single_pages/dashboard/forums/view.php:884
+msgid "There are no Replies"
+msgstr "返信がありません。"
+
+#: single_pages/dashboard/forums/view.php:1033
+msgid "There are no unApproved Replies"
+msgstr "未承認の返信はありません。"
+
+#: single_pages/dashboard/forums/view.php:1043
+msgid ""
+"<h3 style=\"text-align:center;\">Forums Help</h3>\n"
+"\t\t   <h4>Single Category Forums</h4>\n"
+"\t\t   <p>\n"
+"\t\t   In a single forum you will have one page that is the Forum Category "
+"Page, it will have the \"forum_category\" Page Attribute checkbox set to "
+"true (checked), this will be the\n"
+"\t\t   Parent Page or Category Page for all your Forum Posts.  Forum posts "
+"beneath this page use the \"forum_post\" Page Type.\n"
+"\t\t   </p>"
+msgstr ""
+"<h3 style=\"text-align:center;\">フォーラムヘルプ</h3>\n"
+"\t\t   <h4>シングルカテゴリーフォーラム</h4>\n"
+"\t\t   <p>\n"
+"\t\t   シングルカテゴリーフォーラムは、「forum_category」のページ属性が選択さ"
+"れた、カテゴリーフォーラムページがサイト上に1つしか無いフォーラムです。\n"
+"\t\t   このページの配下に \"forum_post\" ページタイプのページが作成されていき"
+"ます.\n"
+"\t\t   </p>"
+
+#: single_pages/dashboard/forums/view.php:1050
+msgid ""
+"<p>\n"
+"\t\t   Forum Page (any page type with forum_category attribute checked and "
+"Forum List Block)\n"
+"\t\t\t <br/>&nbsp;&nbsp;&nbsp; |- Forum Post One (child pages using the "
+"forum_post page type)\n"
+"\t\t\t <br/>&nbsp;&nbsp;&nbsp; |- Forum Post Two\n"
+"\t\t\t <br/>&nbsp;&nbsp;&nbsp; |- etc...\n"
+"\t\t    </p>"
+msgstr ""
+"<p>\n"
+"\t\t   [フォーラム] (フォーラムリストブロックが設置され「forum_category」ペー"
+"ジ属性がオンのページ。ページタイプは問いません)\n"
+"\t\t\t <br/>&nbsp;&nbsp;&nbsp; |- 投稿1 (子ページは forum_post ページタイプが"
+"使用されます)\n"
+"\t\t\t <br/>&nbsp;&nbsp;&nbsp; |- 投稿2\n"
+"\t\t\t <br/>&nbsp;&nbsp;&nbsp; |- etc...\n"
+"\t\t    </p>"
+
+#: single_pages/dashboard/forums/view.php:1057
+msgid ""
+"<p>\n"
+"\t\t   Category Pages use a Forums List Block that will display a Page List "
+"of all the Forum Posts with links to each post.\n"
+"\t\t   </p>"
+msgstr ""
+"<p>\n"
+"\t\t   カテゴリーページで、フォーラムリストブロックを使用すると、投稿が1件ず"
+"つ表示されます\n"
+"\t\t   </p>"
+
+#: single_pages/dashboard/forums/view.php:1061
+msgid ""
+"<p>\n"
+"\t\t   All Forum Pages have a Forums Post Block, this block adds the \"Add a "
+"New Post\" button to the page that allows visitors to post from the front "
+"end of the website. On Forum Post Pages\n"
+"\t\t   the Forum Post Block adds buttons for Admins or Forum Moderators to "
+"Edit. Delete and UnApprove or Approve Pages. The Forums Post Block can be "
+"placed on any page on your website\n"
+"\t\t   where you want to give visitors a link to add forum posts.\n"
+"\t\t   </p>"
+msgstr ""
+"<p>\n"
+"\t\t   すべてのフォーラム投稿ページでは「投稿する」ボタンが設置され、ユーザー"
+"が投稿を追加できるようになっています。\n"
+"\t\t   管理者や「Forum Moderator」グループに属するユーザーは、投稿の編集・削"
+"除・未承認・承認を行えます。\n"
+"\t\t  フォーラム投稿ボタンはサイト上のどのページにも設置できます。\n"
+"\t\t   </p>"
+
+#: single_pages/dashboard/forums/view.php:1067
+msgid ""
+"<p>\n"
+"\t\t   All Forum Post Pages have an embeded Autonav block using the Forums "
+"Breadcrumb Template and a Forum Post block.  The rest of the data on the "
+"page is generated from Forum\n"
+"\t\t   Page Attributes on the forum_post.php Page Template.</p>"
+msgstr ""
+"<p>\n"
+"\t\t   フォーラム投稿ページには、forum_breadcrumb のカスタムテンプレートが適"
+"用されたオートナビブロックが設置されています。\n"
+"\t\t   残りの表示は.forum_post.php というページテンプレートファイルの中に埋め"
+"込まれやコードにより、投稿情報を表示しています。</p>"
+
+#: single_pages/dashboard/forums/view.php:1071
+msgid ""
+"<h4>Multiple Category Forums</h4>\n"
+"\t\t   <p>\n"
+"\t\t   Multiple Category Forums are created with more than one page with the "
+"forums_category page attribute set.</p>"
+msgstr ""
+"<h4>複数カテゴリフォーラム</h4>\n"
+"\t\t   <p>\n"
+"\t\t   複数カテゴリフォーラムは、forums_category ページ属性がオンになっている"
+"ページがサイト上に複数ページ存在している場合に作成できます。</p>"
+
+#: single_pages/dashboard/forums/view.php:1075
+msgid ""
+"<p>\n"
+"\t\t   Top Level Forum Page (any page type with a Forum List Bock)\n"
+"\t\t    <br/>&nbsp;&nbsp;&nbsp;|- Forum Category Page (any page type with "
+"forum_category attribute checked and Forum List Block)\n"
+"\t\t\t<br/>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- Forum Post "
+"One (child pages using the forum_post page type)\n"
+"\t\t\t<br/>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- Forum Post "
+"Two\n"
+"\t\t\t<br/>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- etc...\n"
+"\t\t\t<br/>&nbsp;&nbsp;&nbsp;|- Second Forum Category Page (any page type "
+"with forum_category attribute checked and Forum List Block)\n"
+"\t\t\t<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- Forum Post One "
+"(child pages using the forum_post page type)\n"
+"\t\t\t<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- Forum Post "
+"Two\n"
+"\t\t\t<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- etc...\t\n"
+"\t\t  </p>"
+msgstr ""
+"<p>\n"
+"\t\t   トップレベルのフォーラムページ (フォーラムリストブロックが設置された"
+"ページ。ページタイプは問わない)\n"
+"\t\t    <br/>&nbsp;&nbsp;&nbsp;|- カテゴリ1ページ (ページ属性 forum_category "
+"がチェックしてあり、フォーラムリストブロックが設置)\n"
+"\t\t\t<br/>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- 投稿1 (child "
+"pages using the forum_post page type)\n"
+"\t\t\t<br/>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- 投稿2\n"
+"\t\t\t<br/>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- etc…\n"
+"\t\t\t<br/>&nbsp;&nbsp;&nbsp;|- カテゴリ2ページ (ページ属性 forum_category が"
+"チェックしてあり、フォーラムリストブロックが設置)\n"
+"\t\t\t<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- 投稿1 (child "
+"pages using the forum_post page type)\n"
+"\t\t\t<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- 投稿2\n"
+"\t\t\t<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- etc…\t\n"
+"\t\t  </p>"
+
+#: single_pages/dashboard/forums/view.php:1087
+msgid ""
+"<h4>Settings</h4>\n"
+"\t\t  <p>On the Settings page you can select the defaults for each Forum "
+"Category.  The top row of checkboxes allows you to select the options you\n"
+"\t\t  want displayed on your Forum pages.</p>\n"
+"\t\t  <br/>\n"
+"\t\t  <br/>"
+msgstr ""
+"<h4>設定</h4>\n"
+"\t\t  <p>設定ページでは、各カテゴリ独自の設定ができます。\n"
+"\t\t  上段の設定は、投稿ページで何を表示させたいかを設定できます。</p>\n"
+"\t\t  <br/>\n"
+"\t\t  <br/>"
+
+#: single_pages/dashboard/forums/view.php:1093
+msgid ""
+"<label>Page Types / Page Template</label>\n"
+"\t\t  <p>For advanced users, you can select a different Page Type or Page "
+"Template than the default /\"Forum Post/\".\n"
+"\t\t  </br/>\n"
+"\t\t  To make a new Page Template copy packages/webli_forums/page_templates/"
+"forum_post.php to your theme or page_templates directory\n"
+"\t\t  and make any changes you want to the file.\n"
+"\t\t  <br/>\n"
+"\t\t  <br/>\n"
+"\t\t  To make a new Page Type, Create the page Type in your Concrete5 "
+"dashboard and make a new Page Type Controller by copying and renaming\n"
+"\t\t  packages/webli_forums/controllers/page_types/forum_post.php and change "
+"the class at the beginning of the file.  The controller is necessary\n"
+"\t\t  for the options in Forum Settings to work properly.\n"
+"\t\t  <br/>\n"
+"\t\t  <br/></p>"
+msgstr ""
+"<label>ページタイプ / ページテンプレート</label>\n"
+"\t\t  <p>上級者は、「Forum Post」以外の違うページタイプやページテンプレートを"
+"作成することが可能です。\n"
+"\t\t  </br/>\n"
+"\t\t  packages/webli_forums/page_templates/forum_post.php を自分のテーマフォ"
+"ルダか「page_template」フォルダに移動し、\n"
+"\t\t  ファイルを任意で変更してみてください。\n"
+"\t\t  <br/>\n"
+"\t\t  <br/>\n"
+"\t\t  新しいページタイプを使う場合は、concrete5 の管理画面でページタイプを作"
+"成してから、 packages/webli_forums/controllers/page_types/forum_post.php \n"
+"\t\t  のファイルをコピー・名前変更し、最初の方にある行の class 名を変更してく"
+"ださい。このコントローラーは、\n"
+"\t\t  フォーラムの設定をうまく反映させるために必要です。\n"
+"\t\t  <br/>\n"
+"\t\t  <br/></p>"
+
+#: single_pages/dashboard/forums/view.php:1105
+msgid ""
+"<label>Optional Attributes</label>\n"
+"\t\t  <p>You can add additional attributes to the Forums Attribute Set in "
+"the Concrete5 dashboard and they will become available for your forum.  "
+"Check the checkbox\n"
+"\t\t  for attributes you want to use for a forum Category.  Using Optional "
+"Attributes may require some styling or modifications to the forum page "
+"template.</p>\n"
+"\t\t  <br/>\n"
+"\t\t  <br/>"
+msgstr ""
+"<label>オプション属性</label>\n"
+"\t\t  <p>フォーラムの属性セットに属性を追加すると、フォーラムで使えるようにな"
+"ります。フォーラムのカテゴリとして\n"
+"\t\t  使いたい属性のチェックボックスをオンにしてください。属性を追加した場"
+"合、フォーラムページテンプレートを追加で修正する必要があるかもしれません。</"
+"p>\n"
+"\t\t  <br/>\n"
+"\t\t  <br/>"
+
+#: single_pages/dashboard/forums/view.php:1110
+msgid ""
+"<label>Add This / Share This</label>\n"
+"\t\t  <p>Visit <a target=\"blank\" href=\"http://www.addthis.com\">www."
+"addthis.com</a> for the code to enable social icons.</p>\n"
+"\t\t  <br/>\n"
+"\t\t  <br/>"
+msgstr ""
+"<label>Add This / Share This</label>\n"
+"\t\t  <p><a target=\"blank\" href=\"http://www.addthis.com\">www.addthis."
+"com</a> サイトや ShareThis のサイトに訪問し、コードを取得酒てください。</p>\n"
+"\t\t  <br/>\n"
+"\t\t  <br/>"
+
+#: single_pages/dashboard/forums/view.php:1114
+msgid ""
+"<label>Pinned Posts</label>\n"
+"\t\t  <p>This function is not available yet. Coming soon.</p>"
+msgstr ""
+"<label>ピン付投稿</label>\n"
+"\t\t  <p>この機能はまだ開発中です。</p>"
+
+#: single_pages/dashboard/forums/view.php:1117
+msgid ""
+"<p>\n"
+"\t\t  To be continued..\n"
+"\t\t  </p>"
+msgstr ""
+"<p>\n"
+"\t\t  To be continued..\n"
+"\t\t  </p>"
+
+#~ msgid ""
+#~ "<center><h3>Forums Help</h3></center>\n"
+#~ "\t\t   <h4>Single Category Forums</h4>\n"
+#~ "\t\t   <p>\n"
+#~ "\t\t   In a single forum you will have one page that is the Forum "
+#~ "Category Page, it will have the \"forum_category\" Page Attribute "
+#~ "checkbox set to true (checked), this will be the\n"
+#~ "\t\t   Parent Page or Category Page for all your Forum Posts.  Forum "
+#~ "posts beneath this page use the \"forum_post\" Page Type.\n"
+#~ "\t\t   </p>\n"
+#~ "\t\t   \n"
+#~ "\t\t   <p>\n"
+#~ "\t\t   Forum Page (any page type with forum_category attribute checked "
+#~ "and Forum List Block)\n"
+#~ "\t\t\t <br/>&nbsp;&nbsp;&nbsp; |- Forum Post One (child pages using the "
+#~ "forum_post page type)\n"
+#~ "\t\t\t <br/>&nbsp;&nbsp;&nbsp; |- Forum Post Two\n"
+#~ "\t\t\t <br/>&nbsp;&nbsp;&nbsp; |- ect...\n"
+#~ "\t\t    </p>\n"
+#~ "\t\t   \n"
+#~ "\t\t   <p>\n"
+#~ "\t\t   Category Pages use a Forums List Block that will display a Page "
+#~ "List of all the Forum Posts with links to each post.\n"
+#~ "\t\t   </p>\n"
+#~ "\t\t   \n"
+#~ "\t\t   <p>\n"
+#~ "\t\t   All Forum Pages have a Forums Post Block, this block adds the "
+#~ "\"Add a New Post\" button to the page that allows visitors to post from "
+#~ "the front end of the website. On Forum Post Pages\n"
+#~ "\t\t   the Forum Post Block adds buttons for Admins or Forum Moderators "
+#~ "to Edit. Delete and UnApprove or Approve Pages. The Forums Post Block can "
+#~ "be placed on any page on your website\n"
+#~ "\t\t   where you want to give visitors a link to add forum posts.\n"
+#~ "\t\t   </p>\n"
+#~ "\t\t\t\n"
+#~ "\t\t   <p>\n"
+#~ "\t\t   All Forum Post Pages have an embeded Autonav block using the "
+#~ "Forums Breadcrumb Template and a Forum Post block.  The rest of the data "
+#~ "on the page is generated from Forum\n"
+#~ "\t\t   Page Attributes on the forum_post.php Page Template.\n"
+#~ "\t\t   \n"
+#~ "\t\t   <h4>Multiple Category Forums</h4>\n"
+#~ "\t\t   <p>\n"
+#~ "\t\t   Multiple Category Forums are created with more than one page with "
+#~ "the forums_category page attribute set.\n"
+#~ "\n"
+#~ "\t\t   <p>\n"
+#~ "\t\t   Top Level Forum Page (any page type with a Forum List Bock)\n"
+#~ "\t\t    <br/>&nbsp;&nbsp;&nbsp;|- Forum Category Page (any page type with "
+#~ "forum_category attribute checked and Forum List Block)\n"
+#~ "\t\t\t<br/>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- Forum Post "
+#~ "One (child pages using the forum_post page type)\n"
+#~ "\t\t\t<br/>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- Forum Post "
+#~ "Two\n"
+#~ "\t\t\t<br/>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- ect...\n"
+#~ "\t\t\t<br/>&nbsp;&nbsp;&nbsp;|- Second Forum Category Page (any page type "
+#~ "with forum_category attribute checked and Forum List Block)\n"
+#~ "\t\t\t<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- Forum Post "
+#~ "One (child pages using the forum_post page type)\n"
+#~ "\t\t\t<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- Forum Post "
+#~ "Two\n"
+#~ "\t\t\t<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- ect...\t\n"
+#~ "\t\t  </p>\n"
+#~ "\t\t\t\n"
+#~ "\t\t  <p>\n"
+#~ "\t\t  <br/>\n"
+#~ "\t\t  <h4>Settings</h4>\n"
+#~ "\t\t  On the Settings page you can select the defaults for each Forum "
+#~ "Category.  The top row of checkboxes allows you to select the options "
+#~ "you\n"
+#~ "\t\t  want displayed on your Forum pages.\n"
+#~ "\t\t  <br/>\n"
+#~ "\t\t  <br/>\n"
+#~ "\t\t  <label>Page Types / Page Template</label>\n"
+#~ "\t\t  <br/>\n"
+#~ "\t\t  For advanced users, you can select a different Page Type or Page "
+#~ "Template than the default /\"Forum Post/\".\n"
+#~ "\t\t  </br/>\n"
+#~ "\t\t  To make a new Page Template copy packages/webli_forums/"
+#~ "page_templates/forum_post.php to your theme or page_templates directory\n"
+#~ "\t\t  and make any changes you want to the file.\n"
+#~ "\t\t  <br/>\n"
+#~ "\t\t  <br/>\n"
+#~ "\t\t  To make a new Page Type, Create the page Type in your Concrete5 "
+#~ "dashboard and make a new Page Type Controller by copying and renaming\n"
+#~ "\t\t  packages/webli_forums/controllers/page_types/forum_post.php and "
+#~ "change the class at the beginning of the file.  The controller is "
+#~ "necessary\n"
+#~ "\t\t  for the options in Forum Settings to work properly.\n"
+#~ "\t\t  <br/>\n"
+#~ "\t\t  <br/>\n"
+#~ "\t\t  <label>Optional Attributes</label>\n"
+#~ "\t\t  <br/>\n"
+#~ "\t\t  You can add additional attributes to the Forums Attribute Set in "
+#~ "the Concrete5 dashboard and they will become available for your forum.  "
+#~ "Check the checkbox\n"
+#~ "\t\t  for attributes you want to use for a forum Category.  Using "
+#~ "Optional Attributes may require some styling or modifications to the "
+#~ "forum page template.\n"
+#~ "\t\t  <br/>\n"
+#~ "\t\t  <br/>\n"
+#~ "\t\t  <label>Add This / Share This</label>\n"
+#~ "\t\t  Visit <a target=\"blank\" href=\"http://www.addthis.com\">www."
+#~ "addthis.com</a> for the code to enable social icons.\n"
+#~ "\t\t  <br/>\n"
+#~ "\t\t  <br/>\n"
+#~ "\t\t  <label>Pinned Posts</label>\n"
+#~ "\t\t  <br/>\n"
+#~ "\t\t  This function is not available yet. Coming soon.\n"
+#~ "\t\t  </p>\n"
+#~ "\t\t  \n"
+#~ "\t\t  <p>\n"
+#~ "\t\t  To be continued..\n"
+#~ "\t\t  </p>\n"
+#~ "\t\t   \n"
+#~ "\t\t   \n"
+#~ "\t\t"
+#~ msgstr ""
+#~ "<center><h3>フォーラムヘルプ</h3></center>\n"
+#~ "\t\t   <h4>Single Category Forums</h4>\n"
+#~ "\t\t   <p>\n"
+#~ "\t\t   In a single forum you will have one page that is the Forum "
+#~ "Category Page, it will have the \"forum_category\" Page Attribute "
+#~ "checkbox set to true (checked), this will be the\n"
+#~ "\t\t   Parent Page or Category Page for all your Forum Posts.  Forum "
+#~ "posts beneath this page use the \"forum_post\" Page Type.\n"
+#~ "\t\t   </p>\n"
+#~ "\t\t   \n"
+#~ "\t\t   <p>\n"
+#~ "\t\t   Forum Page (any page type with forum_category attribute checked "
+#~ "and Forum List Block)\n"
+#~ "\t\t\t <br/>&nbsp;&nbsp;&nbsp; |- Forum Post One (child pages using the "
+#~ "forum_post page type)\n"
+#~ "\t\t\t <br/>&nbsp;&nbsp;&nbsp; |- Forum Post Two\n"
+#~ "\t\t\t <br/>&nbsp;&nbsp;&nbsp; |- ect...\n"
+#~ "\t\t    </p>\n"
+#~ "\t\t   \n"
+#~ "\t\t   <p>\n"
+#~ "\t\t   Category Pages use a Forums List Block that will display a Page "
+#~ "List of all the Forum Posts with links to each post.\n"
+#~ "\t\t   </p>\n"
+#~ "\t\t   \n"
+#~ "\t\t   <p>\n"
+#~ "\t\t   All Forum Pages have a Forums Post Block, this block adds the "
+#~ "\"Add a New Post\" button to the page that allows visitors to post from "
+#~ "the front end of the website. On Forum Post Pages\n"
+#~ "\t\t   the Forum Post Block adds buttons for Admins or Forum Moderators "
+#~ "to Edit. Delete and UnApprove or Approve Pages. The Forums Post Block can "
+#~ "be placed on any page on your website\n"
+#~ "\t\t   where you want to give visitors a link to add forum posts.\n"
+#~ "\t\t   </p>\n"
+#~ "\t\t\t\n"
+#~ "\t\t   <p>\n"
+#~ "\t\t   All Forum Post Pages have an embeded Autonav block using the "
+#~ "Forums Breadcrumb Template and a Forum Post block.  The rest of the data "
+#~ "on the page is generated from Forum\n"
+#~ "\t\t   Page Attributes on the forum_post.php Page Template.\n"
+#~ "\t\t   \n"
+#~ "\t\t   <h4>Multiple Category Forums</h4>\n"
+#~ "\t\t   <p>\n"
+#~ "\t\t   Multiple Category Forums are created with more than one page with "
+#~ "the forums_category page attribute set.\n"
+#~ "\n"
+#~ "\t\t   <p>\n"
+#~ "\t\t   Top Level Forum Page (any page type with a Forum List Bock)\n"
+#~ "\t\t    <br/>&nbsp;&nbsp;&nbsp;|- Forum Category Page (any page type with "
+#~ "forum_category attribute checked and Forum List Block)\n"
+#~ "\t\t\t<br/>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- Forum Post "
+#~ "One (child pages using the forum_post page type)\n"
+#~ "\t\t\t<br/>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- Forum Post "
+#~ "Two\n"
+#~ "\t\t\t<br/>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- ect...\n"
+#~ "\t\t\t<br/>&nbsp;&nbsp;&nbsp;|- Second Forum Category Page (any page type "
+#~ "with forum_category attribute checked and Forum List Block)\n"
+#~ "\t\t\t<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- Forum Post "
+#~ "One (child pages using the forum_post page type)\n"
+#~ "\t\t\t<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- Forum Post "
+#~ "Two\n"
+#~ "\t\t\t<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- ect...\t\n"
+#~ "\t\t  </p>\n"
+#~ "\t\t\t\n"
+#~ "\t\t  <p>\n"
+#~ "\t\t  <br/>\n"
+#~ "\t\t  <h4>Settings</h4>\n"
+#~ "\t\t  On the Settings page you can select the defaults for each Forum "
+#~ "Category.  The top row of checkboxes allows you to select the options "
+#~ "you\n"
+#~ "\t\t  want displayed on your Forum pages.\n"
+#~ "\t\t  <br/>\n"
+#~ "\t\t  <br/>\n"
+#~ "\t\t  <label>Page Types / Page Template</label>\n"
+#~ "\t\t  <br/>\n"
+#~ "\t\t  For advanced users, you can select a different Page Type or Page "
+#~ "Template than the default /\"Forum Post/\".\n"
+#~ "\t\t  </br/>\n"
+#~ "\t\t  To make a new Page Template copy packages/webli_forums/"
+#~ "page_templates/forum_post.php to your theme or page_templates directory\n"
+#~ "\t\t  and make any changes you want to the file.\n"
+#~ "\t\t  <br/>\n"
+#~ "\t\t  <br/>\n"
+#~ "\t\t  To make a new Page Type, Create the page Type in your Concrete5 "
+#~ "dashboard and make a new Page Type Controller by copying and renaming\n"
+#~ "\t\t  packages/webli_forums/controllers/page_types/forum_post.php and "
+#~ "change the class at the beginning of the file.  The controller is "
+#~ "necessary\n"
+#~ "\t\t  for the options in Forum Settings to work properly.\n"
+#~ "\t\t  <br/>\n"
+#~ "\t\t  <br/>\n"
+#~ "\t\t  <label>Optional Attributes</label>\n"
+#~ "\t\t  <br/>\n"
+#~ "\t\t  You can add additional attributes to the Forums Attribute Set in "
+#~ "the Concrete5 dashboard and they will become available for your forum.  "
+#~ "Check the checkbox\n"
+#~ "\t\t  for attributes you want to use for a forum Category.  Using "
+#~ "Optional Attributes may require some styling or modifications to the "
+#~ "forum page template.\n"
+#~ "\t\t  <br/>\n"
+#~ "\t\t  <br/>\n"
+#~ "\t\t  <label>Add This / Share This</label>\n"
+#~ "\t\t  Visit <a target=\"blank\" href=\"http://www.addthis.com\">www."
+#~ "addthis.com</a> for the code to enable social icons.\n"
+#~ "\t\t  <br/>\n"
+#~ "\t\t  <br/>\n"
+#~ "\t\t  <label>Pinned Posts</label>\n"
+#~ "\t\t  <br/>\n"
+#~ "\t\t  This function is not available yet. Coming soon.\n"
+#~ "\t\t  </p>\n"
+#~ "\t\t  \n"
+#~ "\t\t  <p>\n"
+#~ "\t\t  To be continued..\n"
+#~ "\t\t  </p>\n"
+#~ "\t\t   \n"
+#~ "\t\t   \n"
+#~ "\t\t"
+
+#~ msgid ""
+#~ "(<strong>Note</strong>: Wraps the Blog List block in a div with this "
+#~ "class name.)"
+#~ msgstr ""
+#~ "(<strong>メモ</strong>: フォーラムリストブロックをこの名前の class がつい"
+#~ "た div で囲みます。)"
