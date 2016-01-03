@@ -14,6 +14,7 @@ use Events;
 use URL;
 use Permissions;
 use Application\Service\UserInterface\Menu;
+use Config;
 
 use \Concrete\Core\Page\Type\Type as CollectionType;
 
@@ -68,9 +69,19 @@ class Controller extends Package
 				$settings =	$this->get_saved_settings($page->getCollectionParentID());
 				
 				if($settings['notification']){
+
+                    if (Config::get('concrete.email.webli_forum.address') && strstr(Config::get('concrete.email.webli_forum.address'), '@')) {
+                        $formFormEmailAddress = Config::get('concrete.email.webli_forum.address');
+                    } else if (Config::get('concrete.email.default.address') && strstr(Config::get('concrete.email.default.address'), '@')) {
+                        $formFormEmailAddress = Config::get('concrete.email.default.address');
+                    } else {
+                        $adminUserInfo = UserInfo::getByID(USER_SUPER_ID);
+                        $formFormEmailAddress = $adminUserInfo->getUserEmail();
+                    }
+
 					$mh = Core::make('helper/mail');
 					$mh->to($settings['email_addresses']);
-					$mh->from('donotreply@webli.us');
+					$mh->from($formFormEmailAddress);
 					
 					$parentPage = Page::getByID($page->getCollectionParentID());
 									
