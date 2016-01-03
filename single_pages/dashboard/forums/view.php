@@ -1045,34 +1045,34 @@ $u = new User();
 		   <p>
 		   In a single forum you will have one page that is the Forum Category Page, it will have the "forum_category" Page Attribute checkbox set to true (checked), this will be the
 		   Parent Page or Category Page for all your Forum Posts.  Forum posts beneath this page use the "forum_post" Page Type.
-		   </p>
+		   </p>');
 		   
-		   <p>
+	echo t('<p>
 		   Forum Page (any page type with forum_category attribute checked and Forum List Block)
 			 <br/>&nbsp;&nbsp;&nbsp; |- Forum Post One (child pages using the forum_post page type)
 			 <br/>&nbsp;&nbsp;&nbsp; |- Forum Post Two
 			 <br/>&nbsp;&nbsp;&nbsp; |- ect...
-		    </p>
+		    </p>');
 		   
-		   <p>
+	echo t('<p>
 		   Category Pages use a Forums List Block that will display a Page List of all the Forum Posts with links to each post.
-		   </p>
+		   </p>');
 		   
-		   <p>
+	echo t('<p>
 		   All Forum Pages have a Forums Post Block, this block adds the "Add a New Post" button to the page that allows visitors to post from the front end of the website. On Forum Post Pages
 		   the Forum Post Block adds buttons for Admins or Forum Moderators to Edit. Delete and UnApprove or Approve Pages. The Forums Post Block can be placed on any page on your website
 		   where you want to give visitors a link to add forum posts.
-		   </p>
+		   </p>');
 			
-		   <p>
+	echo t('<p>
 		   All Forum Post Pages have an embeded Autonav block using the Forums Breadcrumb Template and a Forum Post block.  The rest of the data on the page is generated from Forum
-		   Page Attributes on the forum_post.php Page Template.
+		   Page Attributes on the forum_post.php Page Template.</p>');
 		   
-		   <h4>Multiple Category Forums</h4>
+	echo t('<h4>Multiple Category Forums</h4>
 		   <p>
-		   Multiple Category Forums are created with more than one page with the forums_category page attribute set.
+		   Multiple Category Forums are created with more than one page with the forums_category page attribute set.</p>');
 
-		   <p>
+	echo t('<p>
 		   Top Level Forum Page (any page type with a Forum List Bock)
 		    <br/>&nbsp;&nbsp;&nbsp;|- Forum Category Page (any page type with forum_category attribute checked and Forum List Block)
 			<br/>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- Forum Post One (child pages using the forum_post page type)
@@ -1082,18 +1082,16 @@ $u = new User();
 			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- Forum Post One (child pages using the forum_post page type)
 			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- Forum Post Two
 			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- ect...	
-		  </p>
+		  </p>');
 			
-		  <p>
+	echo t('<h4>Settings</h4>
+		  <p>On the Settings page you can select the defaults for each Forum Category.  The top row of checkboxes allows you to select the options you
+		  want displayed on your Forum pages.</p>
 		  <br/>
-		  <h4>Settings</h4>
-		  On the Settings page you can select the defaults for each Forum Category.  The top row of checkboxes allows you to select the options you
-		  want displayed on your Forum pages.
-		  <br/>
-		  <br/>
-		  <label>Page Types / Page Template</label>
-		  <br/>
-		  For advanced users, you can select a different Page Type or Page Template than the default /"Forum Post/".
+		  <br/>');
+
+	echo t('<label>Page Types / Page Template</label>
+		  <p>For advanced users, you can select a different Page Type or Page Template than the default /"Forum Post/".
 		  </br/>
 		  To make a new Page Template copy packages/webli_forums/page_templates/forum_post.php to your theme or page_templates directory
 		  and make any changes you want to the file.
@@ -1103,27 +1101,22 @@ $u = new User();
 		  packages/webli_forums/controllers/page_types/forum_post.php and change the class at the beginning of the file.  The controller is necessary
 		  for the options in Forum Settings to work properly.
 		  <br/>
+		  <br/></p>');
+	echo t('<label>Optional Attributes</label>
+		  <p>You can add additional attributes to the Forums Attribute Set in the Concrete5 dashboard and they will become available for your forum.  Check the checkbox
+		  for attributes you want to use for a forum Category.  Using Optional Attributes may require some styling or modifications to the forum page template.</p>
 		  <br/>
-		  <label>Optional Attributes</label>
+		  <br/>');
+	echo t('<label>Add This / Share This</label>
+		  <p>Visit <a target="blank" href="http://www.addthis.com">www.addthis.com</a> for the code to enable social icons.</p>
 		  <br/>
-		  You can add additional attributes to the Forums Attribute Set in the Concrete5 dashboard and they will become available for your forum.  Check the checkbox
-		  for attributes you want to use for a forum Category.  Using Optional Attributes may require some styling or modifications to the forum page template.
-		  <br/>
-		  <br/>
-		  <label>Add This / Share This</label>
-		  Visit <a target="blank" href="http://www.addthis.com">www.addthis.com</a> for the code to enable social icons.
-		  <br/>
-		  <br/>
-		  <label>Pinned Posts</label>
-		  <br/>
-		  This function is not available yet. Coming soon.
-		  </p>
+		  <br/>');
+    echo t('<label>Pinned Posts</label>
+		  <p>This function is not available yet. Coming soon.</p>');
 		  
-		  <p>
+	echo t('<p>
 		  To be continued..
-		  </p>
+		  </p>');?>
 		   
-		   
-		'); ?>
 </div>
 
