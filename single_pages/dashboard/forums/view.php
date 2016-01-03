@@ -1040,7 +1040,7 @@ $u = new User();
 
 <div class="ccm-tab-content" id="ccm-tab-content-help">
 	<?php
-	echo t('<center><h3>Forums Help</h3></center>
+	echo t('<h3 style="text-align:center;">Forums Help</h3>
 		   <h4>Single Category Forums</h4>
 		   <p>
 		   In a single forum you will have one page that is the Forum Category Page, it will have the "forum_category" Page Attribute checkbox set to true (checked), this will be the
