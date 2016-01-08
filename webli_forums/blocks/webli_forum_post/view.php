@@ -315,9 +315,9 @@ document.onkeypress = stopRKey;
 		 <?php
 		 } ?>
 	  
-	  <button style="float: left" type="submit" class="btn btn-default"><?php echo t('Submit') ?></button>
+	  <button style="float: right" type="submit" class="btn btn-default"><?php echo t('Submit') ?></button>
    </form>
-   <button style="float: right" onclick="$.magnificPopup.close();"class="cancelButton btn btn-default">Cancel</button>
+   <button style="float: left" onclick="$.magnificPopup.close();"class="cancelButton btn btn-default">Cancel</button>
    <div style="clear: both"></div>
 </div>
 
