@@ -38,7 +38,7 @@ class Controller extends Package
 
 	protected $pkgHandle = 'webli_forums';
 	protected $appVersionRequired = '5.7.4';
-    protected $pkgVersion = '0.5';
+    protected $pkgVersion = '0.5.1';
 
      public function getPackageDescription()
 	 {
@@ -117,47 +117,47 @@ class Controller extends Package
         parent::upgrade();
 
 // This is all for beta upgrades, remove from finished version		
-		if(!BlockType::getByHandle('webli_forum_search')){
-			BlockType::installBlockTypeFromPackage('webli_forum_search', $pkg);
-		}
-		
-		if(!BlockType::getByHandle('webli_forum_archive')){
-			BlockType::installBlockTypeFromPackage('webli_forum_archive', $pkg);
-		}
-		
-		if(!BlockType::getByHandle('webli_forum_tags')){
-			BlockType::installBlockTypeFromPackage('webli_forum_tags', $pkg);
-		}
-
-		$attribute = CollectionAttributeKey::getByHandle('tags');
-		if ( !is_object($attribute)) {
-			$att = AttributeType::getByHandle('select');
-			// add to attribute set
-			CollectionAttributeKey::add($att, array('akHandle' => 'tags', 'akName' => t('Tags'), 'akIsSearchableIndexed' => true),$pkg)->setAttributeSet('forums'); 
-		}
-
-		
-		$attribute = CollectionAttributeKey::getByHandle('forum_image');
-		if ( !is_object($attribute)) {
-			$att = AttributeType::getByHandle('image_file');
-			// add to attribute set
-			CollectionAttributeKey::add($att, array('akHandle' => 'forum_image', 'akName' => t('Forum Image')),$pkg)->setAttributeSet('forums'); 
-			$addAttribute = CollectionAttributeKey::getByHandle('forum_image');
-		}
-
-		
-		$attribute = CollectionAttributeKey::getByHandle('forum_expiration_date');
-		if ( is_object($attribute)) {
-			$attribute->delete();
-		}
-
-		$db = Loader::db();
-	
-		$db->Execute('update btWebliForums set
-			forum_search_block = ?,
-			forum_archive_block = ?,
-			forum_tags_block = ?',
-			array(1,1,1));		
+		//if(!BlockType::getByHandle('webli_forum_search')){
+		//	BlockType::installBlockTypeFromPackage('webli_forum_search', $pkg);
+		//}
+		//
+		//if(!BlockType::getByHandle('webli_forum_archive')){
+		//	BlockType::installBlockTypeFromPackage('webli_forum_archive', $pkg);
+		//}
+		//
+		//if(!BlockType::getByHandle('webli_forum_tags')){
+		//	BlockType::installBlockTypeFromPackage('webli_forum_tags', $pkg);
+		//}
+		//
+		//$attribute = CollectionAttributeKey::getByHandle('tags');
+		//if ( !is_object($attribute)) {
+		//	$att = AttributeType::getByHandle('select');
+		//	// add to attribute set
+		//	CollectionAttributeKey::add($att, array('akHandle' => 'tags', 'akName' => t('Tags'), 'akIsSearchableIndexed' => true),$pkg)->setAttributeSet('forums'); 
+		//}
+		//
+		//
+		//$attribute = CollectionAttributeKey::getByHandle('forum_image');
+		//if ( !is_object($attribute)) {
+		//	$att = AttributeType::getByHandle('image_file');
+		//	// add to attribute set
+		//	CollectionAttributeKey::add($att, array('akHandle' => 'forum_image', 'akName' => t('Forum Image')),$pkg)->setAttributeSet('forums'); 
+		//	$addAttribute = CollectionAttributeKey::getByHandle('forum_image');
+		//}
+		//
+		//
+		//$attribute = CollectionAttributeKey::getByHandle('forum_expiration_date');
+		//if ( is_object($attribute)) {
+		//	$attribute->delete();
+		//}
+		//
+		//$db = Loader::db();
+		//
+		//$db->Execute('update btWebliForums set
+		//	forum_search_block = ?,
+		//	forum_archive_block = ?,
+		//	forum_tags_block = ?',
+		//	array(1,1,1));		
     }
 				
 				
@@ -533,10 +533,11 @@ class Controller extends Package
 				forum_search_block,
 				forum_archive_block,
 				forum_tags_block,
+				rich_text,
 				page_template,
-				page_type
-				) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
-				array(0,1,1,1,'l F j, Y g:ia',1,1,1,0,1,350,250,1,1,1,1,$pageTemplate->getPageTemplateID(),$pageType->getPageTypeID()));			
+				page_type,
+				) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
+				array(0,1,1,1,'l F j, Y g:ia',1,1,1,0,1,350,250,1,1,1,1,1,$pageTemplate->getPageTemplateID(),$pageType->getPageTypeID()));			
 
 
 		// Add Sample Forum Post

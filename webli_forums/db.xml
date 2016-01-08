@@ -182,6 +182,10 @@
 		<field name="page_type" type="I">
 			<unsigned />
 		</field>
+
+		<field name="rich_text" type="I">
+			<unsigned />
+		</field>
 		
 		<field name="optional_attributes" type="C" size="255">
 			<default value="" />

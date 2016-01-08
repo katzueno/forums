@@ -225,6 +225,9 @@ class Controller extends BlockController
 		
 			$editPage = Page::getCurrentPage();
 			
+			$settings = $this->get_saved_settings();
+			
+			
 			$u = new User();
 			
 			// if user not loggged in make admin page owner
@@ -241,15 +244,17 @@ class Controller extends BlockController
 			if($_POST['forumName']) $editPage->setAttribute('forum_name', $_POST['forumName'] );
 			
 			// Save forum post
-			if($_POST['forumPost']) $editPage->setAttribute('forum_post', $_POST['forumPost'] );
+			if($settings['rich_text']){
+				if($_POST['forumPost']) $editPage->setAttribute('forum_post', $_POST['forumPost'] );
+			} else { 
+				if($_POST['forumPost']) $editPage->setAttribute('forum_post', $th->sanitize($_POST['forumPost']) );
+			}
 
 			// save tags
 			$ak = CollectionAttributeKey::getByHandle('tags');
 			$ak->saveAttributeForm($editPage);			
 
 			// Save optional Attributes
-			$settings = $this->get_saved_settings();
-			
 			if($settings['optional_attributes']) {
 				$optAtts = unserialize($settings['optional_attributes']);
 				

@@ -5,7 +5,7 @@ $tp = new TaskPermission();
 $u = new User();
 $form = Loader::helper('form');
 $nav = Loader::helper("navigation");
-
+$th = Core::make('helper/text');
 if(!$forumAdmin) { ?>
 
    <style>
@@ -174,7 +174,14 @@ document.onkeypress = stopRKey;
   
 	  <div class="form-group forumPost">
 		  <label for="forumPost"><?php echo t('Post') ?></label>
-		  <textarea style="min-height:200px" id="redactor-post" class="form-control" name="forumPost"></textarea>
+		  <?php
+			if($settings['rich_text']): ?>
+			   <textarea style="min-height:200px" id="redactor-post" class="form-control" name="forumPost"></textarea>
+			<?php
+			else: ?>
+			   <textarea style="min-height:200px" id="forumPost" class="form-control" name="forumPost"></textarea>
+			<?php
+			endif ?>
 	  </div>
 	
 	  <div class="form-group tags">
@@ -276,8 +283,15 @@ document.onkeypress = stopRKey;
 	
 		<div class="form-group forumPost">
 			<label for="forumPost"><?php echo t('Post') ?></label>
-			<textarea style="min-height:200px" id="redactor-edit" class="form-control" name="forumPost"><?php echo Page::getCurrentPage()->getCollectionAttributeValue('forum_post') ?></textarea>
-		</div>
+			<?php
+			if($settings['rich_text']): ?>
+			   <textarea style="min-height:200px" id="redactor-edit" class="form-control" name="forumPost"><?php echo Page::getCurrentPage()->getCollectionAttributeValue('forum_post') ?></textarea>
+			<?php
+			else: ?>
+			   <textarea style="min-height:200px" id="forumEdit" class="form-control" name="forumPost"><?php echo strip_tags(Page::getCurrentPage()->getCollectionAttributeValue('forum_post')) ?></textarea>
+			<?php
+			endif ?>
+		 </div>
 
 
 	  <div class="form-group tags">

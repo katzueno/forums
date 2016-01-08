@@ -120,6 +120,8 @@ $u = new User();
 						<input type="checkbox" name="anonymous_posts" value="1" <?php if($settings['anonymous_posts']) echo 'checked="checked"'?>> <?php echo t('Enable Anonymous Posts') ?>
 						<br/>
 						<input type="checkbox" name="mod_approval" value="1" <?php if($settings['mod_approval']) echo 'checked="checked"'?>> <?php echo t('Moderator Approval Required') ?>
+						<br/>
+						<input type="checkbox" name="rich_text" value="1" <?php if($settings['rich_text']) echo 'checked="checked"'?>> <?php echo t('Rich Text Editor') ?>
 					</td>
 					
 					<td width="25%">
