@@ -248,7 +248,7 @@ document.onkeypress = stopRKey;
 			   <select name="forumSelect">
 			   <?php
 			   foreach($forumPages as $fp) { ?>
-				  <option value="<?php echo $fp->getCollectionID() ?>"><?php echo $fp->getCollectionName() ?></option>
+				  <option value="<?php echo $fp->getCollectionID() ?>" <?php if($fp->getCollectionID() == Page::getCurrentPage()->getCollectionParentID()) echo 'selected="selected"' ?>><?php echo $fp->getCollectionName() ?></option>
 			   <?php
 			   } ?>
 			   </select>
