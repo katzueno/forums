@@ -236,7 +236,6 @@ document.onkeypress = stopRKey;
 		
 </div>
 
-
 <div id="edit-post-popup" class="white-popup mfp-hide">
 	<form method="POST" action="<?php echo $this->action('edit_forum_post'); ?>">
 	  <?php
