@@ -96,8 +96,16 @@ if($display['add_this'] && $display['add_this_script']) echo $display['add_this_
 								$u = new user();
 								$usr = UserInfo::getByID($c->getCollectionUserID());
 								print Loader::helper('concrete/avatar')->outputUserAvatar($usr);
-							endif; ?>
-							<?php echo $c->getCollectionAttributeValue('forum_post') ?>
+							endif;
+    						if($display['rich_text'])
+    						{
+    						    echo $c->getCollectionAttributeValue('forum_post');
+                            }
+                            else
+                            {
+                                echo nl2br(h($c->getCollectionAttributeValue('forum_post'));
+                            }
+                            ?>
 							<div style="clear:both"></div>
 						</div>
 						
