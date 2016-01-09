@@ -176,10 +176,10 @@ document.onkeypress = stopRKey;
 		  <label for="forumPost"><?php echo t('Post') ?></label>
 		  <?php
 			if($settings['rich_text']): ?>
-			   <textarea style="min-height:200px" id="redactor-post" class="form-control" name="forumPost"></textarea>
+			   <textarea style="min-height:200px;width:100%;" id="redactor-post" class="form-control" name="forumPost"></textarea>
 			<?php
 			else: ?>
-			   <textarea style="min-height:200px" id="forumPost" class="form-control" name="forumPost"></textarea>
+			   <textarea style="min-height:200px;width:100%;" id="forumPost" class="form-control" name="forumPost"></textarea>
 			<?php
 			endif ?>
 	  </div>
@@ -238,7 +238,7 @@ document.onkeypress = stopRKey;
 
 	  <button style="float: right" type="submit" class="btn btn-default"><?php echo t('Submit') ?></button>
    </form>
-   <button style="float: left" onclick="$.magnificPopup.close();"class="cancelButton btn btn-default">Cancel</button>
+   <button style="float: left" onclick="$.magnificPopup.close();"class="cancelButton btn btn-default"><?php echo t('Cancel') ?></button>
    <div style="clear: both"></div>
 		
 </div>
@@ -285,10 +285,10 @@ document.onkeypress = stopRKey;
 			<label for="forumPost"><?php echo t('Post') ?></label>
 			<?php
 			if($settings['rich_text']): ?>
-			   <textarea style="min-height:200px" id="redactor-edit" class="form-control" name="forumPost"><?php echo Page::getCurrentPage()->getCollectionAttributeValue('forum_post') ?></textarea>
+			   <textarea style="min-height:200px;width:100%;" id="redactor-edit" class="form-control" name="forumPost"><?php echo Page::getCurrentPage()->getCollectionAttributeValue('forum_post') ?></textarea>
 			<?php
 			else: ?>
-			   <textarea style="min-height:200px" id="forumEdit" class="form-control" name="forumPost"><?php echo strip_tags(Page::getCurrentPage()->getCollectionAttributeValue('forum_post')) ?></textarea>
+			   <textarea style="min-height:200px;width:100%;" id="forumEdit" class="form-control" name="forumPost"><?php echo strip_tags(Page::getCurrentPage()->getCollectionAttributeValue('forum_post')) ?></textarea>
 			<?php
 			endif ?>
 		 </div>
@@ -331,7 +331,7 @@ document.onkeypress = stopRKey;
 	  
 	  <button style="float: right" type="submit" class="btn btn-default"><?php echo t('Submit') ?></button>
    </form>
-   <button style="float: left" onclick="$.magnificPopup.close();"class="cancelButton btn btn-default">Cancel</button>
+   <button style="float: left" onclick="$.magnificPopup.close();"class="cancelButton btn btn-default"><?php echo t('Cancel') ?></button>
    <div style="clear: both"></div>
 </div>
 
