@@ -535,7 +535,7 @@ class Controller extends Package
 				forum_tags_block,
 				rich_text,
 				page_template,
-				page_type,
+				page_type
 				) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
 				array(0,1,1,1,'l F j, Y g:ia',1,1,1,0,1,350,250,1,1,1,1,1,$pageTemplate->getPageTemplateID(),$pageType->getPageTypeID()));			
 
