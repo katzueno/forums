@@ -103,7 +103,7 @@ if($display['add_this'] && $display['add_this_script']) echo $display['add_this_
                             }
                             else
                             {
-                                echo nl2br(h($c->getCollectionAttributeValue('forum_post'));
+                                echo nl2br(h($c->getCollectionAttributeValue('forum_post')));
                             }
                             ?>
 							<div style="clear:both"></div>
