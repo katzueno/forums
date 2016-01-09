@@ -1,10 +1,10 @@
 <?php  defined('C5_EXECUTE') or die("Access Denied.");
-$al = Loader::helper('concrete/asset_library');
+$al = Core::make('helper/concrete/asset_library');
 $fp = FilePermissions::getGlobal();
 $tp = new TaskPermission();
 $u = new User();
-$form = Loader::helper('form');
-$nav = Loader::helper("navigation");
+$form = Core::make('helper/form');
+$nav = Core::make('helper/navigation');
 $th = Core::make('helper/text');
 if(!$forumAdmin) { ?>
 
