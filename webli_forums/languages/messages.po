@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Webli Forms\n"
-"POT-Creation-Date: 2016-01-03 10:07+0900\n"
-"PO-Revision-Date: 2016-01-03 10:07+0900\n"
-"Last-Translator: Katz Ueno <iam@katzueno.com>\n"
+"POT-Creation-Date: 2016-01-09 22:43+0900\n"
+"PO-Revision-Date: 2016-01-09 22:43+0900\n"
+"Last-Translator: Katz Ueno <katz@concrete5.co.jp>\n"
 "Language-Team: Webli Forums\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
@@ -309,7 +309,7 @@ msgid ""
 msgstr ""
 
 #: blocks/webli_forum_list/forum_list_form.php:285
-#: single_pages/dashboard/forums/view.php:143
+#: single_pages/dashboard/forums/view.php:145
 msgid "Date Format"
 msgstr ""
 
@@ -318,7 +318,7 @@ msgid "(<strong>Note</strong>: Use PHP Date Formatting string.)"
 msgstr ""
 
 #: blocks/webli_forum_list/forum_list_form.php:292
-#: single_pages/dashboard/forums/view.php:137
+#: single_pages/dashboard/forums/view.php:139
 msgid "Display Author"
 msgstr ""
 
@@ -408,12 +408,12 @@ msgstr ""
 msgid " replied to "
 msgstr ""
 
-#: blocks/webli_forum_post/controller.php:27
+#: blocks/webli_forum_post/controller.php:28
 msgid "Create forum posts"
 msgstr ""
 
-#: blocks/webli_forum_post/controller.php:32 controller.php:203
-#: single_pages/dashboard/forums/view.php:350
+#: blocks/webli_forum_post/controller.php:33 controller.php:203
+#: single_pages/dashboard/forums/view.php:352
 msgid "Forum Post"
 msgstr ""
 
@@ -422,25 +422,25 @@ msgid "Block Class (Optional)"
 msgstr ""
 
 #: blocks/webli_forum_post/view.php:34
-#: single_pages/dashboard/forums/view.php:471
-#: single_pages/dashboard/forums/view.php:598
-#: single_pages/dashboard/forums/view.php:702
-#: single_pages/dashboard/forums/view.php:813
-#: single_pages/dashboard/forums/view.php:862
-#: single_pages/dashboard/forums/view.php:962
-#: single_pages/dashboard/forums/view.php:1011
+#: single_pages/dashboard/forums/view.php:473
+#: single_pages/dashboard/forums/view.php:600
+#: single_pages/dashboard/forums/view.php:704
+#: single_pages/dashboard/forums/view.php:815
+#: single_pages/dashboard/forums/view.php:864
+#: single_pages/dashboard/forums/view.php:964
+#: single_pages/dashboard/forums/view.php:1013
 msgid "Delete"
 msgstr ""
 
 #: blocks/webli_forum_post/view.php:41
-#: single_pages/dashboard/forums/view.php:491
-#: single_pages/dashboard/forums/view.php:711
+#: single_pages/dashboard/forums/view.php:493
+#: single_pages/dashboard/forums/view.php:713
 msgid "UnPin"
 msgstr ""
 
 #: blocks/webli_forum_post/view.php:47
-#: single_pages/dashboard/forums/view.php:391
-#: single_pages/dashboard/forums/view.php:499
+#: single_pages/dashboard/forums/view.php:393
+#: single_pages/dashboard/forums/view.php:501
 msgid "Pin"
 msgstr ""
 
@@ -449,9 +449,9 @@ msgid "UnApprove"
 msgstr ""
 
 #: blocks/webli_forum_post/view.php:61
-#: single_pages/dashboard/forums/view.php:607
-#: single_pages/dashboard/forums/view.php:971
-#: single_pages/dashboard/forums/view.php:1018
+#: single_pages/dashboard/forums/view.php:609
+#: single_pages/dashboard/forums/view.php:973
+#: single_pages/dashboard/forums/view.php:1020
 msgid "Approve"
 msgstr ""
 
@@ -463,47 +463,42 @@ msgstr ""
 msgid "Login or Register to Add New Post"
 msgstr ""
 
-#: blocks/webli_forum_post/view.php:138 blocks/webli_forum_post/view.php:247
-#: new_post.php:10
+#: blocks/webli_forum_post/view.php:138 blocks/webli_forum_post/view.php:253
 msgid "Select Forum"
 msgstr ""
 
-#: blocks/webli_forum_post/view.php:156 blocks/webli_forum_post/view.php:262
+#: blocks/webli_forum_post/view.php:156 blocks/webli_forum_post/view.php:268
 #: blocks/webli_forum_search/form_setup_html.php:46
-#: blocks/webli_forum_search/forum_search_form.php:138 new_post.php:26
-#: single_pages/dashboard/forums/view.php:314
-#: single_pages/dashboard/forums/view.php:429
-#: single_pages/dashboard/forums/view.php:557
-#: single_pages/dashboard/forums/view.php:662
+#: blocks/webli_forum_search/forum_search_form.php:138
+#: single_pages/dashboard/forums/view.php:316
+#: single_pages/dashboard/forums/view.php:431
+#: single_pages/dashboard/forums/view.php:559
+#: single_pages/dashboard/forums/view.php:664
 msgid "Title"
 msgstr ""
 
-#: blocks/webli_forum_post/view.php:164 blocks/webli_forum_post/view.php:270
-#: new_post.php:34
+#: blocks/webli_forum_post/view.php:164 blocks/webli_forum_post/view.php:276
 msgid "Name"
 msgstr ""
 
-#: blocks/webli_forum_post/view.php:169 new_post.php:39
+#: blocks/webli_forum_post/view.php:169
 msgid "Email Address (not displayed)"
 msgstr ""
 
-#: blocks/webli_forum_post/view.php:176 blocks/webli_forum_post/view.php:279
-#: new_post.php:46
+#: blocks/webli_forum_post/view.php:176 blocks/webli_forum_post/view.php:285
 msgid "Post"
 msgstr ""
 
-#: blocks/webli_forum_post/view.php:199 blocks/webli_forum_post/view.php:286
-#: controller.php:136 controller.php:245 new_post.php:51
-#: single_pages/dashboard/forums/view.php:382
+#: blocks/webli_forum_post/view.php:206 blocks/webli_forum_post/view.php:299
+#: controller.php:245 single_pages/dashboard/forums/view.php:384
 msgid "Tags"
 msgstr ""
 
-#: blocks/webli_forum_post/view.php:232 blocks/webli_forum_post/view.php:319
-#: new_post.php:55
+#: blocks/webli_forum_post/view.php:239 blocks/webli_forum_post/view.php:332
 msgid "Submit"
 msgstr ""
 
-#: blocks/webli_forum_post/view.php:329
+#: blocks/webli_forum_post/view.php:342
 #: single_pages/dashboard/forums/view.php:25
 msgid ""
 "Are you sure you want to DELETE THIS PAGE?  This will remove the page from "
@@ -613,11 +608,6 @@ msgstr ""
 msgid "New Forum Post to %s"
 msgstr ""
 
-#: controller.php:144 controller.php:252
-#: single_pages/dashboard/forums/view.php:357
-msgid "Forum Image"
-msgstr ""
-
 #: controller.php:172
 msgid "Forums Dashboard"
 msgstr ""
@@ -646,6 +636,10 @@ msgstr ""
 msgid "Forum Post Approved"
 msgstr ""
 
+#: controller.php:252 single_pages/dashboard/forums/view.php:359
+msgid "Forum Image"
+msgstr ""
+
 #: controller.php:264
 msgid "Top Level Forums Page"
 msgstr ""
@@ -658,7 +652,7 @@ msgstr ""
 msgid "Add a Comment"
 msgstr ""
 
-#: controller.php:553
+#: controller.php:554
 msgid ""
 "\n"
 "\t\t\t\t<p>Hey, Congratulations, you have installed Forums for Concrete5.  "
@@ -672,7 +666,7 @@ msgid ""
 "webli.us</a></p>"
 msgstr ""
 
-#: controller.php:560
+#: controller.php:561
 msgid "Frist Message"
 msgstr ""
 
@@ -727,12 +721,12 @@ msgid "Help"
 msgstr ""
 
 #: single_pages/dashboard/forums/view.php:94
-#: single_pages/dashboard/forums/view.php:290
-#: single_pages/dashboard/forums/view.php:430
-#: single_pages/dashboard/forums/view.php:558
-#: single_pages/dashboard/forums/view.php:663
-#: single_pages/dashboard/forums/view.php:771
-#: single_pages/dashboard/forums/view.php:920
+#: single_pages/dashboard/forums/view.php:292
+#: single_pages/dashboard/forums/view.php:432
+#: single_pages/dashboard/forums/view.php:560
+#: single_pages/dashboard/forums/view.php:665
+#: single_pages/dashboard/forums/view.php:773
+#: single_pages/dashboard/forums/view.php:922
 msgid "Category"
 msgstr ""
 
@@ -752,145 +746,141 @@ msgstr ""
 msgid "Moderator Approval Required"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:126
-msgid "Display Search Block"
+#: single_pages/dashboard/forums/view.php:124
+msgid "Rich Text Editor"
 msgstr ""
 
 #: single_pages/dashboard/forums/view.php:128
-msgid "Display Archive Block"
+msgid "Display Search Block"
 msgstr ""
 
 #: single_pages/dashboard/forums/view.php:130
+msgid "Display Archive Block"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:132
 msgid "Display Tags Block"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:135
+#: single_pages/dashboard/forums/view.php:137
 msgid "Display Title"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:139
+#: single_pages/dashboard/forums/view.php:141
 msgid "Display Forum Tags"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:141
+#: single_pages/dashboard/forums/view.php:143
 msgid "Display Date"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:149
+#: single_pages/dashboard/forums/view.php:151
 msgid "Display Avatars"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:151
+#: single_pages/dashboard/forums/view.php:153
 msgid "Display Forum Image"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:153
+#: single_pages/dashboard/forums/view.php:155
 msgid "Crop Images"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:155
+#: single_pages/dashboard/forums/view.php:157
 msgid "Image Dimensions"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:158
+#: single_pages/dashboard/forums/view.php:160
 msgid "Width"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:163
+#: single_pages/dashboard/forums/view.php:165
 msgid "Height"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:219
+#: single_pages/dashboard/forums/view.php:221
 msgid "E-Mail Notification of New Forum Post"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:221
+#: single_pages/dashboard/forums/view.php:223
 msgid "Enter recipient E-Mail Addresses seperated by commas"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:237
+#: single_pages/dashboard/forums/view.php:239
 msgid "Add This"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:239
+#: single_pages/dashboard/forums/view.php:241
 msgid ""
 "Paste Add This Share Code Here: (<a href=\"http://www.addthis.com\" target="
 "\"_blank\">www.addthis.com</a>)"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:240
-#: single_pages/dashboard/forums/view.php:258
+#: single_pages/dashboard/forums/view.php:242
+#: single_pages/dashboard/forums/view.php:260
 msgid "Copy Javascript Script Tags Here"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:242
+#: single_pages/dashboard/forums/view.php:244
 msgid "Copy Share HTML Tags Here"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:244
+#: single_pages/dashboard/forums/view.php:246
 msgid "Copy Follow HTML Tags Here"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:246
+#: single_pages/dashboard/forums/view.php:248
 msgid "Copy Recommend HTML Tags Here"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:255
+#: single_pages/dashboard/forums/view.php:257
 msgid "Share This"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:257
+#: single_pages/dashboard/forums/view.php:259
 msgid ""
 "Paste Share This Code Here: (<a href=\"http://www.sharethis.com\" target="
 "\"_blank\">www.sharethis.com</a>)"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:260
+#: single_pages/dashboard/forums/view.php:262
 msgid "Copy HTML Tags Here"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:279
+#: single_pages/dashboard/forums/view.php:281
 msgid ""
 "Add a Forum Category page by setting a \"forum_category\" Page Attribute"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:292
+#: single_pages/dashboard/forums/view.php:294
 msgid "Select a Category"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:320
+#: single_pages/dashboard/forums/view.php:322
 msgid "Description"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:329
+#: single_pages/dashboard/forums/view.php:331
 msgid "User"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:338
-#: single_pages/dashboard/forums/view.php:428
-#: single_pages/dashboard/forums/view.php:556
-#: single_pages/dashboard/forums/view.php:661
-#: single_pages/dashboard/forums/view.php:769
-#: single_pages/dashboard/forums/view.php:918
+#: single_pages/dashboard/forums/view.php:340
+#: single_pages/dashboard/forums/view.php:430
+#: single_pages/dashboard/forums/view.php:558
+#: single_pages/dashboard/forums/view.php:663
+#: single_pages/dashboard/forums/view.php:771
+#: single_pages/dashboard/forums/view.php:920
 msgid "Date"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:359
+#: single_pages/dashboard/forums/view.php:361
 msgid "Choose Image"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:394
-#: single_pages/dashboard/forums/view.php:854
-#: single_pages/dashboard/forums/view.php:1003
+#: single_pages/dashboard/forums/view.php:396
+#: single_pages/dashboard/forums/view.php:856
+#: single_pages/dashboard/forums/view.php:1005
 msgid "Save"
-msgstr ""
-
-#: single_pages/dashboard/forums/view.php:408
-#: single_pages/dashboard/forums/view.php:535
-#: single_pages/dashboard/forums/view.php:641
-#: single_pages/dashboard/forums/view.php:748
-#: single_pages/dashboard/forums/view.php:897
-msgid "Filter by Category"
 msgstr ""
 
 #: single_pages/dashboard/forums/view.php:410
@@ -898,53 +888,61 @@ msgstr ""
 #: single_pages/dashboard/forums/view.php:643
 #: single_pages/dashboard/forums/view.php:750
 #: single_pages/dashboard/forums/view.php:899
+msgid "Filter by Category"
+msgstr ""
+
+#: single_pages/dashboard/forums/view.php:412
+#: single_pages/dashboard/forums/view.php:539
+#: single_pages/dashboard/forums/view.php:645
+#: single_pages/dashboard/forums/view.php:752
+#: single_pages/dashboard/forums/view.php:901
 msgid "All Categories"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:431
-#: single_pages/dashboard/forums/view.php:559
-#: single_pages/dashboard/forums/view.php:664
-#: single_pages/dashboard/forums/view.php:772
-#: single_pages/dashboard/forums/view.php:921
+#: single_pages/dashboard/forums/view.php:433
+#: single_pages/dashboard/forums/view.php:561
+#: single_pages/dashboard/forums/view.php:666
+#: single_pages/dashboard/forums/view.php:774
+#: single_pages/dashboard/forums/view.php:923
 msgid "Author"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:480
-#: single_pages/dashboard/forums/view.php:822
-#: single_pages/dashboard/forums/view.php:869
+#: single_pages/dashboard/forums/view.php:482
+#: single_pages/dashboard/forums/view.php:824
+#: single_pages/dashboard/forums/view.php:871
 msgid "unApprove"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:524
+#: single_pages/dashboard/forums/view.php:526
 msgid "There are no Posts"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:630
+#: single_pages/dashboard/forums/view.php:632
 msgid "There are no unApproved Posts"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:737
+#: single_pages/dashboard/forums/view.php:739
 msgid "There are no Pinned Posts"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:770
-#: single_pages/dashboard/forums/view.php:919
+#: single_pages/dashboard/forums/view.php:772
+#: single_pages/dashboard/forums/view.php:921
 msgid "Reply To"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:844
+#: single_pages/dashboard/forums/view.php:846
 msgid "Reply To: "
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:884
+#: single_pages/dashboard/forums/view.php:886
 msgid "There are no Replies"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:1033
+#: single_pages/dashboard/forums/view.php:1035
 msgid "There are no unApproved Replies"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:1043
+#: single_pages/dashboard/forums/view.php:1045
 msgid ""
 "<h3 style=\"text-align:center;\">Forums Help</h3>\n"
 "\t\t   <h4>Single Category Forums</h4>\n"
@@ -957,7 +955,7 @@ msgid ""
 "\t\t   </p>"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:1050
+#: single_pages/dashboard/forums/view.php:1052
 msgid ""
 "<p>\n"
 "\t\t   Forum Page (any page type with forum_category attribute checked and "
@@ -969,7 +967,7 @@ msgid ""
 "\t\t    </p>"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:1057
+#: single_pages/dashboard/forums/view.php:1059
 msgid ""
 "<p>\n"
 "\t\t   Category Pages use a Forums List Block that will display a Page List "
@@ -977,7 +975,7 @@ msgid ""
 "\t\t   </p>"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:1061
+#: single_pages/dashboard/forums/view.php:1063
 msgid ""
 "<p>\n"
 "\t\t   All Forum Pages have a Forums Post Block, this block adds the \"Add a "
@@ -990,7 +988,7 @@ msgid ""
 "\t\t   </p>"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:1067
+#: single_pages/dashboard/forums/view.php:1069
 msgid ""
 "<p>\n"
 "\t\t   All Forum Post Pages have an embeded Autonav block using the Forums "
@@ -999,7 +997,7 @@ msgid ""
 "\t\t   Page Attributes on the forum_post.php Page Template.</p>"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:1071
+#: single_pages/dashboard/forums/view.php:1073
 msgid ""
 "<h4>Multiple Category Forums</h4>\n"
 "\t\t   <p>\n"
@@ -1007,7 +1005,7 @@ msgid ""
 "forums_category page attribute set.</p>"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:1075
+#: single_pages/dashboard/forums/view.php:1077
 msgid ""
 "<p>\n"
 "\t\t   Top Level Forum Page (any page type with a Forum List Bock)\n"
@@ -1028,7 +1026,7 @@ msgid ""
 "\t\t  </p>"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:1087
+#: single_pages/dashboard/forums/view.php:1089
 msgid ""
 "<h4>Settings</h4>\n"
 "\t\t  <p>On the Settings page you can select the defaults for each Forum "
@@ -1038,7 +1036,7 @@ msgid ""
 "\t\t  <br/>"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:1093
+#: single_pages/dashboard/forums/view.php:1095
 msgid ""
 "<label>Page Types / Page Template</label>\n"
 "\t\t  <p>For advanced users, you can select a different Page Type or Page "
@@ -1058,7 +1056,7 @@ msgid ""
 "\t\t  <br/></p>"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:1105
+#: single_pages/dashboard/forums/view.php:1107
 msgid ""
 "<label>Optional Attributes</label>\n"
 "\t\t  <p>You can add additional attributes to the Forums Attribute Set in "
@@ -1071,7 +1069,7 @@ msgid ""
 "\t\t  <br/>"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:1110
+#: single_pages/dashboard/forums/view.php:1112
 msgid ""
 "<label>Add This / Share This</label>\n"
 "\t\t  <p>Visit <a target=\"blank\" href=\"http://www.addthis.com\">www."
@@ -1080,13 +1078,13 @@ msgid ""
 "\t\t  <br/>"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:1114
+#: single_pages/dashboard/forums/view.php:1116
 msgid ""
 "<label>Pinned Posts</label>\n"
 "\t\t  <p>This function is not available yet. Coming soon.</p>"
 msgstr ""
 
-#: single_pages/dashboard/forums/view.php:1117
+#: single_pages/dashboard/forums/view.php:1119
 msgid ""
 "<p>\n"
 "\t\t  To be continued..\n"
