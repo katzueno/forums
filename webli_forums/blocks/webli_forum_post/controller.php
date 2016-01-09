@@ -2,6 +2,7 @@
 namespace Concrete\Package\WebliForums\Block\WebliForumPost;
 use Loader;
 use Core;
+use Database;
 use Page;
 use Concrete\Core\Page\PageList;
 use PageTemplate;
@@ -70,7 +71,7 @@ class Controller extends BlockController
 		$publicForums = array();
 		
 		// get array of values in db
-		$db = Loader::db();
+		$db = Database::connection();
 		
 		$res = $db->GetAll("select * from btWebliForums where anonymous_posts = ?", 1);
 	
@@ -105,7 +106,7 @@ class Controller extends BlockController
 	function get_saved_settings()
 	{
 		// get array of values in db
-		$db = Loader::db();
+		$db = Database::connection();
 		
 		$res = $db->GetRow("select * from btWebliForums where cID = ?", Page::getCurrentPage()->getCollectionParentID());
 		
@@ -141,7 +142,7 @@ class Controller extends BlockController
 	
 	function action_new_forum_post()
 	{
-		$vf = Loader::helper('validation/form');
+		$vf = Core::make('helper/validation/form');
         $vf->setData($_POST['ccm_token']);
         $vf->addRequiredToken('new_forum_post');
         
@@ -179,7 +180,7 @@ class Controller extends BlockController
 			if($_POST['forumTags']) $newPage->setAttribute('forum_tags', $_POST['forumTags'] );
 			
 			// get moderator approval attribute for blog category
-			$db = Loader::db();
+			$db = Database::connection();
 			$res = $db->GetRow("select * from btWebliForums where cID = ?", $_POST['forumSelect']);
 			
 			if($res['mod_approval']){
@@ -216,7 +217,7 @@ class Controller extends BlockController
 	
 		function action_edit_forum_post()
 	{
-		$vf = Loader::helper('validation/form');
+		$vf = Core::make('helper/validation/form');
         $vf->setData($_POST['ccm_token']);
         $vf->addRequiredToken('edit_forum_post');
         
@@ -282,7 +283,7 @@ class Controller extends BlockController
 
 	function action_set_pin()
 	{		
-		$vf = Loader::helper('validation/form');
+		$vf = Core::make('helper/validation/form');
         $vf->setData($_POST['ccm_token']);
         $vf->addRequiredToken('set_pin');
         
@@ -298,7 +299,7 @@ class Controller extends BlockController
 	
 	function action_set_unpin()
 	{	
-		$vf = Loader::helper('validation/form');
+		$vf = Core::make('helper/validation/form');
         $vf->setData($_POST['ccm_token']);
         $vf->addRequiredToken('set_unpin');
         
@@ -315,7 +316,7 @@ class Controller extends BlockController
 	{
 		$cp = new Permissions(Page::getCurrentPage());
 
-		$vf = Loader::helper('validation/form');
+		$vf = Core::make('helper/validation/form');
         $vf->setData($_POST['ccm_token']);
         $vf->addRequiredToken('delete_page');
         
@@ -335,7 +336,7 @@ class Controller extends BlockController
 	
 	function action_approve_page()
 	{
-		$vf = Loader::helper('validation/form');
+		$vf = Core::make('helper/validation/form');
         $vf->setData($_POST['ccm_token']);
         $vf->addRequiredToken('approve_page');
         
@@ -351,7 +352,7 @@ class Controller extends BlockController
 
 	function action_unapprove_page()
 	{
-		$vf = Loader::helper('validation/form');
+		$vf = Core::make('helper/validation/form');
         $vf->setData($_POST['ccm_token']);
         $vf->addRequiredToken('unapprove_page');
         
