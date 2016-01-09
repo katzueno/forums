@@ -131,8 +131,19 @@ class Controller extends BlockController
 	
 	function get_forum_pages()
 	{
+        $c = Page::getCurrentPage();
+        if ($c->getPageTypeName() == 'forum_post')
+        {
+            $parentCID = $c->getCollectionParentID();
+        }
+        else
+        {
+            $parentCID = $c->getCollectionID();
+        }
+        if ($parentCID < 1 || $parentCID == false) $parentCID = 1;
 		$fpl = new PageList();
 		$fpl->sortByDisplayOrder();
+		$fpl->filterByParentID($parentCID);
 		$fpl->filterByAttribute('forum_category', true);
 		$forumPages = $fpl->get();
 		
