@@ -70,18 +70,10 @@ document.onkeypress = stopRKey;
 			</select>
 		 </div>
 	  <?php
-	  } elseif(count($forumPages) == 1) {
-        $c = Page::getCurrentPage();
-        if ($c->getPageTypeHandle() == 'forum_post') // NEED TO CHANGE
-        {
-            $parentCID = $c->getCollectionParentID();
-        }
-        else
-        {
-            $parentCID = $c->getCollectionID();
-        }
+	  } else if (count($forumPages) == 1) {
+    	  $forumSelectID = $forumPages[0]->getCollectionID();
 	  ?>
-		<input type="hidden" name="forumSelect" value="<?php echo $parentCID ?>"/>
+		<input type="hidden" name="forumSelect" value="<?php echo $forumSelectID ?>"/>
 	  <?php 
 	  } ?>
 	  
