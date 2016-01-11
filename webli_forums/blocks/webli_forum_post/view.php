@@ -77,16 +77,22 @@ if(!$forumAdmin) { ?>
 </div>
 
 <?php
-$forumview = $this;
-Loader::element('webli_forums/forum_post',
-    array(
-        'fp' => $fp,
-        'tp' => $tp,
-        'forumview' => $forumview,
-        'forumPages' => $forumPages,
-        'publicForums' => $publicForums,
-        'u' => $u
-    ), 'webli_forums');
+if($forumAdmin || $publicForums || $loggedIn){
+    $forumview = $this;
+    Loader::element('webli_forums/forum_post',
+        array(
+            'fp' => $fp,
+            'tp' => $tp,
+            'forumview' => $forumview,
+            'forumPages' => $forumPages,
+            'publicForums' => $publicForums,
+            'u' => $u,
+            'forumAdmin' => $forumAdmin,
+            'loggedIn' => $loggedIn,
+            'forumAdmin' => $forumAdmin,
+            'publicForums' => $publicForums,
+        ), 'webli_forums');
+}
 ?>
 
 <script type="text/javascript">
