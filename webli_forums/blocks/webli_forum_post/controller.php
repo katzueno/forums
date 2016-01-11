@@ -146,7 +146,7 @@ class Controller extends BlockController
     		$fpl->filterByParentID($parentCID);
     		$fpl->filterByAttribute('forum_category', true);
     		$forumPages = $fpl->get();
-    		if (count($forumPages) < 1) {
+    		if (count($forumPages) < 2) {
         		if ($c->getAttribute('forum_category')) $forumPages = array($c);
             }
         }
