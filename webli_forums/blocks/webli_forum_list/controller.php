@@ -114,7 +114,13 @@ class Controller extends BlockController
         }
 
         $db = Database::connection();
-        $columns = $db->MetaColumnNames(CollectionAttributeKey::getDefaultIndexedSearchTable());
+        if function_exists(CollectionAttributeKey::getDefaultIndexedSearchTable())
+        {
+            $columns = $db->MetaColumnNames(CollectionAttributeKey::getDefaultIndexedSearchTable());
+        } else
+        {
+            $columns = $db->MetaColumnNames(CollectionAttributeKey::getIndexedSearchTable());
+        }
         if (in_array('ak_exclude_page_list', $columns)) {
             $this->list->filter(false, '(ak_exclude_page_list = 0 or ak_exclude_page_list is null)');
         }
