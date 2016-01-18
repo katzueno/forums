@@ -6,6 +6,7 @@ use Concrete\Core\Block\BlockController;
 use Concrete\Core\Page\Feed;
 use Page;
 use Core;
+use Database;
 use PageList;
 use Concrete\Core\Attribute\Key\CollectionKey;
 use \Concrete\Core\Tree\Node\Type\Topic;
