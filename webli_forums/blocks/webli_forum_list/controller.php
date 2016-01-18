@@ -114,7 +114,8 @@ class Controller extends BlockController
         }
 
         $db = Database::connection();
-        if (function_exists(CollectionAttributeKey::getDefaultIndexedSearchTable()))
+        $collectionAttributeKey = new CollectionAttributeKey();
+        if (method_exists($collectionAttributeKey, 'getDefaultIndexedSearchTable'))
         {
             $columns = $db->MetaColumnNames(CollectionAttributeKey::getDefaultIndexedSearchTable());
         } else
