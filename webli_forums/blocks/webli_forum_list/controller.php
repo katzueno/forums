@@ -331,7 +331,7 @@ class Controller extends BlockController
         } elseif ($parameters[0] == 'tag') {
             $method = 'action_filter_by_tag';
             $parameters = array_slice($parameters, 1);
-        } elseif (Core::make('helper/validation/numbers")->integer($parameters[0])) {
+        } elseif (Core::make('helper/validation/numbers')->integer($parameters[0])) {
             // then we're going to treat this as a year.
             $method = 'action_filter_by_date';
             $parameters[0] = intval($parameters[0]);
