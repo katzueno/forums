@@ -4,6 +4,7 @@ use BlockType;
 use CollectionAttributeKey;
 use Concrete\Core\Block\BlockController;
 use Database;
+use Loader;
 use Page;
 use Core;
 use PageList;
@@ -367,7 +368,7 @@ class Controller extends BlockController
         // If we've gotten to the process() function for this class, we assume that we're in
         // the clear, as far as permissions are concerned (since we check permissions at several
         // points within the dispatcher)
-        $db = Loader::db();
+        $db = Database::connection();
 
         $bID = $this->bID;
         $c = $this->getCollectionObject();
