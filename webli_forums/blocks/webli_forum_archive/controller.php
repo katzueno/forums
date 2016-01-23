@@ -3,6 +3,7 @@ namespace Concrete\Package\WebliForums\Block\WebliForumArchive;
 use BlockType;
 use CollectionAttributeKey;
 use Concrete\Core\Block\BlockController;
+use Database;
 use Loader;
 use Page;
 use Core;
@@ -79,8 +80,8 @@ class Controller extends BlockController
             }
         }
 
-        $db = Loader::db();
-        $columns = $db->MetaColumnNames(CollectionAttributeKey::getIndexedSearchTable());
+        $db = Database::connection();
+        $columns = $db->MetaColumnNames(CollectionAttributeKey::getDefaultIndexedSearchTable());
         if (in_array('ak_exclude_page_list', $columns)) {
             $this->list->filter(false, '(ak_exclude_page_list = 0 or ak_exclude_page_list is null)');
         }
@@ -108,7 +109,7 @@ class Controller extends BlockController
     {	
 		
         $list = $this->list;
-        $nh = Loader::helper('navigation');
+        $nh = Core::make('helper/navigation');
         $this->set('nh', $nh);
 
         if ($this->pfID) {
@@ -162,7 +163,7 @@ class Controller extends BlockController
 		$page = Page::getCurrentPage();
 		$parentPage = Page::getByID($page->getCollectionParentID());
 		
-		$db = Loader::db();
+		$db = Database::connection();
 		if($page->getCollectionAttributeValue('forum_category')){
 			$display = $db->GetRow("select * from btWebliForums where cID = ?", $page->getCollectionID());
 		} elseif($parentPage->getCollectionAttributeValue('forum_category')){
@@ -348,7 +349,7 @@ class Controller extends BlockController
         // If we've gotten to the process() function for this class, we assume that we're in
         // the clear, as far as permissions are concerned (since we check permissions at several
         // points within the dispatcher)
-        $db = Loader::db();
+		$db = Database::connection();
 
         $bID = $this->bID;
         $c = $this->getCollectionObject();
