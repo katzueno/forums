@@ -115,13 +115,7 @@ class Controller extends BlockController
 
         $db = Database::connection();
         $collectionAttributeKey = new CollectionAttributeKey();
-        if (method_exists($collectionAttributeKey, 'getDefaultIndexedSearchTable'))
-        {
-            $columns = $db->MetaColumnNames(CollectionAttributeKey::getDefaultIndexedSearchTable());
-        } else
-        {
-            $columns = $db->MetaColumnNames(CollectionAttributeKey::getIndexedSearchTable());
-        }
+        $columns = $db->MetaColumnNames($collectionAttributeKey->getIndexedSearchTable());
         if (in_array('ak_exclude_page_list', $columns)) {
             $this->list->filter(false, '(ak_exclude_page_list = 0 or ak_exclude_page_list is null)');
         }
